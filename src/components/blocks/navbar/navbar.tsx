@@ -207,7 +207,7 @@ export default function Navbar() {
           </div>
 
           <div className="hidden lg:flex lg:flex-1 lg:justify-end">
-            <Link href="#" className=" text-sm font-semibold leading-6 text-foreground hover:text-white py-2">
+            <Link href="#" className=" text-sm font-semibold leading-6 text-foreground hover:text-white py-2 transition-colors duration-300">
               Contact us <span aria-hidden="true">&rarr;</span>
             </Link>
           </div>
@@ -286,9 +286,9 @@ export default function Navbar() {
                 <div className="py-6">
                   <Link
                     href="#"
-                    className="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-foreground hover:bg-white/5"
+                    className="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-foreground hover:bg-white/5 transition-colors duration-300"
                   >
-                    Log in
+                    Contact us
                   </Link>
                 </div>
               </div>
