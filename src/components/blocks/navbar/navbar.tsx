@@ -34,9 +34,9 @@ const callsToAction = [
 ]
 
 const company = [
-  { name: 'Our Story', href: '#', description: 'History since 1992, focus on building wealth and protecting assets' },
-  { name: 'Our Standards', href: '#', description: 'Mention the high-caliber staff (CPAs, MBAs, JDs) and the firms standard of excellence.' },
-  { name: 'Leaderships', href: '#', description: 'Get in touch with our dedicated support team or reach out on our community forums' },
+  { name: 'Our Story', href: '#', description: '' },
+  { name: 'Our Standards', href: '#', description: '' },
+  { name: 'Leaderships', href: '#', description: '' },
   
 ]
 
@@ -169,10 +169,10 @@ export default function Navbar() {
             </div>
 
             <Link href="#" className="text-sm font-semibold leading-6 text-foreground py-2 hover:text-white transition-colors duration-300">
-              Features
+              Philanthropy
             </Link>
             <Link href="#" className="text-sm font-semibold leading-6 text-foreground py-2 hover:text-white transition-colors duration-300">
-              Marketplace
+              Press
             </Link>
 
             {/* Company Dropdown (Hover) */}
@@ -264,13 +264,13 @@ export default function Navbar() {
                     href="#"
                     className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-foreground hover:bg-white/5"
                   >
-                    Features
+                    Philanthropy
                   </Link>
                   <Link
                     href="#"
                     className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-foreground hover:bg-white/5"
                   >
-                    Marketplace
+                    Press
                   </Link>
 
                   {company.map((item) => (
