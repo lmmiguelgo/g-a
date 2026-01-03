@@ -86,16 +86,16 @@ export default function Navbar() {
 
   return (
     <>
-      <header id='header-nav' className="bg-second-bg fixed w-full z-50">
-        <nav aria-label="Global" className="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8">
+      <header id='header-nav' className="bg-second-bg/80 fixed w-full z-50">
+        <nav aria-label="Global" className="mx-auto flex max-w-8xl items-center justify-between p-6 lg:px-12">
           <div className="flex lg:flex-1">
             <Link href="#" className="-m-1.5 p-1.5">
               <span className="sr-only">Your Company</span>
               <Image
                 alt="Your Company"
-                src={Pic.LogoWide}
-                className="brightness-200 hover:brightness-280 transition-all duration-300"
-                width={240}
+                src={Pic.LogoSquare}
+                className="brightness-200 hover:brightness-280 transition-all duration-300 w-10 lg:w-12"
+                width={50}
                 priority
              
             />
@@ -122,7 +122,7 @@ export default function Navbar() {
               onMouseEnter={() => handleMouseEnter('service')}
               onMouseLeave={handleMouseLeave}
             >
-              <button className={`flex items-center gap-x-1 text-sm font-semibold leading-6 text-foreground outline-none py-2  transition-colors duration-300 ${hoveredDropdown === 'service' ? 'text-white ' : ''}`}>
+              <button className={`flex items-center gap-x-1 text-md font-normal leading-6 text-foreground/80 outline-none py-2  transition-colors duration-300 ${hoveredDropdown === 'service' ? 'text-white ' : ''}`}>
                 Services
                 <ChevronDown className={`h-5 w-5 flex-none text-foreground/60 transition-transform ${hoveredDropdown === 'service' ? 'rotate-180' : ''}`} aria-hidden="true" />
               </button>
@@ -136,13 +136,13 @@ export default function Navbar() {
                       {services.map((item) => (
                         <div
                           key={item.name}
-                          className="group relative flex items-center gap-x-6 rounded-lg p-4 text-sm leading-6 hover:bg-white/5"
+                          className="group relative flex items-center gap-x-6 rounded-lg p-4 text-md leading-6 hover:bg-white/5"
                         >
                           <div className="flex h-11 w-11 flex-none items-center justify-center rounded-lg bg-white/5 group-hover:bg-white/10">
                             <item.icon className="h-6 w-6 text-foreground/70 group-hover:text-foreground" aria-hidden="true" />
                           </div>
                           <div className="flex-auto">
-                            <Link href={item.href} className="block font-semibold text-foreground">
+                            <Link href={item.href} className="block font-normal text-foreground">
                               {item.name}
                               <span className="absolute inset-0" />
                             </Link>
@@ -156,7 +156,7 @@ export default function Navbar() {
                         <Link
                           key={item.name}
                           href={item.href}
-                          className="flex items-center justify-center gap-x-2.5 p-3 text-sm font-semibold leading-6 text-foreground hover:bg-white/10"
+                          className="flex items-center justify-center gap-x-2.5 p-3 text-md font-normal leading-6 text-foreground hover:bg-white/10"
                         >
                           <item.icon className="h-5 w-5 flex-none text-foreground/60" aria-hidden="true" />
                           {item.name}
@@ -168,10 +168,10 @@ export default function Navbar() {
               )}
             </div>
 
-            <Link href="#" className="text-sm font-semibold leading-6 text-foreground py-2 hover:text-white transition-colors duration-300">
+            <Link href="#" className="text-md font-normal leading-6 text-foreground/80 py-2 hover:text-white transition-colors duration-300">
               Philanthropy
             </Link>
-            <Link href="#" className="text-sm font-semibold leading-6 text-foreground py-2 hover:text-white transition-colors duration-300">
+            <Link href="#" className="text-md font-normal leading-6 text-foreground/80 py-2 hover:text-white transition-colors duration-300">
               Press
             </Link>
 
@@ -181,7 +181,7 @@ export default function Navbar() {
               onMouseEnter={() => handleMouseEnter('company')}
               onMouseLeave={handleMouseLeave}
             >
-              <button className={`flex items-center gap-x-1 text-sm font-semibold leading-6 text-foreground outline-none py-2 transition-colors duration-300 ${hoveredDropdown === 'company' ? 'text-white ' : ''}`}>
+              <button className={`flex items-center gap-x-1 text-md font-normal leading-6 text-foreground/80 outline-none py-2 transition-colors duration-300  ${hoveredDropdown === 'company' ? 'text-white ' : ''}`}>
                 Company
                 <ChevronDown className={`h-5 w-5 flex-none text-foreground/60 transition-transform ${hoveredDropdown === 'company' ? 'rotate-180' : ''}`} aria-hidden="true" />
               </button>
@@ -193,7 +193,7 @@ export default function Navbar() {
                   <div className="overflow-hidden rounded-xl bg-second-bg p-4 shadow-lg ring-1 ring-white/10">
                     {company.map((item) => (
                       <div key={item.name} className="relative rounded-lg p-4 hover:bg-white/5">
-                        <Link href={item.href} className="block text-sm font-semibold leading-6 text-foreground">
+                        <Link href={item.href} className="block text-md font-normal leading-6 text-foreground">
                           {item.name}
                           <span className="absolute inset-0" />
                         </Link>
@@ -207,7 +207,7 @@ export default function Navbar() {
           </div>
 
           <div className="hidden lg:flex lg:flex-1 lg:justify-end">
-            <Link href="#" className=" text-sm font-semibold leading-6 text-foreground hover:text-white py-2 transition-colors duration-300">
+            <Link href="#" className=" text-md font-normal leading-6 text-foreground/80 hover:text-white py-2 transition-colors duration-300">
               Contact us <span aria-hidden="true">&rarr;</span>
             </Link>
           </div>
