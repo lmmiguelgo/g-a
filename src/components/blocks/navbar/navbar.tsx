@@ -25,7 +25,7 @@ const services = [
   { name: 'Tax Services', description: 'Proactive planning, compliance, and liability minimization for individuals and businesses', href: '#', icon: Calculator },
   { name: 'Executive Mentorship', description: 'Performance and wealth strategy mentorship for high-visibility careers', href: '#', icon: GraduationCap },
   { name: 'Small Business Consulting', description: 'Strategic development from early-stage planning to operational structure', href: '#', icon: Store },
-  { name: 'Partnership', description: 'Information on the financial literacy partnership, workshops, and Masterclass series', href: '#', icon: Handshake },
+  { name: 'Strategic Financial Planning', description: 'Align your financial resources with your long-term vision. Drive sustainable growth for your future.', href: '#', icon: Handshake },
 ]
 
 const callsToAction = [

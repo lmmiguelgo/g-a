@@ -7,7 +7,9 @@ import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 
+
 import { Hero } from "@/components/blocks/hero/hero";
+import Services from "@/components/blocks/services/services";
 
 
 export default function Home() {
@@ -15,43 +17,130 @@ export default function Home() {
   // GSAP Animation
 
   useEffect(() => {
-        //Registring ScrollTrigger Plugin
-        gsap.registerPlugin(ScrollTrigger);
+    //Registring ScrollTrigger Plugin
+    gsap.registerPlugin(ScrollTrigger);
 
-            const tl = gsap.timeline({
-            scrollTrigger: {
-                scrub: 1,
-                start: "top top",
-                end: "+=1000",
-                trigger: "body",
-            }
+    let ctx = gsap.context(() => {
+      let mm = gsap.matchMedia();
+
+
+
+      // Desktop Version Animation
+      mm.add("(min-width: 800px)", () => {
+        const tl = gsap.timeline({
+          scrollTrigger: {
+            scrub: 1,
+            start: "top top",
+            end: "+=4000",
+            trigger: "body",
+          }
         });
 
-        
-
+        gsap.from('#main-background', {
+          ease: "circ",
+          duration: 2,
+          scale: 1,
+        });
 
         tl.to('#main-background', {
-            scale: 1,
-            opacity: 0,
-            ease: "circ",
+          scale: 1,
+          opacity: 0,
+          ease: "circ",
+        });
 
-        }, );
-
-       
         tl.to('#logo-hero', {
-            scale: 4,
-            opacity: 0,
-            ease: "circ",
-
+          scale: 4,
+          opacity: 0,
+          ease: "circ",
         }, "<");
 
-         
+        tl.to('#services-section', {
+          opacity: 1,
+          scale: 1,
+          ease: "circ",
+        });
 
-        
+        tl.to('#home-service1', {
+          translateX: 0,
+          opacity: 1,
+          ease: "circ",
+        });
+
+        tl.to('#home-service2', {
+          translateX: 0,
+          opacity: 1,
+          ease: "circ",
+        });
+
+        tl.to('#services-section', {
+          duration: 1.8,
+          translateY: -680,
+          scale: 1.2,
+          ease: "circ.inOut",
+        });
+      });
 
 
 
-    }, [])
+
+
+      // Mobile Version Animation
+      mm.add("(max-width: 799px)", () => {
+        const tl = gsap.timeline({
+          scrollTrigger: {
+            scrub: 0.5,
+            start: "top top",
+            end: "+=4000",
+            trigger: "body",
+          }
+        });
+
+        gsap.from('#main-background', {
+          ease: "circ",
+          duration: 2,
+          scale: 1,
+        });
+
+        tl.to('#main-background', {
+          scale: 1,
+          opacity: 0,
+          ease: "circ",
+        });
+
+        tl.to('#logo-hero', {
+          scale: 4,
+          opacity: 0,
+          ease: "circ",
+        }, "<");
+
+        tl.to('#services-section', {
+          opacity: 1,
+          scale: 1,
+          ease: "circ",
+        });
+
+        tl.to('#home-service1', {
+          translateX: 0,
+          opacity: 1,
+          ease: "circ",
+        });
+
+        tl.to('#home-service2', {
+          translateX: 0,
+          opacity: 1,
+          ease: "circ",
+        });
+
+        tl.to('#services-section', {
+          duration: 4,
+          translateY: -2000,
+          
+        });
+      });
+    });
+
+    return () => ctx.revert();
+  }, [])
 
 
 
@@ -61,13 +150,10 @@ export default function Home() {
     <>
 
 
-    <div  className="fixed w-full h-screen overflow-hidden ">
-      <Image id="main-background" className="w-full h-full scale-128 opacity-32 pointer-events-none object-cover " src={Pic.Background} alt="Background" />
 
-      
-    </div>
 
-    <Hero />
+      <Hero />
+      <Services />
 
     </>
   );
