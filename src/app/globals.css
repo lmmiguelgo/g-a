@@ -5,8 +5,8 @@
   --background: #030303;
   --foreground: #DCD7D4;
   --accent-primary: #70000E;
-  --accent-secondary: #C3B79D;
-  --second-bg: #2c2929;
+  --accent-secondary: #888888;
+  --second-bg: #1A1A1A;
 }
 
 @theme inline {

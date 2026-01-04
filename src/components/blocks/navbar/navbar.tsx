@@ -15,22 +15,23 @@ import {
 } from 'lucide-react'
 import Link from 'next/link'
 import Image from 'next/image'
+import { usePathname } from 'next/navigation'
 import { Pic } from '@/components/ui/pic/pic'
 import { gsap } from 'gsap'
 
 
 
 const services = [
-  { name: 'Business Management', description: 'Holistic management for entertainers/athletes, including day-to-day operations and income strategy', href: '#', icon: Briefcase },
-  { name: 'Tax Services', description: 'Proactive planning, compliance, and liability minimization for individuals and businesses', href: '#', icon: Calculator },
+  { name: 'Business Management', description: 'Holistic management for Entertainers / Athletes', href: '#', icon: Briefcase },
+  { name: 'Tax Services', description: 'Proactive planning, compliance, and liability minimization', href: '#', icon: Calculator },
   { name: 'Executive Mentorship', description: 'Performance and wealth strategy mentorship for high-visibility careers', href: '#', icon: GraduationCap },
   { name: 'Small Business Consulting', description: 'Strategic development from early-stage planning to operational structure', href: '#', icon: Store },
-  { name: 'Strategic Financial Planning', description: 'Align your financial resources with your long-term vision. Drive sustainable growth for your future.', href: '#', icon: Handshake },
+  { name: 'Strategic Financial Planning', description: 'Align your financial resources with your long-term vision.', href: '#', icon: Handshake },
 ]
 
 const callsToAction = [
   { name: 'Schedule a Meeting', href: '#', icon: Calendar },
-  { name: 'Contact Us', href: '#', icon: Phone },
+  
 ]
 
 const company = [
@@ -41,6 +42,8 @@ const company = [
 ]
 
 export default function Navbar() {
+
+  const pathname = usePathname();
 
     //Entrance Animation
 
@@ -86,17 +89,17 @@ export default function Navbar() {
 
   return (
     <>
-      <header id='header-nav' className="bg-second-bg/80 fixed w-full z-50">
+      <header id='header-nav' className="bg-second-bg/80 fixed w-full z-50 shadow-2xl">
         <nav aria-label="Global" className="mx-auto flex max-w-8xl items-center justify-between p-6 lg:px-12">
           <div className="flex lg:flex-1">
-            <Link href="#" className="-m-1.5 p-1.5">
+            <Link href="/" className="-m-1.5 p-1.5">
               <span className="sr-only">Your Company</span>
               <Image
                 alt="Your Company"
                 src={Pic.LogoSquare}
-                className="brightness-200 hover:brightness-280 transition-all duration-300 w-10 lg:w-12"
+                className=" transition-all duration-300 w-10 lg:w-12 hover:brightness-140"
                 width={50}
-                priority
+                loading="eager"
              
             />
             </Link>
@@ -116,6 +119,9 @@ export default function Navbar() {
 
           {/* Desktop Navigation */}
           <div className="hidden lg:flex lg:gap-x-12">
+            <Link href="/" className={pathname === '/' ? 'text-white text-md font-normal leading-6 py-2' : 'text-md font-normal leading-6 text-foreground/80 py-2 hover:text-white transition-colors duration-300'}>
+              Home
+            </Link>
             {/* Product Dropdown (Hover) */}
             <div 
               className="relative"
@@ -131,18 +137,18 @@ export default function Navbar() {
               {/* Added top-full and pt-4 to bridge the gap using padding instead of margin */}
               {hoveredDropdown === 'service' && (
                 <div className="absolute left-1/2 top-full z-10 w-screen max-w-md -translate-x-1/2 pt-4">
-                  <div className="overflow-hidden rounded-lg bg-second-bg shadow-lg ring-1 ring-white/10">
+                  <div className=" overflow-hidden rounded-lg bg-second-bg/80 backdrop-blur-md ring-1 ring-white/10 shadow-2xl">
                     <div className="p-4">
                       {services.map((item) => (
                         <div
                           key={item.name}
-                          className="group relative flex items-center gap-x-6 rounded-lg p-4 text-md leading-6 hover:bg-white/5"
+                          className="group relative flex items-center gap-x-6 rounded-lg p-2 text-md leading-6 hover:bg-white/5"
                         >
-                          <div className="flex h-11 w-11 flex-none items-center justify-center rounded-lg bg-white/5 group-hover:bg-white/10">
-                            <item.icon className="h-6 w-6 text-foreground/70 group-hover:text-foreground" aria-hidden="true" />
+                          <div className="flex h-20 w-20 flex-none items-center justify-center rounded-lg bg-white/5 group-hover:bg-white/10">
+                            <item.icon className="h-16 w-6 text-foreground/70 group-hover:text-foreground" aria-hidden="true" />
                           </div>
                           <div className="flex-auto">
-                            <Link href={item.href} className="block font-normal text-foreground">
+                            <Link href={item.href} className="block font-semibold text-foreground">
                               {item.name}
                               <span className="absolute inset-0" />
                             </Link>
@@ -151,7 +157,7 @@ export default function Navbar() {
                         </div>
                       ))}
                     </div>
-                    <div className="grid grid-cols-2 divide-x divide-white/10 bg-white/5">
+                    <div className="grid grid-cols-1 divide-x divide-white/10 bg-white/5">
                       {callsToAction.map((item) => (
                         <Link
                           key={item.name}
@@ -168,10 +174,10 @@ export default function Navbar() {
               )}
             </div>
 
-            <Link href="#" className="text-md font-normal leading-6 text-foreground/80 py-2 hover:text-white transition-colors duration-300">
+            <Link href="/philanthropy" className={pathname === '/philanthropy' ? 'text-white text-md font-normal leading-6 py-2' : 'text-md font-normal leading-6 text-foreground/80 py-2 hover:text-white transition-colors duration-300'}>
               Philanthropy
             </Link>
-            <Link href="#" className="text-md font-normal leading-6 text-foreground/80 py-2 hover:text-white transition-colors duration-300">
+            <Link href="/press" className={pathname === '/press' ? 'text-white text-md font-normal leading-6 py-2' : 'text-md font-normal leading-6 text-foreground/80 py-2 hover:text-white transition-colors duration-300'}>
               Press
             </Link>
 
@@ -190,10 +196,10 @@ export default function Navbar() {
               {/* Added top-full and pt-4 to bridge the gap using padding instead of margin */}
               {hoveredDropdown === 'company' && (
                 <div className="absolute left-1/2 top-full z-10 w-96 -translate-x-1/2 pt-4">
-                  <div className="overflow-hidden rounded-xl bg-second-bg p-4 shadow-lg ring-1 ring-white/10">
+                  <div className="overflow-hidden rounded-xl bg-second-bg/80 backdrop-blur-md p-4 shadow-2xl ring-1 ring-white/10">
                     {company.map((item) => (
-                      <div key={item.name} className="relative rounded-lg p-4 hover:bg-white/5">
-                        <Link href={item.href} className="block text-md font-normal leading-6 text-foreground">
+                      <div key={item.name} className="relative rounded-lg p-2 hover:bg-white/5">
+                        <Link href={item.href} className="block text-md font-normal leading-6 text-foreground hover:text-white transition-colors duration-300">
                           {item.name}
                           <span className="absolute inset-0" />
                         </Link>
@@ -207,7 +213,7 @@ export default function Navbar() {
           </div>
 
           <div className="hidden lg:flex lg:flex-1 lg:justify-end">
-            <Link href="#" className=" text-md font-normal leading-6 text-foreground/80 hover:text-white py-2 transition-colors duration-300">
+            <Link href="#" className=" inline-flex items-center gap-x-2 rounded-md bg-accent-primary px-3.5 py-2.5 text-sm font-semibold text-foreground hover:bg-accent-primary/88 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-500">
               Contact us <span aria-hidden="true">&rarr;</span>
             </Link>
           </div>
@@ -218,10 +224,10 @@ export default function Navbar() {
       {mobileMenuOpen && (
         <div className="relative z-50 lg:hidden" role="dialog" aria-modal="true">
           {/* Backdrop */}
-          <div className="fixed inset-0 bg-second-bg/80 backdrop-blur-sm" onClick={() => setMobileMenuOpen(false)} />
+          <div className="fixed inset-0 " onClick={() => setMobileMenuOpen(false)} />
           
           {/* Panel */}
-          <div className="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-second-bg px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-white/10">
+          <div className="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-second-bg/80 backdrop-blur-md px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-white/10">
             <div className="flex items-center justify-between">
               <Link href="#" className="-m-1.5 p-1.5">
                 <span className="sr-only">Your Company</span>
@@ -230,7 +236,7 @@ export default function Navbar() {
                   src={Pic.LogoWide}
                   className="brightness-200 hover:brightness-100 transition-colors duration-300"
                   width={240}
-                  priority
+                  loading="eager"
                     
                 />
               </Link>

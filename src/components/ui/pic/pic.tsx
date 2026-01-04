@@ -7,6 +7,14 @@ import Executivementorship from '@/assets/executive-mentorship.png'
 import Smallbusiness from '@/assets/small-business.png'
 import Partnership from '@/assets/partnership.png'
 import Financialplanning from '@/assets/financial-planning.png'
+import UnitedstatesFlag from '@/assets/US.png'
+import Usexample from '@/assets/us-example.png'
+import Zambiaflag from '@/assets/zambia.png'
+import Zambiaexample from '@/assets/zambia-example.png'
+import Kenyaflag from '@/assets/Kenya.png'
+import Kenyaexample from '@/assets/kenya-example.png'
+import Ugandaflag from '@/assets/Uganda.png'
+import Ugandaexample from '@/assets/uganda-example.png'
 
 
 export const Pic = {
@@ -19,4 +27,12 @@ export const Pic = {
     SmallBusiness: Smallbusiness,
     Partnership: Partnership,
     FinancialPlanning: Financialplanning,
+    UnitedStatesFlag: UnitedstatesFlag,
+    ZambiaFlag: Zambiaflag,
+    KenyaFlag: Kenyaflag,
+    UgandaFlag: Ugandaflag,
+    USExample: Usexample,
+    ZambiaExample: Zambiaexample,
+    KenyaExample: Kenyaexample,
+    UgandaExample: Ugandaexample,
 }

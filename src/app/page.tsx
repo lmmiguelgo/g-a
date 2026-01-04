@@ -36,11 +36,7 @@ export default function Home() {
           }
         });
 
-        gsap.from('#main-background', {
-          ease: "circ",
-          duration: 2,
-          scale: 1,
-        });
+        
 
         tl.to('#main-background', {
           scale: 1,
@@ -50,6 +46,7 @@ export default function Home() {
 
         tl.to('#logo-hero', {
           scale: 4,
+          translateY: 200,
           opacity: 0,
           ease: "circ",
         }, "<");
@@ -95,17 +92,14 @@ export default function Home() {
           }
         });
 
-        gsap.from('#main-background', {
-          ease: "circ",
-          duration: 2,
-          scale: 1,
-        });
+       
 
         tl.to('#main-background', {
           scale: 1,
           opacity: 0,
           ease: "circ",
         });
+       
 
         tl.to('#logo-hero', {
           scale: 4,
@@ -116,26 +110,48 @@ export default function Home() {
         tl.to('#services-section', {
           opacity: 1,
           scale: 1,
-          ease: "circ",
+          ease: "circ.out",
+          
         });
 
         tl.to('#home-service1', {
           translateX: 0,
           opacity: 1,
-          ease: "circ",
+          
         });
 
         tl.to('#home-service2', {
           translateX: 0,
           opacity: 1,
-          ease: "circ",
+          
         });
 
         tl.to('#services-section', {
           duration: 4,
-          translateY: -2000,
+          translateY: -2200,
           
-        });
+        }, "<");
+
+        tl.to('#home-service3', {
+          translateX: 0,
+          opacity: 1,
+          
+          delay: 0.4,
+        }, "<");
+
+        tl.to('#home-service4', {
+          translateX: 0,
+          opacity: 1,
+          
+          delay: 0.6,
+        }, "<");
+
+        tl.to('#home-service5', {
+          translateX: 0,
+          opacity: 1,
+          
+          delay: 0.8,
+        }, "<");
       });
     });
 
