@@ -9,7 +9,7 @@ export default function Services() {
 
 
     return (
-        <section id="services-section" className=" fixed w-full h-screen lg:h-fit opacity-0 scale-400 ">
+        <section id="services-section" className=" fixed w-full h-screen lg:h-fit opacity-0 scale-400 z-10 ">
             <div className="bg-background py-24 sm:py-32">
                 <div className="mx-auto max-w-2xl px-6 lg:max-w-7xl lg:px-8">
                     <h2 className="text-xl/7  font-bold text-accent-primary ">Our Services</h2>

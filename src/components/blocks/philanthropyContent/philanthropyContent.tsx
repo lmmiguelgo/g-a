@@ -3,7 +3,7 @@ import Image from "next/image"
 
 export default function PhilanthropyContent() {
   return (
-    <div className="overflow-hidden bg-background py-24 sm:py-32">
+    <div className=" w-full overflow-hidden bg-background py-24 sm:py-32">
       <div className="mx-auto max-w-2xl px-6 lg:max-w-7xl lg:px-8">
         <div className="max-w-4xl">
           <p className="text-xl/7 font-bold text-accent-primary">Philanthropy</p>

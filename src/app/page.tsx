@@ -10,6 +10,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 import { Hero } from "@/components/blocks/hero/hero";
 import Services from "@/components/blocks/services/services";
+import PhilanthropyContent from "@/components/blocks/philanthropyContent/philanthropyContent";
 
 
 export default function Home() {
@@ -47,6 +48,10 @@ export default function Home() {
         tl.to('#logo-hero', {
           scale: 4,
           translateY: 200,
+          opacity: 0,
+          ease: "circ",
+        }, "<");
+        tl.to('#hero-arrow-logo', {
           opacity: 0,
           ease: "circ",
         }, "<");
@@ -170,6 +175,7 @@ export default function Home() {
 
       <Hero />
       <Services />
+      
 
     </>
   );

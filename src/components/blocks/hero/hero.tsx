@@ -23,7 +23,7 @@ export const Hero = () => {
 
         gsap.from('#main-background', {
           ease: "circ",
-          duration: 120,
+          duration: 8,
           scale: 1,
         });
 
@@ -73,7 +73,7 @@ export const Hero = () => {
 
 
         <Image id="hero-logo-image" className=" pointer-events-none px-4 lg:px-0 lg:max-w-2xl " src={Pic.LogoWide} alt="Wide Logo" loading="eager" />
-        <ChevronDown className="animate-fade-down animate-infinite animate-duration-1800 animate-delay-1800 text-white mt-4" size={32} />
+        <ChevronDown id="hero-arrow-logo" className="animate-fade-down animate-infinite animate-duration-1800 animate-delay-1800 text-white mt-4" size={32} />
 
       </div>
     </>

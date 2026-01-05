@@ -5,7 +5,7 @@ const HeroBg = () => {
   return (
     <div  className="fixed w-full h-screen overflow-hidden flex items-end ">
       
-      <Image id="main-background" className="w-full h-full  opacity-80 pointer-events-none object-contain scale-600 lg:scale-140  lg:object-cover lg:object-left -translate-x-240 lg:translate-0  " src={Pic.Background} alt="Background"
+      <Image id="main-background" className="w-full h-full  opacity-80 pointer-events-none object-contain scale-600 lg:scale-132  lg:object-cover lg:object-left -translate-x-240 lg:translate-0  " src={Pic.Background} alt="Background"
       loading="eager" />
 
       
