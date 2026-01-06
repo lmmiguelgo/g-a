@@ -10,7 +10,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 import { Hero } from "@/components/blocks/hero/hero";
 import Services from "@/components/blocks/services/services";
-import PhilanthropyContent from "@/components/blocks/philanthropyContent/philanthropyContent";
+import HomeTitle from "@/components/ui/homeTitle/homeTitle";
 
 
 export default function Home() {
@@ -51,10 +51,33 @@ export default function Home() {
           opacity: 0,
           ease: "circ",
         }, "<");
+
         tl.to('#hero-arrow-logo', {
           opacity: 0,
           ease: "circ",
         }, "<");
+
+
+        tl.to('#home-title-Services', {
+          display: 'flex',
+          opacity: 1,
+          ease: "circ.in",
+        });
+
+        tl.to('#home-title-Services-h1', {
+          fontSize: '8rem',
+          translateX: 0,
+        }, );
+
+        tl.to('#home-subtitle-Services-h2', {
+          opacity: 1,
+        }, );
+
+        tl.to('#home-subtitle-Services-h2', {
+          color: '#ffffff',
+        }, );
+
+        
 
         tl.to('#services-section', {
           opacity: 1,
@@ -63,6 +86,12 @@ export default function Home() {
         });
 
         tl.to('#home-service1', {
+          translateX: 0,
+          opacity: 1,
+          ease: "circ",
+        });
+
+        tl.to('#home-service2', {
           translateX: 0,
           opacity: 1,
           ease: "circ",
@@ -174,6 +203,8 @@ export default function Home() {
 
 
       <Hero />
+
+      <HomeTitle Id="home-title-Services" IdTitle="home-title-Services-h1" IdSubtitle="home-subtitle-Services-h2" Light="Build Wealth" Bold="Secure Your Future">SERVICES</HomeTitle>
       <Services />
       
 

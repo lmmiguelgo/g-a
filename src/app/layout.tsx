@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Montserrat} from "next/font/google";
+import { Montserrat, Cormorant_Garamond } from "next/font/google";
 import "./globals.css";
 
 
@@ -10,6 +10,13 @@ const montserrat = Montserrat({
   variable: "--font-montserrat",
   subsets: ["latin"],
 });
+
+const cormorantGaramond = Cormorant_Garamond({
+  variable: "--font-cormorant-garamond",
+  subsets: ["latin"],
+  weight: ["300", "400", "600", "700"],
+});
+
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -24,7 +31,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${montserrat.variable}   antialiased`}
+        className={`${montserrat.variable} ${cormorantGaramond.variable} antialiased`}
       >
         <Navbar />
 

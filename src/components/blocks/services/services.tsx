@@ -13,7 +13,7 @@ export default function Services() {
             <div className="bg-background py-24 sm:py-32">
                 <div className="mx-auto max-w-2xl px-6 lg:max-w-7xl lg:px-8">
                     <h2 className="text-xl/7  font-bold text-accent-primary ">Our Services</h2>
-                    <p className="mt-2 max-w-2xl text-4xl font-semibold tracking-tight text-pretty text-foreground sm:text-5xl ">
+                    <p className="mt-2  max-w-4xl text-4xl font-semibold tracking-tight text-pretty text-foreground sm:text-5xl ">
                         <span className="font-light text-foreground">Build Wealth</span> Secure your Future
                     </p>
                     <div className="mt-10 grid grid-cols-1 gap-6 lg:mt-8 lg:grid-cols-6 lg:grid-rows-2">
