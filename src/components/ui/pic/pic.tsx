@@ -16,6 +16,7 @@ import Kenyaexample from '@/assets/kenya-example.png'
 import Ugandaflag from '@/assets/Uganda.png'
 import Ugandaexample from '@/assets/uganda-example.png'
 import Titlebackground from '@/assets/title-background.png'
+import Gammyshouse from '@/assets//gammys-house.svg'
 
 
 export const Pic = {
@@ -37,4 +38,5 @@ export const Pic = {
     KenyaExample: Kenyaexample,
     UgandaExample: Ugandaexample,
     TitleBackground: Titlebackground,
+    GammysHouse: Gammyshouse,
 }
