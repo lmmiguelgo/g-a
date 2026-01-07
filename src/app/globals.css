@@ -2,7 +2,7 @@
 @plugin "tailwindcss-animated";
 
 :root {
-  --background: #030303;
+  --background: #202020;
   --foreground: #DCD7D4;
   --accent-primary: #70000E;
   --accent-secondary: #888888;
