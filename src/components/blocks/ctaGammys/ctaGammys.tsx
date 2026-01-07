@@ -1,7 +1,12 @@
+import Image from "next/image"
+import Link from "next/link"
+import { Pic } from "@/components/ui/pic/pic"
+
+
 export default function CtaGammys() {
     return (
-        <div id="cta-gammys" className="bg-background hidden">
-            <div className="mx-auto max-w-7xl py-24 sm:px-6 sm:py-32 lg:px-8">
+        <div id="cta-gammys" className="fixed w-full   hidden opacity-0 translate-y-400">
+            <div className="mx-auto max-w-7xl py-24 sm:px-6 sm:py-32 lg:px-8 p-4">
                 <div className="relative isolate overflow-hidden bg-second-bg px-6 pt-16 after:pointer-events-none after:absolute after:inset-0 after:inset-ring after:inset-ring-white/10 sm:rounded-3xl sm:px-16 after:sm:rounded-3xl md:pt-24 lg:flex lg:gap-x-20 lg:px-24 lg:pt-0">
                     <svg
                         viewBox="0 0 1024 1024"
@@ -21,22 +26,22 @@ export default function CtaGammys() {
                             Make a secure, <br /> <span className="font-bold">Tax-deductible Donation Online</span>
                         </h2>
                         <p className="mt-6 text-lg/8 text-pretty text-foreground text-start">
-                            click on the “Donate Now” link below.
+                            Click on the <strong>“Donate Now”</strong> link below.
 
 
                         </p>
                         <div className="mt-10 flex items-center  gap-x-6 justify-start">
-                            <a
-                                href="#"
+                            <Link
+                                href="https://www.calfund.org/funds/gammys-house/"
                                 className="rounded-md bg-accent-primary px-3.5 py-2.5 text-sm font-semibold inset-ring inset-ring-white/5 hover:bg-accent-primary/90 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
                             >
                                 {' '}
                                 Donate Now{' '}
-                            </a>
-                            <a href="#" className="text-sm/6 font-semibold hover:text-white">
+                            </Link>
+                            <Link href="/contact" className="text-sm/6 font-semibold hover:text-white">
                                 Contact us
-                                <span aria-hidden="true">→</span>
-                            </a>
+                                <span className="pl-2" aria-hidden="true">→</span>
+                            </Link>
                         </div>
                         <p className="mt-8 text-lg/8 text-pretty text-foreground text-start">
                             You can Alternatively, send payable checks to the <strong>California Community Foundation</strong>, noting that the donation is for <strong>Gammy’s House</strong>. Checks should be mailed to: <br />
@@ -53,12 +58,12 @@ export default function CtaGammys() {
                         </address>
                     </div>
                     <div className="relative mt-16 h-80 lg:mt-8">
-                        <img
-                            alt="App screenshot"
-                            src="https://tailwindcss.com/plus-assets/img/component-images/dark-project-app-screenshot.png"
+                        <Image
+                            alt="Gammy's House Logo Solo"
+                            src={Pic.GammysSingle}
                             width={1824}
                             height={1080}
-                            className="absolute top-0 left-0 w-228 max-w-none rounded-md bg-white/5 ring-1 ring-white/10"
+                            className="absolute top-40 left-10 w-80 max-w-none rounded-md"
                         />
                     </div>
                 </div>

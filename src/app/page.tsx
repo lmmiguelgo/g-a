@@ -216,6 +216,20 @@ export default function Home() {
           ease: "circ",
         } );
 
+        tl.to('#philanthropy-section', {
+          display: 'none',
+          opacity: 0,
+          ease: "circ",
+        } );
+
+        tl.to('#cta-gammys', {
+          duration: 1.4,
+          display : 'block',
+          opacity: 1,
+          translateY: 0,
+          ease: "circ",
+        }, "<" );
+
 
        
 
@@ -404,6 +418,19 @@ export default function Home() {
           ease: "circ",
         }, "<");
 
+        tl.to('#philanthropy-section', {
+          display: 'none',
+          opacity: 0,
+          ease: "circ",
+        } );
+
+        tl.to('#cta-gammys', {
+          display : 'block',
+          opacity: 1,
+          translateY: 0,
+          ease: "circ",
+        }, "<" );
+
 
 
        
@@ -435,6 +462,8 @@ export default function Home() {
       <HomeTitle Id="home-title-Philanthropy" IdTitle="home-title-Philanthropy-h1" IdSubtitle="home-subtitle-Philanthropy-h2" Light="Empowering Lives" Bold="Saving the Future">PHILANTHROPY</HomeTitle>
 
       <PhilanthropyContent />
+      <CtaGammys />
+      
 
       
 
