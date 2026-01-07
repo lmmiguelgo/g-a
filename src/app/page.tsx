@@ -11,8 +11,9 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { Hero } from "@/components/blocks/hero/hero";
 import Services from "@/components/blocks/services/services";
 import HomeTitle from "@/components/ui/homeTitle/homeTitle";
-import PhilanthropyContent from "@/components/blocks/philanthropyContent/philanthropyContent";
+import GammysContent from "@/components/blocks/gammysContent/gammysContent";
 import CtaGammys from "@/components/blocks/ctaGammys/ctaGammys";
+import EdenGlobalContent from "@/components/blocks/edenGlobalContent/edenGlobalContent";
 
 
 export default function Home() {
@@ -229,6 +230,24 @@ export default function Home() {
           translateY: 0,
           ease: "circ",
         }, "<" );
+
+        tl.to('#cta-gammys', {
+          duration : 1.4,
+          scale: 1.04,
+          ease: "circ",
+        },);
+
+        tl.to('#cta-gammys', {
+          opacity: 0,
+          display: 'none',
+          ease: "circ",
+        },);
+
+        tl.to('#philanthropy-section-eden', {
+          opacity: 1,
+          display: 'block',
+          ease: "circ",
+        },);
 
 
        
@@ -461,8 +480,10 @@ export default function Home() {
 
       <HomeTitle Id="home-title-Philanthropy" IdTitle="home-title-Philanthropy-h1" IdSubtitle="home-subtitle-Philanthropy-h2" Light="Empowering Lives" Bold="Saving the Future">PHILANTHROPY</HomeTitle>
 
-      <PhilanthropyContent />
+      <GammysContent />
       <CtaGammys />
+
+      <EdenGlobalContent />
       
 
       

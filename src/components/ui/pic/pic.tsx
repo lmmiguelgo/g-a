@@ -18,6 +18,7 @@ import Ugandaexample from '@/assets/uganda-example.png'
 import Titlebackground from '@/assets/title-background.png'
 import Gammyshouse from '@/assets//gammys-house.svg'
 import Gammyssingle from '@/assets/gammys-single.svg'
+import Edenglobal from '@/assets/eden-global.svg'
 
 
 export const Pic = {
@@ -41,4 +42,5 @@ export const Pic = {
     TitleBackground: Titlebackground,
     GammysHouse: Gammyshouse,
     GammysSingle: Gammyssingle,
+    EdenGlobal: Edenglobal,
 }

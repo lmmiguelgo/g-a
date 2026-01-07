@@ -1,9 +1,9 @@
 import { Pic } from "@/components/ui/pic/pic"
 import Image from "next/image"
 
-export default function PhilanthropyContent() {
+export default function EdenGlobalContent() {
   return (
-    <section id="philanthropy-section" className="hidden fixed opacity-0 w-full overflow-hidden bg-background py-24 sm:py-32 scale-400">
+    <section id="philanthropy-section-eden" className="hidden opacity-0 fixed w-full overflow-hidden bg-background py-24 sm:py-32 ">
       <div className="mx-auto max-w-2xl px-6 lg:max-w-7xl lg:px-8">
         <div className="max-w-4xl">
           <p className="text-xl/7 font-bold text-accent-primary">Philanthropy</p>
@@ -15,7 +15,11 @@ export default function PhilanthropyContent() {
         <section className="mt- lg:mt-8 grid grid-cols-1 lg:grid-cols-2 lg:gap-x-8 lg:gap-y-8">
           <div id="philanthropy-section-writing" className="lg:pr-8 -translate-x-280 opacity-0 ">
 
-            <Image className="w-120 pt-20" src={Pic.GammysHouse} alt="Gammy's House" />
+            <div className="flex items-center justify-center">
+                <h1 className="font-secondary font-bold text-4xl">BACK TO <br /> EDEN GLOBAL</h1>
+                <Image className="w-60 pt-20" src={Pic.EdenGlobal} alt="Eden Global" />
+
+            </div>
 
             <p className="mt-6 text-lg/7 text-accent-secondary">
               <strong>Founded in 2003</strong> by <strong>Laura Gordon </strong>and inspired by her late grandmother,
@@ -29,7 +33,7 @@ export default function PhilanthropyContent() {
           </div>
           <div className="pt-16 lg:row-span-2 lg:-mr-16 xl:mr-auto">
             <div className="-mx-8 grid grid-cols-2 gap-4 sm:-mx-16 sm:grid-cols-4 lg:mx-0 lg:grid-cols-2 xl:gap-8">
-              <div id="Philanthropy-USExample" className="aspect-square overflow-hidden rounded-xl outline-1 -outline-offset-1 outline-foreground/10 -translate-x-80 lg:translate-x-0 lg:translate-y-200 opacity-0">
+              <div id="Philanthropy-USExample" className="aspect-square overflow-hidden rounded-xl outline-1 -outline-offset-1 outline-foreground/10 ">
                 <Image
                   
                   alt=""
@@ -37,21 +41,21 @@ export default function PhilanthropyContent() {
                   className="block size-full object-cover"
                 />
               </div>
-              <div id="Philanthropy-ZambiaExample" className="-mt-8 aspect-square overflow-hidden rounded-xl outline-1 -outline-offset-1 outline-foreground/10 lg:-mt-40 translate-x-80  lg:translate-x-0 lg:-translate-y-200 lg:opacity-0">
+              <div id="Philanthropy-ZambiaExample" className="-mt-8 aspect-square overflow-hidden rounded-xl outline-1 -outline-offset-1 outline-foreground/10 lg:-mt-40 ">
                 <Image
                   alt=""
                   src={Pic.ZambiaExample}
                   className="block size-full object-cover"
                 />
               </div>
-              <div id="Philanthropy-KenyaExample" className="aspect-square overflow-hidden rounded-xl outline-1 -outline-offset-1 outline-foreground/10 -translate-x-80 lg:translate-x-0 lg:translate-y-200 lg:opacity-0">
+              <div id="Philanthropy-KenyaExample" className="aspect-square overflow-hidden rounded-xl outline-1 -outline-offset-1 outline-foreground/10 ">
                 <Image
                   alt=""
                   src={Pic.KenyaExample}
                   className="block size-full object-cover"
                 />
               </div>
-              <div id="Philanthropy-UgandaExample" className="-mt-8 aspect-square overflow-hidden rounded-xl outline-1 -outline-offset-1 outline-foreground/10 lg:-mt-40 translate-x-80 lg:translate-x-0 lg:-translate-y-200 lg:opacity-0">
+              <div id="Philanthropy-UgandaExample" className="-mt-8 aspect-square overflow-hidden rounded-xl outline-1 -outline-offset-1 outline-foreground/10 lg:-mt-40 ">
                 <Image
                   alt=""
                   src={Pic.UgandaExample}

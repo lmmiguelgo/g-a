@@ -1,11 +1,11 @@
-import Cta from "@/components/blocks/ctaGammys/ctaGammys"
+import EdenGlobalContent from "@/components/blocks/edenGlobalContent/edenGlobalContent"
 
 
 const Press = () => {
   return (
 
     <>
-    <Cta />
+    <EdenGlobalContent />
       
     </>
     
