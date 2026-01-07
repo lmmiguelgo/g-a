@@ -12,6 +12,7 @@ import { Hero } from "@/components/blocks/hero/hero";
 import Services from "@/components/blocks/services/services";
 import HomeTitle from "@/components/ui/homeTitle/homeTitle";
 import PhilanthropyContent from "@/components/blocks/philanthropyContent/philanthropyContent";
+import CtaGammys from "@/components/blocks/ctaGammys/ctaGammys";
 
 
 export default function Home() {
@@ -335,8 +336,9 @@ export default function Home() {
           ease: "circ.in",
         });
 
-         
+    
 
+    
          tl.to('#home-title-Philanthropy-h1', {
           fontSize: '3.2rem',
           translateX: 0,
@@ -356,6 +358,55 @@ export default function Home() {
           opacity: 0,
         });
 
+//Philanthropy Start
+
+         tl.to('#philanthropy-section', {
+          display: 'block',
+          opacity: 1,
+          scale: 1,
+          ease: "circ",
+        });
+
+         tl.to('#philanthropy-section-writing', {
+          translateX: 0,
+          opacity: 1,
+          ease: "circ",
+        });
+
+        tl.to('#philanthropy-section', {
+          duration: 8,
+          translateY: -1800,
+          ease: "circ",
+        });
+
+         tl.to('#Philanthropy-USExample', {
+          
+          translateX: 0,
+          opacity: 1,
+          ease: "circ",
+        }, "<");
+         tl.to('#Philanthropy-ZambiaExample', {
+          delay: 0.1,
+          translateX: 0,
+          opacity: 1,
+          ease: "circ",
+        }, "<");
+         tl.to('#Philanthropy-KenyaExample', {
+          delay: 0.1,
+          translateX: 0,
+          opacity: 1,
+          ease: "circ",
+        }, "<");
+         tl.to('#Philanthropy-UgandaExample', {
+          delay: 0.1,
+          translateX: 0,
+          opacity: 1,
+          ease: "circ",
+        }, "<");
+
+
+
+       
         
 
 
@@ -384,6 +435,8 @@ export default function Home() {
       <HomeTitle Id="home-title-Philanthropy" IdTitle="home-title-Philanthropy-h1" IdSubtitle="home-subtitle-Philanthropy-h2" Light="Empowering Lives" Bold="Saving the Future">PHILANTHROPY</HomeTitle>
 
       <PhilanthropyContent />
+
+      
 
       
 

@@ -12,7 +12,7 @@ export default function PhilanthropyContent() {
           </h1>
           
         </div>
-        <section className="mt-8 grid grid-cols-1 lg:grid-cols-2 lg:gap-x-8 lg:gap-y-8">
+        <section className="mt- lg:mt-8 grid grid-cols-1 lg:grid-cols-2 lg:gap-x-8 lg:gap-y-8">
           <div id="philanthropy-section-writing" className="lg:pr-8 -translate-x-280 opacity-0 ">
 
             <Image className="w-120 pt-20" src={Pic.GammysHouse} alt="Gammy's House" />
@@ -29,7 +29,7 @@ export default function PhilanthropyContent() {
           </div>
           <div className="pt-16 lg:row-span-2 lg:-mr-16 xl:mr-auto">
             <div className="-mx-8 grid grid-cols-2 gap-4 sm:-mx-16 sm:grid-cols-4 lg:mx-0 lg:grid-cols-2 xl:gap-8">
-              <div id="Philanthropy-USExample" className="aspect-square overflow-hidden rounded-xl outline-1 -outline-offset-1 outline-foreground/10 translate-y-200 opacity-0">
+              <div id="Philanthropy-USExample" className="aspect-square overflow-hidden rounded-xl outline-1 -outline-offset-1 outline-foreground/10 -translate-x-80 lg:translate-x-0 lg:translate-y-200 opacity-0">
                 <Image
                   
                   alt=""
@@ -37,21 +37,21 @@ export default function PhilanthropyContent() {
                   className="block size-full object-cover"
                 />
               </div>
-              <div id="Philanthropy-ZambiaExample" className="-mt-8 aspect-square overflow-hidden rounded-xl outline-1 -outline-offset-1 outline-foreground/10 lg:-mt-40 -translate-y-200 opacity-0">
+              <div id="Philanthropy-ZambiaExample" className="-mt-8 aspect-square overflow-hidden rounded-xl outline-1 -outline-offset-1 outline-foreground/10 lg:-mt-40 translate-x-80  lg:translate-x-0 lg:-translate-y-200 lg:opacity-0">
                 <Image
                   alt=""
                   src={Pic.ZambiaExample}
                   className="block size-full object-cover"
                 />
               </div>
-              <div id="Philanthropy-KenyaExample" className="aspect-square overflow-hidden rounded-xl outline-1 -outline-offset-1 outline-foreground/10 translate-y-200 opacity-0">
+              <div id="Philanthropy-KenyaExample" className="aspect-square overflow-hidden rounded-xl outline-1 -outline-offset-1 outline-foreground/10 -translate-x-80 lg:translate-x-0 lg:translate-y-200 lg:opacity-0">
                 <Image
                   alt=""
                   src={Pic.KenyaExample}
                   className="block size-full object-cover"
                 />
               </div>
-              <div id="Philanthropy-UgandaExample" className="-mt-8 aspect-square overflow-hidden rounded-xl outline-1 -outline-offset-1 outline-foreground/10 lg:-mt-40 -translate-y-200 opacity-0">
+              <div id="Philanthropy-UgandaExample" className="-mt-8 aspect-square overflow-hidden rounded-xl outline-1 -outline-offset-1 outline-foreground/10 lg:-mt-40 translate-x-80 lg:translate-x-0 lg:-translate-y-200 lg:opacity-0">
                 <Image
                   alt=""
                   src={Pic.UgandaExample}
@@ -60,7 +60,7 @@ export default function PhilanthropyContent() {
               </div>
             </div>
           </div>
-          <div id="philanthropy-section-flags" className="max-lg:mt-16 lg:col-span-1 -translate-x-280 opacity-0 ">
+          <div id="philanthropy-section-flags" className="max-lg:mt-16 lg:col-span-1 lg:-translate-x-280 lg:opacity-0 ">
            
             <hr className=" border-t border-second-bg" />
             <dl className="mt-6 grid grid-cols-1 gap-x-8 gap-y-4 sm:grid-cols-2">
