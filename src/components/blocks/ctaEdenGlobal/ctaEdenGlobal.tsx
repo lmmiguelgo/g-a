@@ -5,7 +5,7 @@ import { Pic } from "@/components/ui/pic/pic"
 
 export default function CtaEdenGlobal() {
     return (
-        <div id="cta-eden-global" className="fixed w-full   ">
+        <div id="cta-eden-global" className="fixed w-full hidden opacity-0 translate-y-400 ">
             <div className="mx-auto max-w-7xl py-24 sm:px-6 sm:py-32 lg:px-8 p-4">
                 <div className="relative isolate overflow-hidden bg-second-bg px-6 pt-16 after:pointer-events-none after:absolute after:inset-0 after:inset-ring after:inset-ring-white/10 sm:rounded-3xl sm:px-16 after:sm:rounded-3xl md:pt-24 lg:flex lg:gap-x-20 lg:px-24 lg:pt-0">
                     <svg

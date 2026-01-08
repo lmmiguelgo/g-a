@@ -10,32 +10,32 @@ export default function EdenGlobalContent() {
           <h1 className="mt-2 text-4xl font-semibold tracking-tight text-pretty text-foreground sm:text-5xl">
             <span className="font-light">Empowering Lives</span> Saving the Future
           </h1>
-          
+
         </div>
-        <section className="mt- lg:mt-8 grid grid-cols-1 lg:grid-cols-2 lg:gap-x-8 lg:gap-y-8">
-          <div id="philanthropy-section-writing" className="lg:pr-8 -translate-x-280 opacity-0 ">
+        <section className="mt- lg:mt-8 grid grid-cols-1 lg:grid-cols-2 lg:gap-x-8 lg:gap-y-8 ">
+          <div id="philanthropy-section-writing-eden" className="lg:pr-8 -translate-x-280 opacity-0  ">
 
             <div className="flex items-center justify-center">
-                <h1 className="font-secondary font-bold text-4xl">BACK TO <br /> EDEN GLOBAL</h1>
-                <Image className="w-60 pt-20" src={Pic.EdenGlobal} alt="Eden Global" />
+              <h1 className="font-secondary font-bold text-4xl">BACK TO <br /> EDEN GLOBAL</h1>
+              <Image className="w-60 pt-20" src={Pic.EdenGlobal} alt="Eden Global" />
 
             </div>
 
             <p className="mt-6 text-lg/7 text-accent-secondary">
-              <strong>Founded in 2003</strong> by <strong>Laura Gordon </strong>and inspired by her late grandmother,
-               <strong>Gammy’s House</strong> is a corporate foundation of <strong>Gordon & Associates.</strong> It is
-                a <strong>philanthropic organization</strong> dedicated to educating, equipping, and <strong>empowering the next generation of Black entrepreneurs</strong>.
-                 Gammy’s House operates as a component fund of the <strong>California Community Foundation</strong>.
+              The mission of <strong>Back to Eden Global</strong> is to <strong>address the need for economic empowerment</strong>, using entrepreneurial opportunities on the continent of Africa, and throughout the diaspora. <br />
+
+              It employs educational, agricultural, and ecological stewardship initiatives to <strong>activate agency and develop</strong> entrepreneurial opportunities at project sites in <strong>Uganda, Zambia, Ghana, Nigeria, and the USA.</strong> <br />
+
+
+
             </p>
-            <p className="mt-8 text-lg/7 text-accent-secondary">
-              Gammy’s House has <strong>invested in global initiatives</strong> that foster equity in <strong>education</strong> and <strong>entrepreneurship</strong>, including:
-            </p>
+
           </div>
           <div className="pt-16 lg:row-span-2 lg:-mr-16 xl:mr-auto">
-            <div className="-mx-8 grid grid-cols-2 gap-4 sm:-mx-16 sm:grid-cols-4 lg:mx-0 lg:grid-cols-2 xl:gap-8">
+            <div className="-mx-8  grid-cols-2 gap-4 sm:-mx-16 sm:grid-cols-4 lg:mx-0 lg:grid-cols-2 xl:gap-8 hidden lg:grid ">
               <div id="Philanthropy-USExample" className="aspect-square overflow-hidden rounded-xl outline-1 -outline-offset-1 outline-foreground/10 ">
                 <Image
-                  
+
                   alt=""
                   src={Pic.USExample}
                   className="block size-full object-cover"
@@ -64,28 +64,7 @@ export default function EdenGlobalContent() {
               </div>
             </div>
           </div>
-          <div id="philanthropy-section-flags" className="max-lg:mt-16 lg:col-span-1 lg:-translate-x-280 lg:opacity-0 ">
-           
-            <hr className=" border-t border-second-bg" />
-            <dl className="mt-6 grid grid-cols-1 gap-x-8 gap-y-4 sm:grid-cols-2">
-              <div className="flex flex-col gap-y-2 border-b border-dotted border-second-bg pb-4">
-                <dt className="text-md/6 text-accent-secondary">Building water wells in <strong>Zambia.</strong></dt>
-                <Image className="rounded-lg border-4 border-foreground/20 aspect-video" src={Pic.ZambiaFlag} alt="Zambia Flag" />
-              </div>
-              <div className="flex flex-col gap-y-2 border-b border-dotted border-second-bg pb-4">
-                <dt className="text-md/6 text-accent-secondary">Building schools in <strong>Kenya.</strong></dt>
-                <Image className="rounded-lg border-4 border-foreground/20 aspect-video" src={Pic.KenyaFlag} alt="Kenya Flag" />
-              </div>
-              <div className="flex flex-col gap-y-2 max-sm:border-b max-sm:border-dotted max-sm:border-second-bg max-sm:pb-4">
-                <dt className="text-md/6 text-accent-secondary">Providing micro-lending and scholarships in the <strong>United States.</strong></dt>
-                <Image className="rounded-lg border-4 border-foreground/20 aspect-video" src={Pic.UnitedStatesFlag} alt="United States Flag" />
-              </div>
-              <div className="flex flex-col gap-y-2">
-                <dt className="text-md/6 text-accent-secondary">Empowering business owners in <strong>Uganda.</strong></dt>
-                <Image className="rounded-lg border-4 border-foreground/20 aspect-video" src={Pic.UgandaFlag} alt="Uganda Flag" />
-              </div>
-            </dl>
-          </div>
+
         </section>
       </div>
     </section>

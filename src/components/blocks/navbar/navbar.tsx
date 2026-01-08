@@ -213,7 +213,7 @@ export default function Navbar() {
           </div>
 
           <div className="hidden lg:flex lg:flex-1 lg:justify-end">
-            <Link href="#" className=" inline-flex items-center gap-x-2 rounded-md bg-accent-primary px-3.5 py-2.5 text-sm font-semibold text-foreground hover:bg-accent-primary/88 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-500">
+            <Link href="#" className=" inline-flex items-center gap-x-2 rounded-md bg-accent-primary px-3.5 py-2.5 text-sm font-semibold text-foreground hover:bg-accent-primary/88">
               Contact us <span aria-hidden="true">&rarr;</span>
             </Link>
           </div>

@@ -14,6 +14,7 @@ import HomeTitle from "@/components/ui/homeTitle/homeTitle";
 import GammysContent from "@/components/blocks/gammysContent/gammysContent";
 import CtaGammys from "@/components/blocks/ctaGammys/ctaGammys";
 import EdenGlobalContent from "@/components/blocks/edenGlobalContent/edenGlobalContent";
+import CtaEdenGlobal from "@/components/blocks/ctaEdenGlobal/ctaEdenGlobal";
 
 
 export default function Home() {
@@ -35,7 +36,7 @@ export default function Home() {
           scrollTrigger: {
             scrub: 1,
             start: "top top",
-            end: "+=14000",
+            end: "+=32000",
             trigger: "body",
           }
         });
@@ -239,6 +240,7 @@ export default function Home() {
 
         tl.to('#cta-gammys', {
           opacity: 0,
+          translateY: 200,
           display: 'none',
           ease: "circ",
         },);
@@ -248,6 +250,41 @@ export default function Home() {
           display: 'block',
           ease: "circ",
         },);
+        
+        tl.to('#philanthropy-section-writing-eden', {
+          duration: 1.4,
+          translateX: 0,
+          opacity: 1,
+          ease: "circ",
+        },);
+
+        tl.to('#philanthropy-section-eden', {
+          delay: 0.8,
+          opacity: 0,
+          display: 'hidden',
+          ease: "circ",
+        },);
+
+        tl.to('#cta-eden-global', {
+          duration: 1.4,
+          display: 'block',
+          translateY: 0,
+          opacity: 1,
+          ease: "circ",
+        }, "<");
+        tl.to('#cta-eden-global', {
+          duration : 1.4,
+          scale: 1.04,
+          ease: "circ",
+        },);
+
+         tl.to('#cta-eden-global', {
+          opacity: 0,
+          translateY: 200,
+          display: 'none',
+          ease: "circ",
+        },);
+
 
 
        
@@ -265,7 +302,7 @@ export default function Home() {
           scrollTrigger: {
             scrub: 0.5,
             start: "top top",
-            end: "+=8000",
+            end: "+=20000",
             trigger: "body",
           }
         });
@@ -407,9 +444,10 @@ export default function Home() {
         });
 
         tl.to('#philanthropy-section', {
-          duration: 8,
+          duration: 4,
           translateY: -1800,
-          ease: "circ",
+          
+          
         });
 
          tl.to('#Philanthropy-USExample', {
@@ -450,6 +488,45 @@ export default function Home() {
           ease: "circ",
         }, "<" );
 
+        tl.to('#cta-gammys', {
+          delay: 0.8,
+          display : 'none',
+          opacity: 0,
+          translateY: 200,
+          ease: "circ",
+        },);
+
+        tl.to('#philanthropy-section-eden', {
+          
+          display : 'block',
+          opacity: 1,
+          ease: "circ",
+        },);
+
+        tl.to('#philanthropy-section-writing-eden', {
+          delay: 0.8,
+          translateX: 0,
+          opacity: 1,
+          ease: "circ",
+        },"<");
+
+        tl.to('#philanthropy-section-eden', {
+          delay: 0.8,
+          display : 'hidden',
+          opacity: 0,
+          ease: "circ",
+        },);
+
+       
+        tl.to('#cta-eden-global', {
+          translateY: 0,
+          display : 'block',
+          opacity: 1,
+          ease: "circ",
+        }, "<");
+
+       
+
 
 
        
@@ -484,7 +561,7 @@ export default function Home() {
       <CtaGammys />
 
       <EdenGlobalContent />
-      
+      <CtaEdenGlobal />
 
       
 
