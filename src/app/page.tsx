@@ -1,7 +1,7 @@
 'use client';
 
 import { Pic } from "@/components/ui/pic/pic";
-import { useEffect } from "react";
+import { useGSAP } from "@gsap/react";
 import Image from "next/image";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
@@ -17,15 +17,13 @@ import EdenGlobalContent from "@/components/blocks/edenGlobalContent/edenGlobalC
 import CtaEdenGlobal from "@/components/blocks/ctaEdenGlobal/ctaEdenGlobal";
 
 
+gsap.registerPlugin(ScrollTrigger);
+
 export default function Home() {
 
   // GSAP Animation
 
-  useEffect(() => {
-    //Registring ScrollTrigger Plugin
-    gsap.registerPlugin(ScrollTrigger);
-
-    let ctx = gsap.context(() => {
+  useGSAP(() => {
       let mm = gsap.matchMedia();
 
 
@@ -534,9 +532,9 @@ export default function Home() {
 
 
       });
-    });
+    
 
-    return () => ctx.revert();
+    //return () => ctx.revert();
   }, [])
 
 

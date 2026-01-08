@@ -23,9 +23,7 @@ import { usePathname } from 'next/navigation'
 import { Pic } from '@/components/ui/pic/pic'
 import { gsap } from 'gsap'
 import { ScrollToPlugin } from "gsap/ScrollToPlugin";
-
-
-
+import { useGSAP } from "@gsap/react";
 
 
 export default function Navbar() {
@@ -97,22 +95,14 @@ const philanthropy = [
 
     //Entrance Animation
 
-      useEffect(() => {
-        //Registring ScrollTrigger Plugin
+      useGSAP(() => {
         
-
-
         gsap.from('#header-nav', {
             duration: 1.8,
             ease: "expo.out",
             y: -250,
             opacity: 0,
         });
-
-
-
-      
-
     }, [])
 
 

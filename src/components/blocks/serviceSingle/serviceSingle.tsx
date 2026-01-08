@@ -1,6 +1,10 @@
+"use client";
+
+import { useGSAP } from "@gsap/react";
 import Image from "next/image"
-import { Pic } from "@/components/ui/pic/pic"
-import path from "path";
+import Link from "next/link";
+import { gsap } from 'gsap'
+import { ScrollToPlugin } from "gsap/ScrollToPlugin";
 
 const stats = [
     { label: 'Founded', value: '2021' },
@@ -9,14 +13,36 @@ const stats = [
     { label: 'Raised', value: '$25M' },
 ]
 
-export default function ServiceSingle({ Servicenumber, Title, Children, Picture }: { Servicenumber?: number ; Title?: string ; Children?: React.ReactNode ; Picture ?: any }) {
+export default function ServiceSingle({ Servicenumber, Title, children, Picture }: { Servicenumber?: string; Title?: string; children?: React.ReactNode; Picture?: any }) {
+
+    
+    gsap.registerPlugin(ScrollToPlugin);
+
+    useGSAP(() => {
+         gsap.from( "#service-image-container", {
+            translateX: -400,
+            opacity: 0,
+            duration: 1.5,
+            ease: "power3.out", 
+        })
+    }, []);
+
+
+    const scrollToServices = () => {
+        gsap.to(window, {
+            duration: 2,
+
+            scrollTo: { y: "5200" }
+        })
+    }
+
     return (
-        <div className="bg-background py-24 sm:py-32">
+        <div className="fixed w-full bg-background py-24 sm:py-32">
             <div className="mx-auto max-w-7xl px-6 lg:px-8">
                 <div className="mx-auto grid max-w-2xl grid-cols-1 items-start gap-x-8 gap-y-16 sm:gap-y-24 lg:mx-0 lg:max-w-none lg:grid-cols-2">
-                    <div className="lg:pr-4">
+                    <div id="service-image-container" className="lg:pr-4">
                         <div className="relative overflow-hidden rounded-3xl bg-background px-6 pt-64 pb-9 after:pointer-events-none after:absolute after:inset-0 after:rounded-3xl after:inset-ring after:inset-ring-white/10 sm:px-12 lg:max-w-lg lg:px-8 lg:pb-8 xl:px-10 xl:pb-10 flex lg:h-180">
-                           {Picture && (
+                            {Picture && (
                                 <Image
                                     alt=""
                                     src={Picture}
@@ -41,14 +67,27 @@ export default function ServiceSingle({ Servicenumber, Title, Children, Picture 
                         </div>
                     </div>
                     <div>
-                        <div className="text-base/7 text-foreground/80 lg:max-w-lg">
-                            <p className="text-base/7 font-semibold text-accent-primary">Service {Servicenumber}</p>
+                        <div className="text-lg/7 text-foreground/80 lg:max-w-lg">
+                            <p className="text-lg/7 font-bold text-accent-primary">Service {Servicenumber}</p>
                             <h1 className="mt-2 text-4xl font-semibold tracking-tight text-pretty text-foreground sm:text-5xl">
                                 {Title}
                             </h1>
                             <div className="max-w-xl">
-                                {Children}
+                                {children}
                             </div>
+                        </div>
+                        <div className="mt-10 flex items-center  gap-x-6 justify-start">
+                            <Link
+                                href="/contact"
+                                className="rounded-md bg-accent-primary px-3.5 py-2.5 text-sm font-semibold inset-ring inset-ring-white/5 hover:bg-accent-primary/90 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white animate-jump animate-once animate-delay-2000 animate-duration-2000 "
+                            >
+                                {' '}
+                                Contact us{' '}
+                            </Link>
+                            <Link onClick={() => {scrollToServices()}} href={"/"} className="text-sm/6 font-semibold hover:text-white">
+                                Other Services
+                                <span className="pl-2" aria-hidden="true">→</span>
+                            </Link>
                         </div>
 
                     </div>

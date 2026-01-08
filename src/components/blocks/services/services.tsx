@@ -19,7 +19,7 @@ export default function Services() {
                     <div className="mt-10 grid grid-cols-1 gap-6 lg:mt-8 lg:grid-cols-6 lg:grid-rows-2">
 
 
-                        <Link href="#" id="home-service1" className="group relative lg:col-span-3 -translate-x-200 opacity-0">
+                        <Link href="/services/business-management" id="home-service1" className="group relative lg:col-span-3 -translate-x-200 opacity-0">
                             <div className="absolute inset-0 rounded-lg bg-second-bg max-lg:rounded-t-2xl lg:rounded-tl-2xl" />
 
 
@@ -44,13 +44,13 @@ export default function Services() {
 
 
 
-                        <Link href="#" id="home-service2" className="group relative lg:col-span-3 translate-x-200 opacity-0">
+                        <Link href="/services/tax-services" id="home-service2" className="group relative lg:col-span-3 translate-x-200 opacity-0">
 
 
                             <div className="absolute inset-0 rounded-lg bg-second-bg lg:rounded-tr-2xl" />
                             <div className="relative flex h-full flex-col overflow-hidden rounded-[calc(var(--radius-lg)+1px)] lg:rounded-tr-[calc(1rem+1px)]">
                                 <Image
-                                    alt=""
+                                    alt="Tax Services"
                                     src={Pic.TaxServices}
                                     className="h-80 object-cover object-left lg:object-right lg:grayscale-40 opacity-80 group-hover:scale-110 group-hover:grayscale-0 transition-all duration-400 z-1"
                                 />
@@ -67,11 +67,11 @@ export default function Services() {
 
 
 
-                        <Link href="#" id="home-service3" className="group relative lg:col-span-2 -translate-x-200 opacity-0 lg:translate-x-0 lg:opacity-100 ">
+                        <Link href="/services/executive-mentorship" id="home-service3" className="group relative lg:col-span-2 -translate-x-200 opacity-0 lg:translate-x-0 lg:opacity-100 ">
                             <div className="absolute inset-0 rounded-lg bg-second-bg lg:rounded-bl-2xl" />
                             <div className="relative flex h-full flex-col overflow-hidden rounded-[calc(var(--radius-lg)+1px)] lg:rounded-bl-[calc(1rem+1px)]">
                                 <Image
-                                    alt=""
+                                    alt="Executive Mentorship Service"
                                     src={Pic.ExecutiveMentorship}
                                     className="h-80 object-cover object-left lg:object-center opacity-80 group-hover:scale-110 lg:grayscale-40 group-hover:grayscale-0 transition-all duration-400 z-1"
                                 />
@@ -87,7 +87,7 @@ export default function Services() {
                         </Link>
 
 
-                        <Link href="#" id="home-service4" className="group relative lg:col-span-2 translate-x-200 opacity-0 lg:translate-x-0 lg:opacity-100 ">
+                        <Link href="/services/small-business-consulting" id="home-service4" className="group relative lg:col-span-2 translate-x-200 opacity-0 lg:translate-x-0 lg:opacity-100 ">
                             <div className="absolute inset-0 rounded-lg bg-second-bg" />
                             <div className="relative flex h-full flex-col overflow-hidden rounded-[calc(var(--radius-lg)+1px)]">
                                 <Image
@@ -107,11 +107,11 @@ export default function Services() {
                         </Link>
 
 
-                        <Link href="#" id="home-service5" className="group relative lg:col-span-2 -translate-x-200 opacity-0 lg:translate-x-0 lg:opacity-100 ">
+                        <Link href="/services/strategic-financial-planning" id="home-service5" className="group relative lg:col-span-2 -translate-x-200 opacity-0 lg:translate-x-0 lg:opacity-100 ">
                             <div className="absolute inset-0 rounded-lg bg-second-bg max-lg:rounded-b-2xl lg:rounded-br-2xl" />
                             <div className="relative flex h-full flex-col overflow-hidden rounded-[calc(var(--radius-lg)+1px)] max-lg:rounded-b-[calc(1rem+1px)] lg:rounded-br-[calc(1rem+1px)]">
                                 <Image
-                                    alt=""
+                                    alt="Financial Planning Service"
                                     src={Pic.FinancialPlanning}
                                     className="h-80 object-cover opacity-80 group-hover:scale-110 lg:grayscale-40 group-hover:grayscale-0 transition-all duration-400 z-1"
                                 />
