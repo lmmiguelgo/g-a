@@ -18,7 +18,7 @@ export default function GammysContent() {
             <Image className="w-120 pt-20" src={Pic.GammysHouse} alt="Gammy's House" />
 
             <p className="mt-6 text-lg/7 text-accent-secondary">
-              <strong>Founded in 2003</strong> by <strong>Laura Gordon </strong>and inspired by her late grandmother,
+              <strong>Founded in 2003</strong> by <strong>Laura Gordon </strong>and inspired by her late grandmother.&nbsp;
                <strong>Gammy’s House</strong> is a corporate foundation of <strong>Gordon & Associates.</strong> It is
                 a <strong>philanthropic organization</strong> dedicated to educating, equipping, and <strong>empowering the next generation of Black entrepreneurs</strong>.
                  Gammy’s House operates as a component fund of the <strong>California Community Foundation</strong>.

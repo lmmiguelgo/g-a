@@ -33,7 +33,7 @@ export default function CtaGammys() {
                         <div className="mt-10 flex items-center  gap-x-6 justify-start">
                             <Link
                                 href="https://www.calfund.org/funds/gammys-house/"
-                                className="rounded-md bg-accent-primary px-3.5 py-2.5 text-sm font-semibold inset-ring inset-ring-white/5 hover:bg-accent-primary/90 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
+                                className="rounded-md bg-accent-primary px-3.5 py-2.5 text-sm font-semibold inset-ring inset-ring-white/5 hover:bg-accent-primary/90 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white animate-jump animate-once animate-delay-2000 animate-duration-2000 "
                             >
                                 {' '}
                                 Donate Now{' '}
@@ -44,17 +44,17 @@ export default function CtaGammys() {
                             </Link>
                         </div>
                         <p className="mt-8 text-lg/8 text-pretty text-foreground text-start">
-                            You can Alternatively, send payable checks to the <strong>California Community Foundation</strong>, noting that the donation is for <strong>Gammy’s House</strong>. Checks should be mailed to: <br />
+                            You can Alternatively, send payable checks to the <strong>California Community Foundation</strong>, noting that the donation is for <strong>Gammy’s House</strong>. <br /> <br /> <strong>Checks should be mailed to:</strong> <br />
                         </p>
 
-                        <address className="mt-8 not-italic">
+                        <address className="mt-4 not-italic">
                             <strong>Gammy’s House – Fund# D805</strong>
                             <br />
                             <strong>c/o California Community Foundation</strong>
                             <br />
                             221 S. Figueroa St., Suite 400
                             <br />
-                            Los Angeles, CA 90012
+                            Los Angeles, CA 90012.
                         </address>
                     </div>
                     <div className="relative mt-16 h-80 lg:mt-8">
@@ -63,7 +63,7 @@ export default function CtaGammys() {
                             src={Pic.GammysSingle}
                             width={1824}
                             height={1080}
-                            className="absolute top-40 left-10 w-80 max-w-none rounded-md"
+                            className="absolute top-40 left-10 w-70 max-w-none rounded-md"
                         />
                     </div>
                 </div>
