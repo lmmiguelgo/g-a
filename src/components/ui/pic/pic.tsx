@@ -19,6 +19,8 @@ import Titlebackground from '@/assets/title-background.png'
 import Gammyshouse from '@/assets//gammys-house.svg'
 import Gammyssingle from '@/assets/gammys-single.svg'
 import Edenglobal from '@/assets/eden-global.svg'
+import Lauragordon from '@/assets/laura.png'
+import Isaacgordon from '@/assets/isaac-gordon.png'
 
 
 export const Pic = {
@@ -43,4 +45,7 @@ export const Pic = {
     GammysHouse: Gammyshouse,
     GammysSingle: Gammyssingle,
     EdenGlobal: Edenglobal,
+    LauraGordon: Lauragordon,
+    IsaacGordon: Isaacgordon
+
 }

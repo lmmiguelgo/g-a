@@ -8,14 +8,15 @@ import {
   Store,
   Handshake,
   Calendar,
-  Phone,
   Menu,
   X,
   ChevronDown,
   BookOpen,
   ShieldCheck,
-  Users
+  UserStar,
+  Sparkles
 } from 'lucide-react'
+
 import Link from 'next/link'
 import Image from 'next/image'
 import { usePathname } from 'next/navigation'
@@ -29,22 +30,23 @@ import { ScrollToPlugin } from "gsap/ScrollToPlugin";
 
 export default function Navbar() {
   const services = [
-  { name: 'Business Management', description: 'Holistic management for Entertainers / Athletes', href: '#', icon: Briefcase },
-  { name: 'Tax Services', description: 'Proactive planning, compliance, and liability minimization', href: '#', icon: Calculator },
-  { name: 'Executive Mentorship', description: 'Performance and wealth strategy mentorship for high-visibility careers', href: '#', icon: GraduationCap },
-  { name: 'Small Business Consulting', description: 'Development from early-stage planning to operational structure', href: '#', icon: Store },
-  { name: 'Strategic Financial Planning', description: 'Align your financial resources with your long-term vision.', href: '#', icon: Handshake },
+  { name: 'Business Management', description: 'Holistic management for Entertainers / Athletes', href: '/services/business-management', icon: Briefcase },
+  { name: 'Tax Services', description: 'Proactive planning, compliance, and liability minimization', href: '/services/tax-services', icon: Calculator },
+  { name: 'Executive Mentorship', description: 'Performance and wealth strategy mentorship for high-visibility careers', href: '/services/executive-mentorship', icon: GraduationCap },
+  { name: 'Small Business Consulting', description: 'Development from early-stage planning to operational structure', href: '/services/small-business-consulting', icon: Store },
+  { name: 'Strategic Financial Planning', description: 'Align your financial resources with your long-term vision.', href: '/services/strategic-financial-planning', icon: Handshake },
 ]
 
 const callsToAction = [
-  { name: 'Schedule a Meeting', href: '#', icon: Calendar },
+  { name: 'Book Consultation', href: 'https://outlook.office365.com/book/GordonAssociates@gordonandassociates.biz/?ismsaljsauthenabled=true', icon: Calendar },
   
 ]
 
 const company = [
   { name: 'Our Story', href: '#', description: 'Discover our journey and values', icon: BookOpen },
   { name: 'Our Standards', href: '#', description: 'Our commitment to excellence', icon: ShieldCheck },
-  { name: 'Leaderships', href: '#', description: 'Meet the team guiding our vision', icon: Users },
+  { name: 'Laura Gordon', href: '#', description: 'Our Founder and CEO', image: Pic.LauraGordon },
+  { name: 'Isaac M', href: '#', description: 'Our Managing Partner', image: Pic.IsaacGordon },
   
 ]
 
@@ -272,9 +274,7 @@ const philanthropy = [
                 </div>
               )}
             </div>
-            <Link href="/press" className={pathname === '/press' ? 'text-white text-md font-normal leading-6 py-2' : 'text-md font-normal leading-6 text-foreground/80 py-2 hover:text-white transition-colors duration-300'}>
-              Press
-            </Link>
+            
 
             {/* Company Dropdown (Hover) */}
             <div 
@@ -299,7 +299,15 @@ const philanthropy = [
                           className="group relative flex items-center gap-x-6 rounded-lg p-2 text-md leading-6 hover:bg-white/5"
                         >
                           <div className="flex h-20 w-20 flex-none items-center justify-center rounded-lg bg-white/5 group-hover:bg-white/10">
-                            <item.icon className="h-16 w-6 text-foreground/70 group-hover:text-white transition-colors duration-300" aria-hidden="true" />
+                            {'image' in item && item.image ? (
+                                <Image 
+                                    src={item.image} 
+                                    alt={item.name} 
+                                    className="h-auto w-auto  object-cover grayscale group-hover:grayscale-0 transition-all duration-300" 
+                                />
+                            ) : (
+                                <item.icon className="h-16 w-6 text-foreground/70 group-hover:text-white transition-colors duration-300" aria-hidden="true" />
+                            )}
                           </div>
                           <div className="flex-auto">
                             <Link href={item.href} className="block font-semibold text-foreground hover:text-white transition-colors duration-300">
@@ -326,7 +334,11 @@ const philanthropy = [
                   </div>
                 </div>
               )}
+              
             </div>
+            <Link href="/press" className={pathname === '/press' ? 'text-white text-md font-normal leading-6 py-2' : 'text-md font-normal leading-6 text-foreground/80 py-2 hover:text-white transition-colors duration-300'}>
+              Press
+            </Link>
           </div>
 
           <div className="hidden lg:flex lg:flex-1 lg:justify-end">

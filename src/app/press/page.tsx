@@ -1,11 +1,11 @@
-import EdenGlobalContent from "@/components/blocks/edenGlobalContent/edenGlobalContent"
+import ServiceSingle from "@/components/blocks/serviceSingle/serviceSingle"
 
 
 const Press = () => {
   return (
 
     <>
-    <EdenGlobalContent />
+    <ServiceSingle />
       
     </>
     
