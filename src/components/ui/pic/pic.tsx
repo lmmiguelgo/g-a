@@ -2,11 +2,16 @@ import Logowide from '@/assets/wide-logo.svg'
 import background from '@/assets/background.jpg'
 import LogoSquare from '@/assets/square-logo.svg'
 import Businessmanagement from '@/assets/business-management.png'
+import Businessmanagementmobile from '@/assets/business-management-mobile.png'
 import Taxservices from '@/assets/tax-services.png'
+import Taxservicesmobile from '@/assets/tax-services-mobile.png' 
 import Executivementorship from '@/assets/executive-mentorship.png'
+import Executivementorshipmobile from '@/assets/executive-mentorship-mobile.png'
 import Smallbusiness from '@/assets/small-business.png'
+import smallbusinessmobile from '@/assets/small-business-mobile.png'
 import Partnership from '@/assets/partnership.png'
 import Financialplanning from '@/assets/financial-planning.png'
+import Financialplanningmobile from '@/assets/financial-planning-mobile.png'
 import UnitedstatesFlag from '@/assets/US.png'
 import Usexample from '@/assets/us-example.png'
 import Zambiaflag from '@/assets/zambia.png'
@@ -28,11 +33,16 @@ export const Pic = {
     LogoSquare: LogoSquare,
     Background: background, 
     BusinessManagement: Businessmanagement,
+    BusinessManagementMobile: Businessmanagementmobile,
     TaxServices: Taxservices,
+    TaxServicesMobile: Taxservicesmobile,
     ExecutiveMentorship: Executivementorship,
+    ExecutiveMentorshipMobile: Executivementorshipmobile,
     SmallBusiness: Smallbusiness,
+    SmallBusinessMobile: smallbusinessmobile,
     Partnership: Partnership,
     FinancialPlanning: Financialplanning,
+    FinancialPlanningMobile: Financialplanningmobile,
     UnitedStatesFlag: UnitedstatesFlag,
     ZambiaFlag: Zambiaflag,
     KenyaFlag: Kenyaflag,

@@ -32,7 +32,7 @@ export default function Services() {
 
 
                                 <div className="bg-second-bg p-10 pt-4 z-2">
-                                    <h3 className="text-md/4 font-bold text-accent-secondary">Service 01</h3>
+                                    
                                     <p className="mt-2 text-lg font-bold tracking-tight text-foreground">Business Management</p>
                                     <p className="mt-2 max-w-lg text-md/6 text-foreground">
                                         Holistic management for entertainers/athletes, including day-to-day operations and income strategy.
@@ -55,7 +55,7 @@ export default function Services() {
                                     className="h-80 object-cover object-left lg:object-right lg:grayscale-40 opacity-80 group-hover:scale-110 group-hover:grayscale-0 transition-all duration-400 z-1"
                                 />
                                 <div className="bg-second-bg p-10 pt-4 z-2">
-                                    <h3 className="text-md/4 font-bold text-accent-secondary">Service 02</h3>
+                                   
                                     <p className="mt-2 text-lg font-bold tracking-tight text-foreground">Tax Services</p>
                                     <p className="mt-2 max-w-lg text-md/6 text-foreground">
                                         Proactive planning, compliance, and liability minimization for individuals and businesses.
@@ -76,8 +76,8 @@ export default function Services() {
                                     className="h-80 object-cover object-left lg:object-center opacity-80 group-hover:scale-110 lg:grayscale-40 group-hover:grayscale-0 transition-all duration-400 z-1"
                                 />
                                 <div className="bg-second-bg p-10 pt-4 z-2">
-                                    <h3 className="text-md/4 font-bold text-accent-secondary">Service 03</h3>
-                                    <p className="mt-2 text-lg font-medium tracking-tight text-foreground">Executive Mentorship</p>
+                                    
+                                    <p className="mt-2 text-lg  font-bold tracking-tight text-foreground">Executive Mentorship</p>
                                     <p className="mt-2 max-w-lg text-md/6 text-foreground">
                                         Performance and wealth strategy mentorship for high-visibility careers.
                                     </p>
@@ -96,8 +96,8 @@ export default function Services() {
                                     className="h-80 object-cover opacity-80 group-hover:scale-110 lg:grayscale-40 group-hover:grayscale-0 transition-all duration-400 z-1"
                                 />
                                 <div className="bg-second-bg p-10 pt-4 z-2">
-                                    <h3 className="text-md/4 font-bold text-accent-secondary">Service 04</h3>
-                                    <p className="mt-2 text-lg font-medium tracking-tight text-foreground">Small Business Consulting</p>
+                                    
+                                    <p className="mt-2 text-lg font-bold tracking-tight text-foreground">Small Business Consulting</p>
                                     <p className="mt-2 max-w-lg text-md/6 text-foreground">
                                         Strategic development from early-stage planning to operational structure.
                                     </p>
@@ -116,8 +116,8 @@ export default function Services() {
                                     className="h-80 object-cover opacity-80 group-hover:scale-110 lg:grayscale-40 group-hover:grayscale-0 transition-all duration-400 z-1"
                                 />
                                 <div className="bg-second-bg p-10 pt-4 z-2">
-                                    <h3 className="text-md/4 font-bold text-accent-secondary">Service 05</h3>
-                                    <p className="mt-2 text-lg font-medium tracking-tight text-foreground">Strategic Financial Planning</p>
+                                    
+                                    <p className="mt-2 text-lg font-bold tracking-tight text-foreground">Strategic Financial Planning</p>
                                     <p className="mt-2 max-w-lg text-md/6 text-foreground">
                                         Align your financial resources with your long-term vision. 
                                     </p>

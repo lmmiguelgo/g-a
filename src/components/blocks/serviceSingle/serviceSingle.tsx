@@ -15,29 +15,39 @@ const stats = [
 
 export default function ServiceSingle({ Servicenumber, Title, children, Picture }: { Servicenumber?: string; Title?: string; children?: React.ReactNode; Picture?: any }) {
 
-    
+
     gsap.registerPlugin(ScrollToPlugin);
 
     useGSAP(() => {
-         gsap.from( "#service-image-container", {
+        gsap.from("#service-image-container", {
             translateX: -400,
             opacity: 0,
-            duration: 1.5,
-            ease: "power3.out", 
+            duration: 1,
+            ease: "power3.out",
+        })
+        gsap.from("#service-text-portion", {
+
+            scale: 0.8,
+            opacity: 0,
+            duration: 1,
+            ease: "power3.out",
         })
     }, []);
 
 
     const scrollToServices = () => {
+        gsap.set(window, {
+            scrollTo: { y: "2800" }
+        })
         gsap.to(window, {
+            delay: 1,
             duration: 2,
-
-            scrollTo: { y: "5200" }
+            scrollTo: { y: "5400" }
         })
     }
 
     return (
-        <div className="fixed w-full bg-background py-24 sm:py-32">
+        <div className="fixed max-h-screen overflow-scroll lg:overflow-hidden w-full bg-background py-24 sm:py-32">
             <div className="mx-auto max-w-7xl px-6 lg:px-8">
                 <div className="mx-auto grid max-w-2xl grid-cols-1 items-start gap-x-8 gap-y-16 sm:gap-y-24 lg:mx-0 lg:max-w-none lg:grid-cols-2">
                     <div id="service-image-container" className="lg:pr-4">
@@ -46,29 +56,25 @@ export default function ServiceSingle({ Servicenumber, Title, children, Picture 
                                 <Image
                                     alt=""
                                     src={Picture}
-                                    className="absolute inset-0 size-full rounded-3xl object-cover brightness-160 grayscale-100 "
-                                    width={100}
+                                    className="absolute inset-0 size-full rounded-3xl object-cover"
+                                    fill
+                                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                                 />
                             )}
-                            <div className="absolute inset-0 bg-background mix-blend-multiply" />
+                            <div className="absolute inset-0 bg-background/12 mix-blend-multiply" />
                             <div
                                 aria-hidden="true"
                                 className="absolute top-1/2 left-1/2 -ml-16 -translate-x-1/2 -translate-y-1/2 transform-gpu blur-3xl"
                             >
-                                <div
-                                    style={{
-                                        clipPath:
-                                            'polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)',
-                                    }}
-                                    className="aspect-square w-274.25 bg-linear-to-tr from-[#b00023e7] to-[#1a1a1a2e] opacity-40"
-                                />
+
                             </div>
+
 
                         </div>
                     </div>
-                    <div>
+                    <div id="service-text-portion">
                         <div className="text-lg/7 text-foreground/80 lg:max-w-lg">
-                            <p className="text-lg/7 font-bold text-accent-primary">Service {Servicenumber}</p>
+                            <p className="text-lg/7 font-bold text-accent-primary">Services</p>
                             <h1 className="mt-2 text-4xl font-semibold tracking-tight text-pretty text-foreground sm:text-5xl">
                                 {Title}
                             </h1>
@@ -83,10 +89,11 @@ export default function ServiceSingle({ Servicenumber, Title, children, Picture 
                             >
                                 {' '}
                                 Contact us{' '}
-                            </Link>
-                            <Link onClick={() => {scrollToServices()}} href={"/"} className="text-sm/6 font-semibold hover:text-white">
-                                Other Services
                                 <span className="pl-2" aria-hidden="true">→</span>
+                            </Link>
+                            <Link onClick={() => { scrollToServices() }} href={"/"} className="text-sm/6 font-semibold hover:text-white">
+                                Other Services
+
                             </Link>
                         </div>
 
