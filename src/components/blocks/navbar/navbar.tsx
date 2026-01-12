@@ -32,7 +32,7 @@ export default function Navbar() {
     { name: 'Tax Services', description: 'Proactive planning, compliance, and liability minimization', href: '/services/tax-services', icon: Calculator },
     { name: 'Executive Mentorship', description: 'Performance and wealth strategy mentorship for high-visibility careers', href: '/services/executive-mentorship', icon: GraduationCap },
     { name: 'Small Business Consulting', description: 'Development from early-stage planning to operational structure', href: '/services/small-business-consulting', icon: Store },
-    { name: 'Strategic Financial Planning', description: 'Align your financial resources with your long-term vision.', href: '/services/strategic-financial-planning', icon: Handshake },
+    { name: 'Above the Neck, Inc.', description: 'Gordon & Associates is proud to partner with Above the Neck, Inc.', href: '/services/above-the-neck', icon: Handshake },
   ]
 
   const callsToAction = [
@@ -41,8 +41,7 @@ export default function Navbar() {
   ]
 
   const company = [
-    { name: 'Our Story', href: '#', description: 'Discover our journey and values', icon: BookOpen },
-    { name: 'Our Standards', href: '#', description: 'Our commitment to excellence', icon: ShieldCheck },
+    { name: 'Our Story & Standards', href: '#', description: 'Discover our journey, commitment and values', icon: BookOpen },
     { name: 'Laura Gordon', href: '#', description: 'Our Founder and CEO', image: Pic.LauraGordon },
     { name: 'Isaac M', href: '#', description: 'Our Managing Partner', image: Pic.IsaacGordon },
 

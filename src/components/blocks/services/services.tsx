@@ -107,7 +107,7 @@ export default function Services() {
                         </Link>
 
 
-                        <Link href="/services/strategic-financial-planning" id="home-service5" className="group relative lg:col-span-2 -translate-x-200 opacity-0 lg:translate-x-0 lg:opacity-100 ">
+                        <Link href="/services/above-the-neck" id="home-service5" className="group relative lg:col-span-2 -translate-x-200 opacity-0 lg:translate-x-0 lg:opacity-100 ">
                             <div className="absolute inset-0 rounded-lg bg-second-bg max-lg:rounded-b-2xl lg:rounded-br-2xl" />
                             <div className="relative flex h-full flex-col overflow-hidden rounded-[calc(var(--radius-lg)+1px)] max-lg:rounded-b-[calc(1rem+1px)] lg:rounded-br-[calc(1rem+1px)]">
                                 <Image
@@ -117,9 +117,9 @@ export default function Services() {
                                 />
                                 <div className="bg-second-bg p-10 pt-4 z-2">
                                     
-                                    <p className="mt-2 text-lg font-bold tracking-tight text-foreground">Strategic Financial Planning</p>
+                                    <p className="mt-2 text-lg font-bold tracking-tight text-foreground">Above the Neck, Inc.</p>
                                     <p className="mt-2 max-w-lg text-md/6 text-foreground">
-                                        Align your financial resources with your long-term vision. 
+                                       Gordon & Associates is proud to partner with Above the Neck, Inc. 
                                     </p>
                                 </div>
                             </div>

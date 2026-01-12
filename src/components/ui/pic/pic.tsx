@@ -27,6 +27,8 @@ import Edenglobal from '@/assets/eden-global.svg'
 import Lauragordon from '@/assets/laura.png'
 import Isaacgordon from '@/assets/isaac-gordon.png'
 import Pressimage from '@/assets/press.png'
+import Lauragordonfull from '@/assets/laura-gordon-full.webp'
+import Isaacgordonfull from '@/assets/isaac-gordon-full.png'
 
 
 export const Pic = {
@@ -59,6 +61,6 @@ export const Pic = {
     LauraGordon: Lauragordon,
     IsaacGordon: Isaacgordon,
     PressImage: Pressimage,
-    
-
+    LauraGordonFull: Lauragordonfull,
+    IsaacGordonFull: Isaacgordonfull,
 }
