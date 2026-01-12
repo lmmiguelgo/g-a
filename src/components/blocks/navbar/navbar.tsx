@@ -231,55 +231,7 @@ export default function Navbar() {
             </div>
 
             {/* Philanthropy Dropdown (Hover) */}
-            <div
-              className="relative"
-              onMouseEnter={() => handleMouseEnter('philanthropy')}
-              onMouseLeave={handleMouseLeave}
-            >
-              <Link href="/" onClick={scrollToPhilanthropy} className={`flex items-center gap-x-1 text-md font-normal leading-6 text-foreground/80 outline-none py-2 transition-colors duration-300 cursor-pointer  ${hoveredDropdown === 'philanthropy' ? 'text-white ' : ''}`}>
-                Philanthropy
-                <ChevronDown className={`h-5 w-5 flex-none text-foreground/60 transition-transform ${hoveredDropdown === 'philanthropy' ? 'rotate-180' : ''}`} aria-hidden="true" />
-              </Link>
-
-              {/* Philanthropy Flyout Menu */}
-              {hoveredDropdown === 'philanthropy' && (
-                <div className="absolute left-1/2 top-full z-10 w-screen max-w-md -translate-x-1/2 pt-4">
-                  <div className="overflow-hidden rounded-lg bg-second-bg/80 backdrop-blur-sm ring-1 ring-white/10 shadow-2xl">
-                    <div className="p-4">
-                      {philanthropy.map((item) => (
-                        <div
-                          key={item.name}
-                          className="group relative flex items-center gap-x-6 rounded-lg p-2 text-md leading-6 hover:bg-white/5"
-                        >
-                          <div className="flex h-20 w-20 flex-none items-center justify-center rounded-lg bg-white/5 group-hover:bg-white/10">
-                            <Image src={item.image} alt={item.name} className="h-8 w-8 object-contain group-hover:brightness-100 brightness-80 transition-all duration-300" />
-                          </div>
-                          <div className="flex-auto">
-                            <Link onClick={item.scrollTo} href={"/"} className="block font-semibold text-foreground hover:text-white transition-colors duration-300">
-                              {item.name}
-                              <span className="absolute inset-0" />
-                            </Link>
-                            <p className="mt-1 text-foreground/70 group-hover:text-white">{item.description}</p>
-                          </div>
-                        </div>
-                      ))}
-                    </div>
-                    <div className="grid grid-cols-1 divide-x divide-white/10 bg-white/5">
-                      {callsToAction.map((item) => (
-                        <Link
-                          key={item.name}
-                          href={item.href}
-                          className="group flex items-center justify-center gap-x-2.5 p-3 text-md font-normal leading-6 text-foreground hover:bg-white/10 hover:text-white"
-                        >
-                          <item.icon className="h-5 w-5 flex-none text-foreground/60 group-hover:text-white" aria-hidden="true" />
-                          {item.name}
-                        </Link>
-                      ))}
-                    </div>
-                  </div>
-                </div>
-              )}
-            </div>
+           
 
 
             {/* Company Dropdown (Hover) */}
@@ -341,6 +293,58 @@ export default function Navbar() {
                 </div>
               )}
 
+              
+
+            </div>
+
+             <div
+              className="relative"
+              onMouseEnter={() => handleMouseEnter('philanthropy')}
+              onMouseLeave={handleMouseLeave}
+            >
+              <Link href="/" onClick={scrollToPhilanthropy} className={`flex items-center gap-x-1 text-md font-normal leading-6 text-foreground/80 outline-none py-2 transition-colors duration-300 cursor-pointer  ${hoveredDropdown === 'philanthropy' ? 'text-white ' : ''}`}>
+                Philanthropy
+                <ChevronDown className={`h-5 w-5 flex-none text-foreground/60 transition-transform ${hoveredDropdown === 'philanthropy' ? 'rotate-180' : ''}`} aria-hidden="true" />
+              </Link>
+
+              {/* Philanthropy Flyout Menu */}
+              {hoveredDropdown === 'philanthropy' && (
+                <div className="absolute left-1/2 top-full z-10 w-screen max-w-md -translate-x-1/2 pt-4">
+                  <div className="overflow-hidden rounded-lg bg-second-bg/80 backdrop-blur-sm ring-1 ring-white/10 shadow-2xl">
+                    <div className="p-4">
+                      {philanthropy.map((item) => (
+                        <div
+                          key={item.name}
+                          className="group relative flex items-center gap-x-6 rounded-lg p-2 text-md leading-6 hover:bg-white/5"
+                        >
+                          <div className="flex h-20 w-20 flex-none items-center justify-center rounded-lg bg-white/5 group-hover:bg-white/10">
+                            <Image src={item.image} alt={item.name} className="h-8 w-8 object-contain group-hover:brightness-100 brightness-80 transition-all duration-300" />
+                          </div>
+                          <div className="flex-auto">
+                            <Link onClick={item.scrollTo} href={"/"} className="block font-semibold text-foreground hover:text-white transition-colors duration-300">
+                              {item.name}
+                              <span className="absolute inset-0" />
+                            </Link>
+                            <p className="mt-1 text-foreground/70 group-hover:text-white">{item.description}</p>
+                          </div>
+                        </div>
+                      ))}
+                    </div>
+                    <div className="grid grid-cols-1 divide-x divide-white/10 bg-white/5">
+                      {callsToAction.map((item) => (
+                        <Link
+                          key={item.name}
+                          href={item.href}
+                          className="group flex items-center justify-center gap-x-2.5 p-3 text-md font-normal leading-6 text-foreground hover:bg-white/10 hover:text-white"
+                        >
+                          <item.icon className="h-5 w-5 flex-none text-foreground/60 group-hover:text-white" aria-hidden="true" />
+                          {item.name}
+                        </Link>
+                      ))}
+                    </div>
+                  </div>
+                </div>
+              )}
             </div>
             <Link onClick={scrollToHome} href="/press" className={pathname === '/press' ? 'text-white text-md font-normal leading-6 py-2' : 'text-md font-normal leading-6 text-foreground/80 py-2 hover:text-white transition-colors duration-300'}>
               Press
