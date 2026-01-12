@@ -26,6 +26,7 @@ import Gammyssingle from '@/assets/gammys-single.svg'
 import Edenglobal from '@/assets/eden-global.svg'
 import Lauragordon from '@/assets/laura.png'
 import Isaacgordon from '@/assets/isaac-gordon.png'
+import Pressimage from '@/assets/press.png'
 
 
 export const Pic = {
@@ -56,6 +57,8 @@ export const Pic = {
     GammysSingle: Gammyssingle,
     EdenGlobal: Edenglobal,
     LauraGordon: Lauragordon,
-    IsaacGordon: Isaacgordon
+    IsaacGordon: Isaacgordon,
+    PressImage: Pressimage,
+    
 
 }

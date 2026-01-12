@@ -1,22 +1,47 @@
+"use client";
+
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { useGSAP } from "@gsap/react";
+
+
+gsap.registerPlugin(ScrollTrigger);
+
 export default function ContactPage() {
+
+  useGSAP(() => {
+    const tl = gsap.timeline({
+      scrollTrigger: {
+        scrub: 1,
+        start: "top top",
+        end: "+=400",
+        trigger: "body",
+      }
+    });
+
+    tl.to('#contact-page', {
+      duration: 1,
+      translateY: -100,
+    });
+  }, []);
+
+  
   return (
-    <div className="relative bg-background">
+    <div id="contact-page" className="fixed w-full flex flex-col-reverse lg:block  bg-background">
       <div className="lg:absolute lg:inset-0 lg:left-1/2">
         <img
           alt=""
           src="https://images.unsplash.com/photo-1559136555-9303baea8ebd?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&crop=focalpoint&fp-x=.4&w=2560&h=3413&&q=80"
-          className="h-64 w-full bg-second-bg object-cover sm:h-80 lg:absolute lg:h-full"
+          className="h-screen w-full bg-second-bg object-cover sm:h-80 lg:absolute lg:h-full opacity-80"
         />
       </div>
-      <div className="pt-16 pb-24 sm:pt-24 sm:pb-32 lg:mx-auto lg:grid lg:max-w-7xl lg:grid-cols-2 lg:pt-32">
+      <div className="pt-32 pb-24 sm:pt-24 sm:pb-32 lg:mx-auto lg:grid lg:max-w-7xl lg:grid-cols-2 lg:pt-32">
         <div className="px-6 lg:px-8">
           <div className="mx-auto max-w-xl lg:mx-0 lg:max-w-lg">
             <h2 className="text-4xl font-semibold tracking-tight text-pretty text-foreground sm:text-5xl">
               Let's work together
             </h2>
-            <p className="mt-2 text-lg/8 text-accent-secondary">
-              Proin volutpat consequat porttitor cras nullam gravida at orci molestie a eu arcu sed ut tincidunt magna.
-            </p>
+            
             <form action="#" method="POST" className="mt-16">
               <div className="grid grid-cols-1 gap-x-8 gap-y-6 sm:grid-cols-2">
                 <div>
@@ -65,6 +90,7 @@ export default function ContactPage() {
                   <label htmlFor="company" className="block text-sm/6 font-semibold text-foreground">
                     Company
                   </label>
+                  
                   <div className="mt-2.5">
                     <input
                       id="company"
@@ -80,9 +106,7 @@ export default function ContactPage() {
                     <label htmlFor="phone" className="block font-semibold text-foreground">
                       Phone
                     </label>
-                    <p id="phone-description" className="text-accent-secondary">
-                      Optional
-                    </p>
+                    
                   </div>
                   <div className="mt-2.5">
                     <input
@@ -115,52 +139,7 @@ export default function ContactPage() {
                     />
                   </div>
                 </div>
-                <fieldset className="sm:col-span-2">
-                  <legend className="block text-sm/6 font-semibold text-foreground">Expected budget</legend>
-                  <div className="mt-4 space-y-4 text-sm/6 text-accent-secondary">
-                    <div className="flex gap-x-2.5">
-                      <input
-                        defaultValue="under_25k"
-                        defaultChecked
-                        id="budget-under-25k"
-                        name="budget"
-                        type="radio"
-                        className="relative mt-1 size-4 appearance-none rounded-full border border-accent-secondary before:absolute before:inset-1 before:rounded-full before:bg-white not-checked:before:hidden checked:border-accent-primary checked:bg-accent-primary focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent-primary disabled:border-foreground/10 disabled:bg-second-bg/50 disabled:before:bg-accent-secondary forced-colors:appearance-auto forced-colors:before:hidden"
-                      />
-                      <label htmlFor="budget-under-25k">Less than $25K</label>
-                    </div>
-                    <div className="flex gap-x-2.5">
-                      <input
-                        defaultValue="25k-50k"
-                        id="budget-25k-50k"
-                        name="budget"
-                        type="radio"
-                        className="relative mt-1 size-4 appearance-none rounded-full border border-accent-secondary before:absolute before:inset-1 before:rounded-full before:bg-white not-checked:before:hidden checked:border-accent-primary checked:bg-accent-primary focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent-primary disabled:border-foreground/10 disabled:bg-second-bg/50 disabled:before:bg-accent-secondary forced-colors:appearance-auto forced-colors:before:hidden"
-                      />
-                      <label htmlFor="budget-25k-50k">$25K – $50K</label>
-                    </div>
-                    <div className="flex gap-x-2.5">
-                      <input
-                        defaultValue="50k-100k"
-                        id="budget-50k-100k"
-                        name="budget"
-                        type="radio"
-                        className="relative mt-1 size-4 appearance-none rounded-full border border-accent-secondary before:absolute before:inset-1 before:rounded-full before:bg-white not-checked:before:hidden checked:border-accent-primary checked:bg-accent-primary focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent-primary disabled:border-foreground/10 disabled:bg-second-bg/50 disabled:before:bg-accent-secondary forced-colors:appearance-auto forced-colors:before:hidden"
-                      />
-                      <label htmlFor="budget-50k-100k">$50K – $100K</label>
-                    </div>
-                    <div className="flex gap-x-2.5">
-                      <input
-                        defaultValue="over_100k"
-                        id="budget-over-100k"
-                        name="budget"
-                        type="radio"
-                        className="relative mt-1 size-4 appearance-none rounded-full border border-accent-secondary before:absolute before:inset-1 before:rounded-full before:bg-white not-checked:before:hidden checked:border-accent-primary checked:bg-accent-primary focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent-primary disabled:border-foreground/10 disabled:bg-second-bg/50 disabled:before:bg-accent-secondary forced-colors:appearance-auto forced-colors:before:hidden"
-                      />
-                      <label htmlFor="budget-over-100k">$100K+</label>
-                    </div>
-                  </div>
-                </fieldset>
+                
               </div>
               <div className="mt-10 flex justify-end border-t border-foreground/10 pt-8">
                 <button

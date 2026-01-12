@@ -203,17 +203,17 @@ export default function Home() {
         } , "<");
 
         tl.to('#philanthropy-section', {
-          duration: 2,
+          duration: 1,
           scale: 1.2,
           translateX: 400,
           translateY: -80,
-          ease: "circ",
+          
         } );
 
         tl.to('#philanthropy-section', {
-          duration: 4,
+          duration: 1,
           translateY: -600,
-          ease: "circ",
+          
         } );
 
         tl.to('#philanthropy-section', {
@@ -442,8 +442,8 @@ export default function Home() {
         });
 
         tl.to('#philanthropy-section', {
-          duration: 4,
-          translateY: -1800,
+          duration: 1.8,
+          translateY: -1680,
           
           
         });

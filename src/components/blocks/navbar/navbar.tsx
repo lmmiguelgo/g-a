@@ -237,7 +237,7 @@ export default function Navbar() {
               onMouseEnter={() => handleMouseEnter('philanthropy')}
               onMouseLeave={handleMouseLeave}
             >
-              <Link onClick={scrollToPhilanthropy} href={"/"} className={`flex items-center gap-x-1 text-md font-normal leading-6 text-foreground/80 outline-none py-2 transition-colors duration-300 cursor-pointer  ${hoveredDropdown === 'philanthropy' ? 'text-white ' : ''}`}>
+              <Link href="/" onClick={scrollToPhilanthropy} className={`flex items-center gap-x-1 text-md font-normal leading-6 text-foreground/80 outline-none py-2 transition-colors duration-300 cursor-pointer  ${hoveredDropdown === 'philanthropy' ? 'text-white ' : ''}`}>
                 Philanthropy
                 <ChevronDown className={`h-5 w-5 flex-none text-foreground/60 transition-transform ${hoveredDropdown === 'philanthropy' ? 'rotate-180' : ''}`} aria-hidden="true" />
               </Link>
@@ -343,13 +343,13 @@ export default function Navbar() {
               )}
 
             </div>
-            <Link href="/press" className={pathname === '/press' ? 'text-white text-md font-normal leading-6 py-2' : 'text-md font-normal leading-6 text-foreground/80 py-2 hover:text-white transition-colors duration-300'}>
+            <Link onClick={scrollToHome} href="/press" className={pathname === '/press' ? 'text-white text-md font-normal leading-6 py-2' : 'text-md font-normal leading-6 text-foreground/80 py-2 hover:text-white transition-colors duration-300'}>
               Press
             </Link>
           </div>
 
           <div className="hidden lg:flex lg:flex-1 lg:justify-end">
-            <Link href="/contact" className=" inline-flex items-center gap-x-2 rounded-md bg-accent-primary px-3.5 py-2.5 text-sm font-semibold text-foreground hover:bg-accent-primary/88">
+            <Link onClick={scrollToHome} href="/contact" className=" inline-flex items-center gap-x-2 rounded-md bg-accent-primary px-3.5 py-2.5 text-sm font-semibold text-foreground hover:bg-accent-primary/88">
               Contact us <span aria-hidden="true">&rarr;</span>
             </Link>
           </div>
