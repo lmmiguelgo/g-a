@@ -4,11 +4,11 @@ import Image from 'next/image'
 
 export default function CompanyContent() {
   return (
-    <div className="bg-background pb-24 pt-24 sm:pb-32 sm:pt-32">
+    <div id='company-content' className="fixed hidden opacity-0 w-full bg-background pb-24 pt-24 sm:pb-32 sm:pt-32">
       {/* 1. COMPANY OVERVIEW SECTION */}
       <div className="mx-auto max-w-7xl px-6 lg:px-8 w-full">
-        <div className="mx-auto max-w-7xl lg:mx-0">
-          <h2 className="text-base/7 font-semibold text-accent-primary">The Company</h2>
+        <div id='company-content-header' className="mx-auto max-w-7xl lg:mx-0 -translate-x-400">
+          <h2 className="text-lg/7 font-bold text-accent-primary">The Company</h2>
           <p className="mt-2 text-4xl font-semibold tracking-tight text-pretty text-foreground sm:text-5xl">
             Gordon & Associates
           </p>
@@ -26,28 +26,28 @@ export default function CompanyContent() {
               <strong className="text-foreground">Gordon & Associates</strong> is committed to conducting business at the highest standards of <strong className="text-foreground">integrity, professionalism, and excellence.</strong> To maintain that standard, the firm recruits and employs high caliber professional staff consisting of <strong className="text-foreground">CPAs, MBAs, MDivs, DMins, MBTs, and JDs</strong> with over <strong className="text-foreground">125 years of combined experience.</strong>
             </p>
             <p>
-              <strong className="text-foreground">Gordon & Associates’</strong> mission is to provide business management, accounting, and tax services at the highest level of professionalism and integrity, based on sound business practices and <strong className="text-foreground">biblical principles.</strong>
+              <strong className="text-foreground">Gordon & Associates</strong> mission is to provide business management, accounting, and tax services at the highest level of professionalism and integrity, based on sound business practices and <strong className="text-foreground">biblical principles.</strong>
             </p>
           </div>
         </div>
         
         {/* Services Checklist */}
         <div className="mx-auto mt-10 max-w-2xl lg:mx-0 lg:max-w-none">
-          <div className="grid grid-cols-1 gap-x-8 gap-y-6 text-base/7 font-semibold text-foreground sm:grid-cols-2 md:flex lg:gap-x-10">
-            <div className="flex gap-x-3">
-              <CheckCircle aria-hidden="true" className="mt-1 size-5 flex-none text-accent-primary" />
+          <div className="grid grid-cols-1 gap-x-8 gap-y-6 text-xl/7 font-bold text-foreground sm:grid-cols-2 md:flex lg:gap-x-10">
+            <div id='company-content-s1' className="flex gap-x-3 items-center translate-x-400 opacity-0">
+              <CheckCircle aria-hidden="true" className="mt-1 size-12 flex-none text-accent-primary" />
               Wealth Management
             </div>
-            <div className="flex gap-x-3">
-              <CheckCircle aria-hidden="true" className="mt-1 size-5 flex-none text-accent-primary" />
+            <div id='company-content-s2' className="flex gap-x-3 items-center translate-x-400 opacity-0">
+              <CheckCircle aria-hidden="true" className="mt-1 size-12 flex-none text-accent-primary" />
               Tax Planning & Prep
             </div>
-            <div className="flex gap-x-3">
-              <CheckCircle aria-hidden="true" className="mt-1 size-5 flex-none text-accent-primary" />
+            <div id='company-content-s3' className="flex gap-x-3 items-center translate-x-400 opacity-0">
+              <CheckCircle aria-hidden="true" className="mt-1 size-12 flex-none text-accent-primary" />
               Business Consulting
             </div>
-            <div className="flex gap-x-3">
-              <CheckCircle aria-hidden="true" className="mt-1 size-5 flex-none text-accent-primary" />
+            <div id='company-content-s4' className="flex gap-x-3 items-center translate-x-400 opacity-0">
+              <CheckCircle aria-hidden="true" className="mt-1 size-12 flex-none text-accent-primary" />
               Executive Mentoring
             </div>
           </div>
@@ -63,11 +63,11 @@ export default function CompanyContent() {
         <div className="mx-auto grid max-w-2xl grid-cols-1 items-start gap-x-12 gap-y-16 lg:mx-0 lg:max-w-none lg:grid-cols-2">
           
           {/* Laura's Image */}
-          <div className="relative aspect-3/2 w-full lg:aspect-auto lg:h-full">
+          <div id='company-content-laura-pic' className="relative aspect-8/9 w-full lg:aspect-auto lg:h-full -translate-x-400 opacity-0">
             <Image
               alt="Laura W. Gordon"
               src={Pic.LauraGordonFull}
-              className="absolute inset-0 size-full rounded-2xl bg-second-bg object-cover shadow-2xl"
+              className="absolute inset-0 size-full rounded-2xl bg-second-bg object-cover object-top shadow-2xl"
             />
             {/* Floating Mission Quote overlapping the image */}
             <div className="absolute -bottom-12 left-6 right-6 rounded-xl bg-accent-primary p-6 shadow-lg sm:left-12 sm:right-auto sm:max-w-sm">
@@ -78,11 +78,11 @@ export default function CompanyContent() {
           </div>
 
           {/* Laura's Bio */}
-          <div className="pt-10 lg:pt-0 lg:pl-8">
+          <div id='company-content-laura-bio' className="pt-10 lg:pt-0 lg:pl-8 translate-x-400 opacity-0">
             <h2 className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl">Laura W. Gordon</h2>
-            <p className="mt-2 text-lg/7 font-semibold text-accent-primary">Founder and CEO</p>
+            <p className="mt-2 text-lg/7 font-bold text-accent-primary">Founder and CEO</p>
             
-            <div className="mt-6 space-y-6 text-base/7 text-foreground">
+            <div className="mt-6 space-y-6 text-lg/7 text-foreground">
               <p>
                 <strong className="text-foreground">Laura W. Gordon</strong> is a <strong className="text-foreground">Certified Public Accountant</strong> licensed in the state of California and is a <strong className="text-foreground">licensed minister</strong> in the marketplace.
               </p>
@@ -111,11 +111,11 @@ export default function CompanyContent() {
         <div className="mx-auto grid max-w-2xl grid-cols-1 items-start gap-x-12 gap-y-16 lg:mx-0 lg:max-w-none lg:grid-cols-2">
           
           {/* Isaac's Bio - Order 2 on mobile, Order 1 on Desktop */}
-          <div className="order-2 lg:order-1 lg:pr-8">
+          <div id='company-content-isaac-bio' className="order-2 lg:order-1 lg:pr-8 -translate-x-400 opacity-0">
             <h2 className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl">Isaac M. Gordon</h2>
-            <p className="mt-2 text-lg/7 font-semibold text-accent-primary">Managing Partner</p>
+            <p className="mt-2 text-lg/7 font-bold text-accent-primary">Managing Partner</p>
             
-            <div className="mt-6 space-y-6 text-base/7 text-foreground">
+            <div className="mt-6 space-y-6 text-lg/7 text-foreground">
               <p>
                 <strong className="text-foreground">Isaac M. Gordon’s</strong> career has been shaped by a rare mix of athletic discipline, academic excellence, and a genuine commitment to helping people navigate their financial lives with confidence. After spending his collegiate years at UTEP as a <strong className="text-foreground">scholar‑athlete</strong> and playing professional basketball in Europe, he transitioned into the financial world with the same drive that defined him on the court. Today, he serves as <strong className="text-foreground">Managing Partner</strong> of Gordon & Associates, An Accountancy Corporation where he advises high‑profile and high‑net‑worth clients on everything from tax strategy to long‑term financial planning.
               </p>
@@ -136,7 +136,7 @@ export default function CompanyContent() {
           </div>
 
           {/* Isaac's Image - Order 1 on mobile, Order 2 on Desktop */}
-          <div className="order-1 relative aspect-3/2 w-full lg:order-2 lg:aspect-auto lg:h-full">
+          <div id='company-content-isaac-pic' className="order-1 relative aspect-8/9 w-full lg:order-2 lg:aspect-auto lg:h-full translate-x-400 opacity-0">
             <Image
               alt="Isaac M. Gordon"
               src={Pic.IsaacGordonFull}

@@ -41,9 +41,9 @@ export default function Navbar() {
   ]
 
   const company = [
-    { name: 'Our Story & Standards', href: '#', description: 'Discover our journey, commitment and values', icon: BookOpen },
-    { name: 'Laura Gordon', href: '#', description: 'Our Founder and CEO', image: Pic.LauraGordon },
-    { name: 'Isaac M', href: '#', description: 'Our Managing Partner', image: Pic.IsaacGordon },
+    { name: 'Our Story & Standards', href: '#', description: 'Discover our journey, commitment and values', icon: BookOpen, action() { scrollToCompany() } },
+    { name: 'Laura Gordon', href: '#', description: 'Our Founder and CEO', image: Pic.LauraGordon, action() {scrollToLaura()} },
+    { name: 'Isaac M', href: '#', description: 'Our Managing Partner', image: Pic.IsaacGordon, action() {scrollToIsaac()} },
 
   ]
 
@@ -63,48 +63,67 @@ export default function Navbar() {
   }
   const scrollToServices = () => {
     gsap.set(window, {
-      scrollTo: { y: "2800" }
+      scrollTo: { y: "2400" }
     })
     gsap.to(window, {
       delay: 1,
       duration: 2,
-      scrollTo: { y: "5400" }
+      scrollTo: { y: "4800" }
       
     })
+  }
+  const scrollToCompany = () => {
+    gsap.set(window, {
+      scrollTo: { y: "8800" }
+    })
+    gsap.to(window, {
+      delay: 1,
+      duration: 2,
+      scrollTo: { y: "12000" }
+      
+    })
+  }
+  const scrollToLaura = () => {
+    gsap.to(window, {
+      duration: 2,
+      scrollTo: { y: "12580" }
+    })
+   
+  }
+  const scrollToIsaac = () => {
+    gsap.to(window, {
+      duration: 2,
+      scrollTo: { y: "13800" }
+    })
+   
   }
   const scrollToPhilanthropy = () => {
     gsap.set(window, {
 
-      scrollTo: { y: "10200" }
+      scrollTo: { y: "17000" }
     })
     gsap.to(window, {
       delay: 1,
       duration: 2,
-      scrollTo: { y: "14540" }
+      scrollTo: { y: "20880" }
     })
   }
   const scrollToGammys = () => {
     
-    gsap.set(window, {
-
-      scrollTo: { y: "10200" }
-    })
     gsap.to(window, {
-      delay: 1,
       duration: 2,
-      scrollTo: { y: "14540" }
+
+      scrollTo: { y: "21800" }
     })
+    
   }
   const scrollToEdenGlobal = () => {
-    gsap.set(window, {
-
-      scrollTo: { y: "25600" }
-    })
     gsap.to(window, {
-      delay: 1,
       duration: 2,
+
       scrollTo: { y: "28000" }
     })
+    
   }
 
   const pathname = usePathname();
@@ -114,7 +133,7 @@ export default function Navbar() {
   useGSAP(() => {
 
     gsap.from('#header-nav', {
-      duration: 1.8,
+      duration: 1.4,
       ease: "expo.out",
       y: -250,
       opacity: 0,
@@ -175,7 +194,7 @@ export default function Navbar() {
 
           {/* Desktop Navigation */}
           <div className="hidden lg:flex lg:gap-x-12">
-            <button onClick={() => { window.location.href = "/"; scrollToHome(); }} className={`cursor-pointer ${pathname === '/' ? 'text-white text-md font-normal leading-6 py-2' : 'text-md font-normal leading-6 text-foreground/80 py-2 hover:text-white transition-colors duration-300'}`}>
+            <button onClick={() => { window.location.href = "/"; scrollToHome(); }} className="cursor-pointer text-md font-normal leading-6 text-foreground/80 py-2 hover:text-white transition-colors duration-300">
               Home
             </button>
             {/* Service Dropdown (Hover) */}
@@ -184,7 +203,7 @@ export default function Navbar() {
               onMouseEnter={() => handleMouseEnter('service')}
               onMouseLeave={handleMouseLeave}
             >
-              <Link href={"/"} onClick={scrollToServices} className={`flex items-center gap-x-1 text-md font-normal leading-6 outline-none py-2 transition-colors duration-300 cursor-pointer ${pathname?.includes('/services') || hoveredDropdown === 'service' ? 'text-white' : 'text-foreground/80 hover:text-white'}`}>
+              <Link href={"/"} onClick={scrollToServices} className={`flex items-center gap-x-1 text-md font-normal leading-6 outline-none py-2 transition-colors duration-300 cursor-pointer ${hoveredDropdown === 'service' ? 'text-white' : 'text-foreground/80 hover:text-white'}`}>
                 Services
                 <ChevronDown className={`h-5 w-5 flex-none text-foreground/60 transition-transform ${hoveredDropdown === 'service' ? 'rotate-180' : ''}`} aria-hidden="true" />
               </Link>
@@ -230,7 +249,7 @@ export default function Navbar() {
               )}
             </div>
 
-            {/* Philanthropy Dropdown (Hover) */}
+            
            
 
 
@@ -240,10 +259,10 @@ export default function Navbar() {
               onMouseEnter={() => handleMouseEnter('company')}
               onMouseLeave={handleMouseLeave}
             >
-              <button className={`flex items-center gap-x-1 text-md font-normal leading-6 text-foreground/80 outline-none py-2 transition-colors duration-300 cursor-pointer  ${hoveredDropdown === 'company' ? 'text-white ' : ''}`}>
+              <Link onClick={scrollToCompany} href={'/'} className={`flex items-center gap-x-1 text-md font-normal leading-6 text-foreground/80 outline-none py-2 transition-colors duration-300 cursor-pointer  ${hoveredDropdown === 'company' ? 'text-white ' : ''}`}>
                 Company
                 <ChevronDown className={`h-5 w-5 flex-none text-foreground/60 transition-transform ${hoveredDropdown === 'company' ? 'rotate-180' : ''}`} aria-hidden="true" />
-              </button>
+              </Link>
 
               {/* Company Flyout Menu */}
               {/* Added top-full and pt-4 to bridge the gap using padding instead of margin */}
@@ -268,7 +287,7 @@ export default function Navbar() {
                             )}
                           </div>
                           <div className="flex-auto">
-                            <Link href={item.href} className="block font-semibold text-foreground hover:text-white transition-colors duration-300">
+                            <Link onClick={item.action} href={item.href} className="block font-semibold text-foreground hover:text-white transition-colors duration-300">
                               {item.name}
                               <span className="absolute inset-0" />
                             </Link>
@@ -297,6 +316,9 @@ export default function Navbar() {
 
             </div>
 
+
+
+{/* Philanthropy Dropdown (Hover) */}
              <div
               className="relative"
               onMouseEnter={() => handleMouseEnter('philanthropy')}
@@ -346,7 +368,7 @@ export default function Navbar() {
                 </div>
               )}
             </div>
-            <Link onClick={scrollToHome} href="/press" className={pathname === '/press' ? 'text-white text-md font-normal leading-6 py-2' : 'text-md font-normal leading-6 text-foreground/80 py-2 hover:text-white transition-colors duration-300'}>
+            <Link onClick={scrollToHome} href="/press" className="text-md font-normal leading-6 text-foreground/80 py-2 hover:text-white transition-colors duration-300">
               Press
             </Link>
           </div>
