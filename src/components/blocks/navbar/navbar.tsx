@@ -1,4 +1,4 @@
-'use client'
+"use client"
 
 import { useState, useEffect } from 'react'
 import {
@@ -48,7 +48,7 @@ export default function Navbar() {
   ]
 
   const philanthropy = [
-    { name: "Gammy's House", scrollTo() { scrollToGammys() }, description: "", image: Pic.GammysSingle },
+    { name: "Gammy's House", scrollTo() { scrollToPhilanthropy() }, description: "", image: Pic.GammysSingle },
     { name: "Back to Eden Global", scrollTo() { scrollToEdenGlobal() }, description: "", image: Pic.EdenGlobal },
   ]
 
@@ -84,15 +84,15 @@ export default function Navbar() {
     })
   }
   const scrollToLaura = () => {
-    gsap.to(window, {
-      duration: 2,
+    gsap.set(window, {
+      
       scrollTo: { y: "12760" }
     })
    
   }
   const scrollToIsaac = () => {
-    gsap.to(window, {
-      duration: 2,
+    gsap.set(window, {
+      
       scrollTo: { y: "14000" }
     })
    
@@ -110,20 +110,21 @@ export default function Navbar() {
   }
   const scrollToGammys = () => {
     
-    gsap.to(window, {
-      duration: 2,
-
+    gsap.set(window, {
       scrollTo: { y: "21800" }
     })
     
   }
   const scrollToEdenGlobal = () => {
-    gsap.to(window, {
-      duration: 2,
+    gsap.set(window, {
 
+      scrollTo: { y: "21300" }
+    })
+    gsap.to(window, {
+      delay: 1,
+      duration: 2,
       scrollTo: { y: "29000" }
     })
-    
   }
 
 
@@ -131,36 +132,35 @@ export default function Navbar() {
   //Mobile Scroll Functions
 
   const navToPhilanthropy = () => {
-      gsap.to(window, {
-        duration: 4,
+      gsap.set(window, {
+        
         scrollTo: { y: "14000" }
       })
-      gsap.to(window, {
-        duration: 4,
+      gsap.set(window, {
+        
         scrollTo: { y: "15300" }
       })
     }
 
     const navToStandards = () => {
         
-        gsap.to(window, {
-          duration: 4,
+        gsap.set(window, {
+         
           scrollTo: { y: "7480" }
           
         })
       }
 
       const navToLaura = () => {
-          gsap.to(window, {
-            duration: 4,
+          gsap.set(window, {
             scrollTo: { y: "9250" }
           })
          
         }
 
         const navToIsaac = () => {
-            gsap.to(window, {
-              duration: 4,
+            gsap.set(window, {
+              
               scrollTo: { y: "11420" }
             })
            
