@@ -3,6 +3,8 @@
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useGSAP } from "@gsap/react";
+import Image from "next/image";
+import { Pic } from "@/components/ui/pic/pic";
 
 
 gsap.registerPlugin(ScrollTrigger);
@@ -10,6 +12,23 @@ gsap.registerPlugin(ScrollTrigger);
 export default function ContactPage() {
 
   useGSAP(() => {
+
+    gsap.from("#contact-container", {
+        translateX: -800,
+        scale: 0.8,
+        opacity: 0,
+        duration: 1,
+        ease: "circ",
+      });
+    gsap.from("#contact-img", {
+        
+        scale: 1.25,
+        opacity: 0,
+        duration: 1,
+        ease: "circ",
+      });
+
+
     const tl = gsap.timeline({
       scrollTrigger: {
         scrub: 1,
@@ -28,14 +47,14 @@ export default function ContactPage() {
   
   return (
     <div id="contact-page" className="fixed w-full flex flex-col-reverse lg:block  bg-background">
-      <div className="lg:absolute lg:inset-0 lg:left-1/2">
-        <img
+      <div className="lg:absolute lg:inset-0 lg:left-1/2 z-10">
+        <Image id="contact-img"
           alt=""
-          src="https://images.unsplash.com/photo-1559136555-9303baea8ebd?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&crop=focalpoint&fp-x=.4&w=2560&h=3413&&q=80"
-          className="h-screen w-full bg-second-bg object-cover sm:h-80 lg:absolute lg:h-full opacity-80"
+          src={Pic.ContactImage}
+          className="h-screen w-full bg-second-bg object-cover sm:h-80 lg:absolute lg:h-full  "
         />
       </div>
-      <div className="pt-32 pb-24 sm:pt-24 sm:pb-32 lg:mx-auto lg:grid lg:max-w-7xl lg:grid-cols-2 lg:pt-32">
+      <div id="contact-container" className="pt-32 pb-24 sm:pt-24 sm:pb-32 lg:mx-auto lg:grid lg:max-w-7xl lg:grid-cols-2 lg:pt-32">
         <div className="px-6 lg:px-8">
           <div className="mx-auto max-w-xl lg:mx-0 lg:max-w-lg">
             <h2 className="text-4xl font-semibold tracking-tight text-pretty text-foreground sm:text-5xl">

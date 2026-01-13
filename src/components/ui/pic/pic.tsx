@@ -29,6 +29,7 @@ import Isaacgordon from '@/assets/isaac-gordon.png'
 import Pressimage from '@/assets/press.png'
 import Lauragordonfull from '@/assets/laura-gordon-full.webp'
 import Isaacgordonfull from '@/assets/isaac-gordon-full.png'
+import Contactimage from '@/assets/contact-image.png'
 
 
 export const Pic = {
@@ -63,4 +64,5 @@ export const Pic = {
     PressImage: Pressimage,
     LauraGordonFull: Lauragordonfull,
     IsaacGordonFull: Isaacgordonfull,
+    ContactImage: Contactimage,
 }
