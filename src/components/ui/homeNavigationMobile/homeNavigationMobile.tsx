@@ -6,7 +6,7 @@ import { ScrollToPlugin } from 'gsap/ScrollToPlugin'
 import { ChevronLeft, ChevronRight, Home } from 'lucide-react'
 import { usePathname } from 'next/navigation'
 
-const HomeNavigation = () => {
+export default function HomeMobileNavigation() {
     
   gsap.registerPlugin(ScrollToPlugin);
   const pathname = usePathname();
@@ -17,7 +17,7 @@ const HomeNavigation = () => {
 
   const navToHome = () => {
     gsap.to(window, {
-      duration: 0,
+      duration: 1,
 
       scrollTo: { y: "0" }
     })
@@ -26,33 +26,28 @@ const HomeNavigation = () => {
    //2 Navigation point
   const navToServices = () => {
     gsap.to(window, {
-      duration: 2,
-      scrollTo: { y: "2400" }
+      duration: 4,
+      scrollTo: { y: "2400" },
+      
     })
     gsap.to(window, {
-      delay: 1,
-      duration: 2,
-      scrollTo: { y: "4800" }
+      
+      duration: 4,
+      scrollTo: { y: "2600" }
       
     })
   }
-  const navToServices2 = () => {
-    gsap.to(window, {
-      duration: 2,
-      scrollTo: { y: "6200" }
-    })
-
-  }
+ 
    //3 Navigation point
   const navToCompany = () => {
     gsap.to(window, {
-      duration: 2,
-      scrollTo: { y: "8800" }
+      duration: 4,
+      scrollTo: { y: "6400" }
     })
     gsap.to(window, {
       delay: 1,
-      duration: 2,
-      scrollTo: { y: "12140" }
+      duration: 4,
+      scrollTo: { y: "7480" }
       
     })
   }
@@ -60,8 +55,8 @@ const HomeNavigation = () => {
    //4 Navigation point
   const navToLaura = () => {
     gsap.to(window, {
-      duration: 2,
-      scrollTo: { y: "12760" }
+      duration: 4,
+      scrollTo: { y: "9250" }
     })
    
   }
@@ -69,8 +64,8 @@ const HomeNavigation = () => {
    //5 Navigation point
   const navToIsaac = () => {
     gsap.to(window, {
-      duration: 2,
-      scrollTo: { y: "14000" }
+      duration: 4,
+      scrollTo: { y: "11420" }
     })
    
   }
@@ -78,32 +73,23 @@ const HomeNavigation = () => {
    //6 Navigation point
   const navToPhilanthropy = () => {
     gsap.to(window, {
-      duration: 2,
-      scrollTo: { y: "17800" }
+      duration: 4,
+      scrollTo: { y: "14000" }
     })
     gsap.to(window, {
-      delay: 1,
-      duration: 2,
-      scrollTo: { y: "21300" }
+      duration: 4,
+      scrollTo: { y: "15300" }
     })
   }
 
    //7 Navigation point
-  const navToGammys = () => {
-    
-    gsap.to(window, {
-      duration: 2,
-
-      scrollTo: { y: "21800" }
-    })
-    
-  }
+  
   const navToGammysCTA = () => {
     
     gsap.to(window, {
-      duration: 2,
+      duration: 4,
 
-      scrollTo: { y: "24800" }
+      scrollTo: { y: "17800" }
     })
     
   }
@@ -111,17 +97,17 @@ const HomeNavigation = () => {
    //8 Navigation point
   const navToEdenGlobal = () => {
     gsap.to(window, {
-      duration: 2,
+      duration: 4,
 
-      scrollTo: { y: "29000" }
+      scrollTo: { y: "19200" }
     })
     
   }
   const navToEdenGlobalCTA = () => {
     gsap.to(window, {
-      duration: 2,
+      duration: 4,
 
-      scrollTo: { y: "31200" }
+      scrollTo: { y: "20400" }
     })
     
   }
@@ -129,12 +115,10 @@ const HomeNavigation = () => {
   const steps = [
     navToHome,
     navToServices,
-    navToServices2,
     navToCompany,
     navToLaura,
     navToIsaac,
     navToPhilanthropy,
-    navToGammys,
     navToGammysCTA,
     navToEdenGlobal,
     navToEdenGlobalCTA
@@ -156,7 +140,7 @@ const HomeNavigation = () => {
     }
   }
 
-  const scrollPositions = [0, 2400, 6200, 8800, 12760, 14000, 17800, 21800, 24800, 29000, 31200];
+  const scrollPositions = [0, 2400, 6400, 9250, 11420, 14000, 17800, 19200, 20400];
 
   useEffect(() => {
     const handleScroll = () => {
@@ -182,7 +166,7 @@ const HomeNavigation = () => {
   if (pathname !== '/') return null;
 
   return (
-    <div className="hidden fixed bottom-8 left-1/2 -translate-x-1/2 z-40 lg:flex items-center gap-6 bg-black/40 backdrop-blur-md px-6 py-3 rounded-full border border-white/10 shadow-2xl transition-all duration-300 hover:bg-black/50">
+    <div className="lg:hidden fixed bottom-8 left-1/2 -translate-x-1/2 z-40 flex items-center gap-6 bg-black/40 backdrop-blur-md px-6 py-3 rounded-full border border-white/10 shadow-2xl transition-all duration-300 hover:bg-black/50">
         <button 
             onClick={() => {
               steps[0]();
@@ -224,5 +208,3 @@ const HomeNavigation = () => {
     </div>
   )
 }
-
-export default HomeNavigation

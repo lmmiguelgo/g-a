@@ -1,14 +1,14 @@
 'use client';
 
-import { Pic } from "@/components/ui/pic/pic";
+
 import { useGSAP } from "@gsap/react";
-import Image from "next/image";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { ScrollToPlugin } from "gsap/ScrollToPlugin";
+
 
 
 import HomeNavigation from "@/components/ui/homeNavigation/homenavigation";
+import HomeMobileNavigation from "@/components/ui/homeNavigationMobile/homeNavigationMobile";
 import { Hero } from "@/components/blocks/hero/hero";
 import Services from "@/components/blocks/services/services";
 import HomeTitle from "@/components/ui/homeTitle/homeTitle";
@@ -420,12 +420,7 @@ export default function Home() {
           ease: "circ",
         },);
 
-         tl.to('#cta-eden-global', {
-          opacity: 0,
-          translateY: 200,
-          display: 'none',
-          ease: "circ",
-        },);
+         
 
 
 
@@ -546,11 +541,6 @@ export default function Home() {
 
 
 
-        
-
-
-
-
          tl.to('#home-title-Company', {
           display: 'flex',
           opacity: 1,
@@ -658,60 +648,6 @@ export default function Home() {
           autoAlpha: 0,
              
          });
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -866,6 +802,7 @@ export default function Home() {
     <>
 
     <HomeNavigation />
+    <HomeMobileNavigation />
 
 
 

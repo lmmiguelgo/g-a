@@ -11,11 +11,11 @@ export default function CtaEdenGlobal() {
                     <svg
                         viewBox="0 0 1024 1024"
                         aria-hidden="true"
-                        className="absolute top-1/2 left-1/2 -z-10 size-256 -translate-y-1/2 mask-[radial-gradient(closest-side,white,transparent)] sm:left-full sm:-ml-80 lg:left-1/2 lg:ml-0 lg:-translate-x-1/2 lg:translate-y-0"
+                        className="absolute top-1/2 left-1/2 -z-10 w-5xl h-256 -translate-y-1/2 mask-[radial-gradient(closest-side,white,transparent)] sm:left-full sm:-ml-80 lg:left-1/2 lg:ml-0 lg:-translate-x-1/2 lg:translate-y-0"
                     >
-                        <circle r={512} cx={512} cy={512} fill="url(#759c1415-0410-454c-8f7c-9a820de03641)" fillOpacity="0.7" />
+                        <circle r={512} cx={512} cy={512} fill="url(#eden-global-gradient)" fillOpacity="0.7" />
                         <defs>
-                            <radialGradient id="759c1415-0410-454c-8f7c-9a820de03641">
+                            <radialGradient id="eden-global-gradient">
                                 <stop stopColor="var(--accent-primary)" />
                                 <stop offset={1} stopColor="var(--accent-secondary)" />
                             </radialGradient>

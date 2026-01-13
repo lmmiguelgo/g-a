@@ -41,9 +41,9 @@ export default function Navbar() {
   ]
 
   const company = [
-    { name: 'Our Story & Standards', href: '#', description: 'Discover our journey, commitment and values', icon: BookOpen, action() { scrollToCompany() } },
-    { name: 'Laura Gordon', href: '#', description: 'Our Founder and CEO', image: Pic.LauraGordon, action() {scrollToLaura()} },
-    { name: 'Isaac M', href: '#', description: 'Our Managing Partner', image: Pic.IsaacGordon, action() {scrollToIsaac()} },
+    { name: 'Our Story & Standards', href: '/', description: 'Discover our journey, commitment and values', icon: BookOpen, action() { scrollToCompany() }, actionMobile() {navToStandards()} },
+    { name: 'Laura Gordon', href: '/', description: 'Our Founder and CEO', image: Pic.LauraGordon, action() {scrollToLaura()}, actionMobile() {navToLaura()} },
+    { name: 'Isaac M', href: '/', description: 'Our Managing Partner', image: Pic.IsaacGordon, action() {scrollToIsaac()}, actionMobile() {navToIsaac()} },
 
   ]
 
@@ -79,33 +79,33 @@ export default function Navbar() {
     gsap.to(window, {
       delay: 1,
       duration: 2,
-      scrollTo: { y: "12000" }
+      scrollTo: { y: "12140" }
       
     })
   }
   const scrollToLaura = () => {
     gsap.to(window, {
       duration: 2,
-      scrollTo: { y: "12580" }
+      scrollTo: { y: "12760" }
     })
    
   }
   const scrollToIsaac = () => {
     gsap.to(window, {
       duration: 2,
-      scrollTo: { y: "13800" }
+      scrollTo: { y: "14000" }
     })
    
   }
   const scrollToPhilanthropy = () => {
     gsap.set(window, {
 
-      scrollTo: { y: "17000" }
+      scrollTo: { y: "17800" }
     })
     gsap.to(window, {
       delay: 1,
       duration: 2,
-      scrollTo: { y: "20880" }
+      scrollTo: { y: "21300" }
     })
   }
   const scrollToGammys = () => {
@@ -121,10 +121,50 @@ export default function Navbar() {
     gsap.to(window, {
       duration: 2,
 
-      scrollTo: { y: "28000" }
+      scrollTo: { y: "29000" }
     })
     
   }
+
+
+
+  //Mobile Scroll Functions
+
+  const navToPhilanthropy = () => {
+      gsap.to(window, {
+        duration: 4,
+        scrollTo: { y: "14000" }
+      })
+      gsap.to(window, {
+        duration: 4,
+        scrollTo: { y: "15300" }
+      })
+    }
+
+    const navToStandards = () => {
+        
+        gsap.to(window, {
+          duration: 4,
+          scrollTo: { y: "7480" }
+          
+        })
+      }
+
+      const navToLaura = () => {
+          gsap.to(window, {
+            duration: 4,
+            scrollTo: { y: "9250" }
+          })
+         
+        }
+
+        const navToIsaac = () => {
+            gsap.to(window, {
+              duration: 4,
+              scrollTo: { y: "11420" }
+            })
+           
+          }
 
   const pathname = usePathname();
 
@@ -440,13 +480,14 @@ export default function Navbar() {
               </div>
               <div className="space-y-2 py-4">
                 <Link
-                  onClick={() => { setMobileMenuOpen(false) ; scrollToPhilanthropy() }} href={"/"}
+                  onClick={() => { setMobileMenuOpen(false) ; navToPhilanthropy() }} href={"/"}
                   className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-foreground hover:bg-white/5"
                 >
                   Philanthropy
                 </Link>
                 <Link
-                  href="#"
+                onClick={() => {setMobileMenuOpen(false); scrollToHome();}}
+                  href="/press"
                   className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-foreground hover:bg-white/5"
                 >
                   Press
@@ -454,6 +495,10 @@ export default function Navbar() {
 
                 {company.map((item) => (
                   <Link
+                    onClick={() => { 
+                      item.actionMobile();
+                      setMobileMenuOpen(false);
+                    }}
                     key={item.name}
                     href={item.href}
                     className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-foreground hover:bg-white/5"
@@ -464,6 +509,7 @@ export default function Navbar() {
               </div>
               <div className="py-6">
                 <Link
+                onClick={() => {setMobileMenuOpen(false);}}
                   href="/contact"
                   className="-mx-3 block rounded-lg px-3 py-1.4 text-base font-semibold leading-7 text-foreground hover:bg-white/5 transition-colors duration-300"
                 >
