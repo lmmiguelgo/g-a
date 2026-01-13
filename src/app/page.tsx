@@ -5,9 +5,10 @@ import { useGSAP } from "@gsap/react";
 import Image from "next/image";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { ScrollToPlugin } from "gsap/ScrollToPlugin";
 
 
-
+import HomeNavigation from "@/components/ui/homeNavigation/homenavigation";
 import { Hero } from "@/components/blocks/hero/hero";
 import Services from "@/components/blocks/services/services";
 import HomeTitle from "@/components/ui/homeTitle/homeTitle";
@@ -21,6 +22,22 @@ import CompanyContent from "@/components/blocks/companyContent/companyContent";
 gsap.registerPlugin(ScrollTrigger);
 
 export default function Home() {
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
   // GSAP Animation
 
@@ -847,6 +864,8 @@ export default function Home() {
 
   return (
     <>
+
+    <HomeNavigation />
 
 
 
