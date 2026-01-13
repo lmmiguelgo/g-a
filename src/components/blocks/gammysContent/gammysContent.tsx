@@ -17,13 +17,13 @@ export default function GammysContent() {
 
             <Image className="w-120 pt-20" src={Pic.GammysHouse} alt="Gammy's House" />
 
-            <p className="mt-6 text-lg/7 text-accent-secondary">
-              <strong>Founded in 2003</strong> by <strong>Laura Gordon </strong>and inspired by her late grandmother,
+            <p className="mt-6 text-lg/7 text-foreground">
+              <strong>Founded in 2003</strong> by <strong>Laura Gordon </strong>and inspired by her late grandmother.&nbsp;
                <strong>Gammy’s House</strong> is a corporate foundation of <strong>Gordon & Associates.</strong> It is
                 a <strong>philanthropic organization</strong> dedicated to educating, equipping, and <strong>empowering the next generation of Black entrepreneurs</strong>.
                  Gammy’s House operates as a component fund of the <strong>California Community Foundation</strong>.
             </p>
-            <p className="mt-8 text-lg/7 text-accent-secondary">
+            <p className="mt-8 text-lg/7 text-foreground">
               Gammy’s House has <strong>invested in global initiatives</strong> that foster equity in <strong>education</strong> and <strong>entrepreneurship</strong>, including:
             </p>
           </div>
@@ -65,19 +65,19 @@ export default function GammysContent() {
             <hr className=" border-t border-second-bg" />
             <dl className="mt-6 grid grid-cols-1 gap-x-8 gap-y-4 sm:grid-cols-2">
               <div className="flex flex-col gap-y-2 border-b border-dotted border-second-bg pb-4">
-                <dt className="text-md/6 text-accent-secondary">Building water wells in <strong>Zambia.</strong></dt>
+                <dt className="text-md/6 text-foreground">Building water wells in <strong>Zambia.</strong></dt>
                 <Image className="rounded-lg border-4 border-foreground/20 aspect-video" src={Pic.ZambiaFlag} alt="Zambia Flag" />
               </div>
               <div className="flex flex-col gap-y-2 border-b border-dotted border-second-bg pb-4">
-                <dt className="text-md/6 text-accent-secondary">Building schools in <strong>Kenya.</strong></dt>
+                <dt className="text-md/6 text-foreground">Building schools in <strong>Kenya.</strong></dt>
                 <Image className="rounded-lg border-4 border-foreground/20 aspect-video" src={Pic.KenyaFlag} alt="Kenya Flag" />
               </div>
               <div className="flex flex-col gap-y-2 max-sm:border-b max-sm:border-dotted max-sm:border-second-bg max-sm:pb-4">
-                <dt className="text-md/6 text-accent-secondary">Providing micro-lending and scholarships in the <strong>United States.</strong></dt>
+                <dt className="text-md/6 text-foreground">Providing micro-lending and scholarships in the <strong>United States.</strong></dt>
                 <Image className="rounded-lg border-4 border-foreground/20 aspect-video" src={Pic.UnitedStatesFlag} alt="United States Flag" />
               </div>
               <div className="flex flex-col gap-y-2">
-                <dt className="text-md/6 text-accent-secondary">Empowering business owners in <strong>Uganda.</strong></dt>
+                <dt className="text-md/6 text-foreground">Empowering business owners in <strong>Uganda.</strong></dt>
                 <Image className="rounded-lg border-4 border-foreground/20 aspect-video" src={Pic.UgandaFlag} alt="Uganda Flag" />
               </div>
             </dl>

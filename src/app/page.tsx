@@ -1,30 +1,47 @@
 'use client';
 
-import { Pic } from "@/components/ui/pic/pic";
-import { useEffect } from "react";
-import Image from "next/image";
+
+import { useGSAP } from "@gsap/react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 
 
+import HomeNavigation from "@/components/ui/homeNavigation/homenavigation";
+import HomeMobileNavigation from "@/components/ui/homeNavigationMobile/homeNavigationMobile";
 import { Hero } from "@/components/blocks/hero/hero";
 import Services from "@/components/blocks/services/services";
 import HomeTitle from "@/components/ui/homeTitle/homeTitle";
 import GammysContent from "@/components/blocks/gammysContent/gammysContent";
 import CtaGammys from "@/components/blocks/ctaGammys/ctaGammys";
 import EdenGlobalContent from "@/components/blocks/edenGlobalContent/edenGlobalContent";
+import CtaEdenGlobal from "@/components/blocks/ctaEdenGlobal/ctaEdenGlobal";
+import CompanyContent from "@/components/blocks/companyContent/companyContent";
 
+
+gsap.registerPlugin(ScrollTrigger);
 
 export default function Home() {
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   // GSAP Animation
 
-  useEffect(() => {
-    //Registring ScrollTrigger Plugin
-    gsap.registerPlugin(ScrollTrigger);
-
-    let ctx = gsap.context(() => {
+  useGSAP(() => {
       let mm = gsap.matchMedia();
 
 
@@ -35,7 +52,7 @@ export default function Home() {
           scrollTrigger: {
             scrub: 1,
             start: "top top",
-            end: "+=14000",
+            end: "+=32000",
             trigger: "body",
           }
         });
@@ -131,13 +148,139 @@ export default function Home() {
           ease: "circ.in",
         }, );
 
-         tl.to('#home-title-Philanthropy', {
+
+
+
+
+
+         tl.to('#home-title-Company', {
           display: 'flex',
           opacity: 1,
           ease: "circ.in",
         });
 
-         
+         tl.to('#home-title-Company-h1', {
+          fontSize: '8rem',
+          translateX: 0,
+        }, );
+
+        tl.to('#home-subtitle-Company-h2', {
+          opacity: 1,
+        }, );
+
+        tl.to('#home-subtitle-Company-h2', {
+          
+          color: '#ffffff',
+        }, );
+
+        tl.to('#home-title-Company', {
+          display: 'none',
+          opacity: 0,
+        });
+
+
+
+
+        tl.to('#company-content', {
+          display: 'block',
+          opacity: 1,
+          scale: 1,
+          ease: "circ",
+        });
+
+        tl.to('#company-content-header', {
+          translateX: 0,
+          opacity: 1,
+          ease: "circ",
+        }, "<");
+
+
+        tl.to('#company-content-s1', {
+          translateX: 0,
+          opacity: 1,
+          ease: "circ",
+        });
+        tl.to('#company-content-s2', {
+          translateX: 0,
+          opacity: 1,
+          ease: "circ",
+        });
+        tl.to('#company-content-s3', {
+          translateX: 0,
+          opacity: 1,
+          ease: "circ",
+        });
+        tl.to('#company-content-s4', {
+          translateX: 0,
+          opacity: 1,
+          ease: "circ",
+        });
+
+        tl.to('#company-content', {
+          duration: 3.2,
+          translateY: -2800,
+        });
+
+        tl.to('#company-content-laura-pic', {
+          duration: 0.4,
+          translateX: 0,
+          opacity: 1,
+          ease: "circ",       
+         }, "<");
+        tl.to('#company-content-laura-bio', {
+          duration: 0.4,
+          translateX: 0,
+          opacity: 1,
+          ease: "circ",       
+         }, "<");
+
+        tl.to('#company-content-isaac-pic', {
+          delay: 0.8,
+          duration: 0.6,
+          translateX: 0,
+          opacity: 1,
+          ease: "circ",       
+         }, "<");
+        tl.to('#company-content-isaac-bio', {
+          duration: 0.6,
+          translateX: 0,
+          opacity: 1,
+          ease: "circ",       
+         }, "<");
+        tl.to('#company-content', {
+          autoAlpha: 0,
+             
+         });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+         tl.to('#home-title-Philanthropy', {
+          display: 'flex',
+          opacity: 1,
+          ease: "circ.in",
+        });
 
          tl.to('#home-title-Philanthropy-h1', {
           fontSize: '8rem',
@@ -204,17 +347,17 @@ export default function Home() {
         } , "<");
 
         tl.to('#philanthropy-section', {
-          duration: 2,
+          duration: 1,
           scale: 1.2,
           translateX: 400,
           translateY: -80,
-          ease: "circ",
+          
         } );
 
         tl.to('#philanthropy-section', {
-          duration: 4,
+          duration: 1,
           translateY: -600,
-          ease: "circ",
+          
         } );
 
         tl.to('#philanthropy-section', {
@@ -239,6 +382,7 @@ export default function Home() {
 
         tl.to('#cta-gammys', {
           opacity: 0,
+          translateY: 200,
           display: 'none',
           ease: "circ",
         },);
@@ -248,6 +392,36 @@ export default function Home() {
           display: 'block',
           ease: "circ",
         },);
+        
+        tl.to('#philanthropy-section-writing-eden', {
+          duration: 1.4,
+          translateX: 0,
+          opacity: 1,
+          ease: "circ",
+        },);
+
+        tl.to('#philanthropy-section-eden', {
+          delay: 0.8,
+          opacity: 0,
+          display: 'hidden',
+          ease: "circ",
+        },);
+
+        tl.to('#cta-eden-global', {
+          duration: 1.4,
+          display: 'block',
+          translateY: 0,
+          opacity: 1,
+          ease: "circ",
+        }, "<");
+        tl.to('#cta-eden-global', {
+          duration : 1.4,
+          scale: 1.04,
+          ease: "circ",
+        },);
+
+         
+
 
 
        
@@ -265,7 +439,7 @@ export default function Home() {
           scrollTrigger: {
             scrub: 0.5,
             start: "top top",
-            end: "+=8000",
+            end: "+=20000",
             trigger: "body",
           }
         });
@@ -363,6 +537,123 @@ export default function Home() {
           ease: "circ.in",
         }, );
 
+
+
+
+
+         tl.to('#home-title-Company', {
+          display: 'flex',
+          opacity: 1,
+          ease: "circ.in",
+        });
+
+         tl.to('#home-title-Company-h1', {
+          fontSize: '3.2rem',
+          translateX: 0,
+        }, );
+
+        tl.to('#home-subtitle-Company-h2', {
+          opacity: 1,
+        }, );
+
+        tl.to('#home-subtitle-Company-h2', {
+          
+          color: '#ffffff',
+        }, );
+
+        tl.to('#home-title-Company', {
+          display: 'none',
+          opacity: 0,
+        });
+
+
+        
+
+        tl.to('#company-content', {
+          display: 'block',
+          opacity: 1,
+          scale: 1,
+          ease: "circ",
+        });
+
+        tl.to('#company-content-header', {
+          translateX: 0,
+          opacity: 1,
+          ease: "circ",
+        }, "<");
+
+
+        tl.to('#company-content', {
+          duration: 8,
+          translateY: -5800,
+          ease: "none",
+        });
+
+
+        
+        tl.to('#company-content-s1', {
+          delay: 0.6,
+          translateX: 0,
+          opacity: 1,
+          ease: "circ",
+        }, "<");
+        tl.to('#company-content-s2', {
+          delay: 0.2,
+          translateX: 0,
+          opacity: 1,
+          ease: "circ",
+        }, "<");
+        tl.to('#company-content-s3', {
+          delay: 0.2,
+          translateX: 0,
+          opacity: 1,
+          ease: "circ",
+        }, "<");
+        tl.to('#company-content-s4', {
+          delay: 0.2,
+          translateX: 0,
+          opacity: 1,
+          ease: "circ",
+        }, "<");
+
+        
+
+        tl.to('#company-content-laura-pic', {
+          duration: 0.4,
+          translateX: 0,
+          opacity: 1,
+          ease: "circ",       
+         }, "<");
+        tl.to('#company-content-laura-bio', {
+          duration: 0.4,
+          translateX: 0,
+          opacity: 1,
+          ease: "circ",       
+         }, "<");
+
+        tl.to('#company-content-isaac-pic', {
+          delay: 0.8,
+          duration: 0.6,
+          translateX: 0,
+          opacity: 1,
+          ease: "circ",       
+         }, "<");
+        tl.to('#company-content-isaac-bio', {
+          duration: 0.6,
+          translateX: 0,
+          opacity: 1,
+          ease: "circ",       
+         }, "<");
+        tl.to('#company-content', {
+          autoAlpha: 0,
+             
+         });
+
+
+
+
+
+
          tl.to('#home-title-Philanthropy', {
           display: 'flex',
           opacity: 1,
@@ -407,9 +698,11 @@ export default function Home() {
         });
 
         tl.to('#philanthropy-section', {
-          duration: 8,
-          translateY: -1800,
-          ease: "circ",
+          
+          duration: 2.8,
+          translateY: -1680,
+          
+          
         });
 
          tl.to('#Philanthropy-USExample', {
@@ -450,6 +743,45 @@ export default function Home() {
           ease: "circ",
         }, "<" );
 
+        tl.to('#cta-gammys', {
+          delay: 0.8,
+          display : 'none',
+          opacity: 0,
+          translateY: 200,
+          ease: "circ",
+        },);
+
+        tl.to('#philanthropy-section-eden', {
+          
+          display : 'block',
+          opacity: 1,
+          ease: "circ",
+        },);
+
+        tl.to('#philanthropy-section-writing-eden', {
+          delay: 0.8,
+          translateX: 0,
+          opacity: 1,
+          ease: "circ",
+        },"<");
+
+        tl.to('#philanthropy-section-eden', {
+          delay: 0.8,
+          display : 'hidden',
+          opacity: 0,
+          ease: "circ",
+        },);
+
+       
+        tl.to('#cta-eden-global', {
+          translateY: 0,
+          display : 'block',
+          opacity: 1,
+          ease: "circ",
+        }, "<");
+
+       
+
 
 
        
@@ -457,9 +789,9 @@ export default function Home() {
 
 
       });
-    });
+    
 
-    return () => ctx.revert();
+    //return () => ctx.revert();
   }, [])
 
 
@@ -468,6 +800,9 @@ export default function Home() {
 
   return (
     <>
+
+    <HomeNavigation />
+    <HomeMobileNavigation />
 
 
 
@@ -478,17 +813,25 @@ export default function Home() {
 
       <Services />
 
+      <HomeTitle Id="home-title-Company" IdTitle="home-title-Company-h1" IdSubtitle="home-subtitle-Company-h2" Light="Gordon & Associates  " Bold=" Accountancy Corporation">COMPANY</HomeTitle>
+      <CompanyContent />
+
       <HomeTitle Id="home-title-Philanthropy" IdTitle="home-title-Philanthropy-h1" IdSubtitle="home-subtitle-Philanthropy-h2" Light="Empowering Lives" Bold="Saving the Future">PHILANTHROPY</HomeTitle>
 
       <GammysContent />
       <CtaGammys />
 
       <EdenGlobalContent />
-      
+      <CtaEdenGlobal />
 
       
 
-      
+      {/* Navigations items Hidden */}
+
+
+      <div id="nav-to-services" aria-hidden= "true" className="absolute -z-10 top-1200">
+
+      </div>
 
       
 

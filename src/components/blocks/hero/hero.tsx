@@ -29,7 +29,7 @@ export const Hero = () => {
 
 
         gsap.from('#logo-hero', {
-          duration: 2,
+          duration: 1.4,
           ease: "expo.out",
           y: 400,
           opacity: 0,
@@ -50,7 +50,7 @@ export const Hero = () => {
 
 
         gsap.from('#logo-hero', {
-          duration: 2,
+          duration: 1.4,
           ease: "expo.out",
           y: 400,
           opacity: 0,
