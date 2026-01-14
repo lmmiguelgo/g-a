@@ -42,15 +42,15 @@ export default function Navbar() {
   ]
 
   const company = [
-    { name: 'Our Story & Standards', href: '/', description: 'Discover our journey, commitment and values', icon: BookOpen, action() { scrollToCompany() }, actionMobile() {navToStandards()} },
-    { name: 'Laura Gordon', href: '/', description: 'Our Founder and CEO', image: Pic.LauraGordon, action() {scrollToLaura()}, actionMobile() {navToLaura()} },
-    { name: 'Isaac M', href: '/', description: 'Our Managing Partner', image: Pic.IsaacGordon, action() {scrollToIsaac()}, actionMobile() {navToIsaac()} },
+    { name: 'Our Story & Standards', href: '/company#company-content', description: 'Discover our journey, commitment and values', icon: BookOpen, action() { }, actionMobile() {} },
+    { name: 'Laura Gordon', href: '/company#company-page-laura', description: 'Our Founder and CEO', image: Pic.LauraGordon, action() {}, actionMobile() {} },
+    { name: 'Isaac M', href: '/company#company-page-isaac', description: 'Our Managing Partner', image: Pic.IsaacGordon, action() {}, actionMobile() {} },
 
   ]
 
   const philanthropy = [
-    { name: "Gammy's House", scrollTo() { scrollToPhilanthropy() }, description: "", image: Pic.GammysSingle },
-    { name: "Back to Eden Global", scrollTo() { scrollToEdenGlobal() }, description: "", image: Pic.EdenGlobal },
+    { name: "Gammy's House", scrollTo() { }, description: "", image: Pic.GammysSingle , href: "/philanthropy#philanthropy-section"},
+    { name: "Back to Eden Global", scrollTo() { }, description: "", image: Pic.EdenGlobal, href: "/philanthropy#philanthropy-section-eden" },
   ]
 
   gsap.registerPlugin(ScrollToPlugin);
@@ -168,6 +168,16 @@ export default function Navbar() {
           }
 
   const pathname = usePathname();
+  const [currentHash, setCurrentHash] = useState('');
+
+  useEffect(() => {
+    setCurrentHash(window.location.hash);
+    const handleHashChange = () => setCurrentHash(window.location.hash);
+    window.addEventListener("hashchange", handleHashChange);
+    return () => window.removeEventListener("hashchange", handleHashChange);
+  }, [pathname]);
+
+  const isActive = (href: string) => (pathname + currentHash) === href;
 
   //Entrance Animation
 
@@ -236,7 +246,7 @@ export default function Navbar() {
 
           {/* Desktop Navigation */}
           <div className="hidden lg:flex lg:gap-x-12">
-            <button onClick={() => { window.location.href = "/"; scrollToHome(); }} className="cursor-pointer text-md font-normal leading-6 text-foreground/80 py-2 hover:text-white transition-colors duration-300">
+            <button onClick={() => { window.location.href = "/"; scrollToHome(); }} className={`cursor-pointer text-md font-normal leading-6 py-2 transition-colors duration-300 ${pathname === "/" ? "text-white" : "text-foreground/80 hover:text-white"}`}>
               Home
             </button>
             {/* Service Dropdown (Hover) */}
@@ -245,7 +255,7 @@ export default function Navbar() {
               onMouseEnter={() => handleMouseEnter('service')}
               onMouseLeave={handleMouseLeave}
             >
-              <Link href={"/"} onClick={scrollToServices} className={`flex items-center gap-x-1 text-md font-normal leading-6 outline-none py-2 transition-colors duration-300 cursor-pointer ${hoveredDropdown === 'service' ? 'text-white' : 'text-foreground/80 hover:text-white'}`}>
+              <Link href={"/services"} onClick={scrollToHome} className={`flex items-center gap-x-1 text-md font-normal leading-6 outline-none py-2 transition-colors duration-300 cursor-pointer ${hoveredDropdown === 'service' || pathname.startsWith('/services') ? 'text-white' : 'text-foreground/80 hover:text-white'}`}>
                 Services
                 <ChevronDown className={`h-5 w-5 flex-none text-foreground/60 transition-transform ${hoveredDropdown === 'service' ? 'rotate-180' : ''}`} aria-hidden="true" />
               </Link>
@@ -301,7 +311,7 @@ export default function Navbar() {
               onMouseEnter={() => handleMouseEnter('company')}
               onMouseLeave={handleMouseLeave}
             >
-              <Link onClick={scrollToCompany} href={'/'} className={`flex items-center gap-x-1 text-md font-normal leading-6 text-foreground/80 outline-none py-2 transition-colors duration-300 cursor-pointer  ${hoveredDropdown === 'company' ? 'text-white ' : ''}`}>
+              <Link onClick={scrollToHome} href={'/company'} className={`flex items-center gap-x-1 text-md font-normal leading-6 outline-none py-2 transition-colors duration-300 cursor-pointer  ${hoveredDropdown === 'company' || pathname.startsWith('/company') ? 'text-white ' : 'text-foreground/80 hover:text-white'}`}>
                 Company
                 <ChevronDown className={`h-5 w-5 flex-none text-foreground/60 transition-transform ${hoveredDropdown === 'company' ? 'rotate-180' : ''}`} aria-hidden="true" />
               </Link>
@@ -315,25 +325,25 @@ export default function Navbar() {
                       {company.map((item) => (
                         <div
                           key={item.name}
-                          className="group relative flex items-center gap-x-6 rounded-lg p-2 text-md leading-6 hover:bg-white/5"
+                          className={`group relative flex items-center gap-x-6 rounded-lg p-2 text-md leading-6 hover:bg-white/5 ${isActive(item.href) ? 'bg-white/5' : ''}`}
                         >
-                          <div className="flex h-20 w-20 flex-none items-center justify-center rounded-lg bg-white/5 group-hover:bg-white/10">
+                          <div className={`flex h-20 w-20 flex-none items-center justify-center rounded-lg bg-white/5 group-hover:bg-white/10 ${isActive(item.href) ? 'bg-white/10' : ''}`}>
                             {'image' in item && item.image ? (
                               <Image
                                 src={item.image}
                                 alt={item.name}
-                                className="h-auto w-auto  object-cover grayscale group-hover:grayscale-0 transition-all duration-300"
+                                className={`h-auto w-auto object-cover group-hover:grayscale-0 transition-all duration-300 ${isActive(item.href) ? 'grayscale-0' : 'grayscale'}`}
                               />
                             ) : (
-                              <item.icon className="h-16 w-6 text-foreground/70 group-hover:text-white transition-colors duration-300" aria-hidden="true" />
+                              <item.icon className={`h-16 w-6 transition-colors duration-300 ${isActive(item.href) ? 'text-white' : 'text-foreground/70 group-hover:text-white'}`} aria-hidden="true" />
                             )}
                           </div>
                           <div className="flex-auto">
-                            <Link onClick={item.action} href={item.href} className="block font-semibold text-foreground hover:text-white transition-colors duration-300">
+                            <Link onClick={() => { item.action(); setTimeout(() => setCurrentHash(window.location.hash), 100); }} href={item.href} className={`block font-semibold transition-colors duration-300 ${isActive(item.href) ? 'text-white' : 'text-foreground hover:text-white'}`}>
                               {item.name}
                               <span className="absolute inset-0" />
                             </Link>
-                            <p className="mt-1 text-foreground/70 group-hover:text-white">{item.description}</p>
+                            <p className={`mt-1 group-hover:text-white ${isActive(item.href) ? 'text-white' : 'text-foreground/70'}`}>{item.description}</p>
                           </div>
                         </div>
                       ))}
@@ -366,7 +376,7 @@ export default function Navbar() {
               onMouseEnter={() => handleMouseEnter('philanthropy')}
               onMouseLeave={handleMouseLeave}
             >
-              <Link href="/" onClick={scrollToPhilanthropy} className={`flex items-center gap-x-1 text-md font-normal leading-6 text-foreground/80 outline-none py-2 transition-colors duration-300 cursor-pointer  ${hoveredDropdown === 'philanthropy' ? 'text-white ' : ''}`}>
+              <Link href="/philanthropy" onClick={scrollToHome} className={`flex items-center gap-x-1 text-md font-normal leading-6 outline-none py-2 transition-colors duration-300 cursor-pointer  ${hoveredDropdown === 'philanthropy'  || pathname.startsWith('/philanthropy') ? 'text-white ' : 'text-foreground/80 hover:text-white'}`}>
                 Philanthropy
                 <ChevronDown className={`h-5 w-5 flex-none text-foreground/60 transition-transform ${hoveredDropdown === 'philanthropy' ? 'rotate-180' : ''}`} aria-hidden="true" />
               </Link>
@@ -379,17 +389,17 @@ export default function Navbar() {
                       {philanthropy.map((item) => (
                         <div
                           key={item.name}
-                          className="group relative flex items-center gap-x-6 rounded-lg p-2 text-md leading-6 hover:bg-white/5"
+                          className={`group relative flex items-center gap-x-6 rounded-lg p-2 text-md leading-6 hover:bg-white/5 ${isActive(item.href) ? 'bg-white/5' : ''}`}
                         >
-                          <div className="flex h-20 w-20 flex-none items-center justify-center rounded-lg bg-white/5 group-hover:bg-white/10">
-                            <Image src={item.image} alt={item.name} className="h-8 w-8 object-contain group-hover:brightness-100 brightness-80 transition-all duration-300" />
+                          <div className={`flex h-20 w-20 flex-none items-center justify-center rounded-lg bg-white/5 group-hover:bg-white/10 ${isActive(item.href) ? 'bg-white/10' : ''}`}>
+                            <Image src={item.image} alt={item.name} className={`h-8 w-8 object-contain transition-all duration-300 ${isActive(item.href) ? 'brightness-100' : 'group-hover:brightness-100 brightness-80'}`} />
                           </div>
                           <div className="flex-auto">
-                            <Link onClick={item.scrollTo} href={"/"} className="block font-semibold text-foreground hover:text-white transition-colors duration-300">
+                            <Link onClick={() => { item.scrollTo(); setTimeout(() => setCurrentHash(window.location.hash), 100); }} href={item.href} className={`block font-semibold transition-colors duration-300 ${isActive(item.href) ? 'text-white' : 'text-foreground hover:text-white'}`}>
                               {item.name}
                               <span className="absolute inset-0" />
                             </Link>
-                            <p className="mt-1 text-foreground/70 group-hover:text-white">{item.description}</p>
+                            <p className={`mt-1 group-hover:text-white ${isActive(item.href) ? 'text-white' : 'text-foreground/70'}`}>{item.description}</p>
                           </div>
                         </div>
                       ))}
@@ -410,7 +420,7 @@ export default function Navbar() {
                 </div>
               )}
             </div>
-            <Link onClick={scrollToHome} href="/press" className="text-md font-normal leading-6 text-foreground/80 py-2 hover:text-white transition-colors duration-300">
+            <Link onClick={scrollToHome} href="/press" className={`text-md font-normal leading-6 py-2 transition-colors duration-300 ${pathname.startsWith('/press') ? 'text-white' : 'text-foreground/80 hover:text-white'}`}>
               Press
             </Link>
           </div>
@@ -473,10 +483,10 @@ export default function Navbar() {
                 <Link
                   onClick={() => { setMobileMenuOpen(false) }}
                   href="/login"
-                  className="group -mx-3 flex items-center gap-x-6 rounded-lg px-3 py-1 text-base font-semibold leading-8 text-foreground hover:bg-white/5"
+                  className={`group -mx-3 flex items-center gap-x-6 rounded-lg px-3 py-1 text-base font-semibold leading-8 hover:bg-white/5 ${pathname.startsWith('/login') ? 'bg-white/5 text-white' : 'text-foreground'}`}
                 >
-                  <div className="flex h-12 w-12 flex-none items-center justify-center rounded-full bg-white/20 group-hover:bg-white/10 border border-foreground/40">
-                    <User className="h-6 w-6 text-foreground/70 group-hover:text-foreground " aria-hidden="true" />
+                  <div className={`flex h-12 w-12 flex-none items-center justify-center rounded-full border border-foreground/40 group-hover:bg-white/10 ${pathname.startsWith('/login') ? 'bg-white/10' : 'bg-white/20'}`}>
+                    <User className={`h-6 w-6 group-hover:text-foreground ${pathname.startsWith('/login') ? 'text-white' : 'text-foreground/70'}`} aria-hidden="true" />
                   </div>
                   Log in
                 </Link>
@@ -485,26 +495,35 @@ export default function Navbar() {
                     onClick={() => { setMobileMenuOpen(false) }}
                     key={item.name}
                     href={item.href}
-                    className="group -mx-3 flex items-center gap-x-6 rounded-lg px-3 py-1 text-base font-semibold leading-8 text-foreground hover:bg-white/5"
+                    className={`group -mx-3 flex items-center gap-x-6 rounded-lg px-3 py-1 text-base font-semibold leading-8 hover:bg-white/5 ${isActive(item.href) ? 'bg-white/5 text-white' : 'text-foreground'}`}
                   >
-                    <div className="flex h-12 w-12 flex-none items-center justify-center rounded-lg bg-white/5 group-hover:bg-white/10">
-                      <item.icon className="h-6 w-6 text-foreground/70 group-hover:text-foreground" aria-hidden="true" />
+                    <div className={`flex h-12 w-12 flex-none items-center justify-center rounded-lg group-hover:bg-white/10 ${isActive(item.href) ? 'bg-white/10' : 'bg-white/5'}`}>
+                      <item.icon className={`h-6 w-6 group-hover:text-foreground ${isActive(item.href) ? 'text-white' : 'text-foreground/70'}`} aria-hidden="true" />
                     </div>
                     {item.name}
                   </Link>
                 ))}
               </div>
               <div className="space-y-2 py-4">
-                <Link
-                  onClick={() => { setMobileMenuOpen(false) ; navToPhilanthropy() }} href={"/"}
-                  className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-foreground hover:bg-white/5"
-                >
-                  Philanthropy
-                </Link>
+                {philanthropy.map((item) => (
+                   <Link
+                   onClick={() => { 
+                     item.scrollTo();
+                     setMobileMenuOpen(false);
+                     setTimeout(() => setCurrentHash(window.location.hash), 100);
+                   }}
+                   key={item.name}
+                   href={item.href}
+                   className={`-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 hover:bg-white/5 ${isActive(item.href) ? 'bg-white/5 text-white' : 'text-foreground'}`}
+                 >
+                   {item.name}
+                 </Link>
+                ))}
+                
                 <Link
                 onClick={() => {setMobileMenuOpen(false); scrollToHome();}}
                   href="/press"
-                  className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-foreground hover:bg-white/5"
+                  className={`-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 hover:bg-white/5 ${pathname.startsWith('/press') ? 'bg-white/5 text-white' : 'text-foreground'}`}
                 >
                   Press
                 </Link>
@@ -514,10 +533,11 @@ export default function Navbar() {
                     onClick={() => { 
                       item.actionMobile();
                       setMobileMenuOpen(false);
+                      setTimeout(() => setCurrentHash(window.location.hash), 100);
                     }}
                     key={item.name}
                     href={item.href}
-                    className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-foreground hover:bg-white/5"
+                    className={`-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 hover:bg-white/5 ${isActive(item.href) ? 'bg-white/5 text-white' : 'text-foreground'}`}
                   >
                     {item.name}
                   </Link>
@@ -527,7 +547,7 @@ export default function Navbar() {
                 <Link
                 onClick={() => {setMobileMenuOpen(false);}}
                   href="/contact"
-                  className="-mx-3 block rounded-lg px-3 py-1.4 text-base font-semibold leading-7 text-foreground hover:bg-white/5 transition-colors duration-300"
+                  className={`-mx-3 block rounded-lg px-3 py-3 text-base font-semibold leading-7 hover:bg-white/5 transition-colors duration-300 ${pathname.startsWith('/contact') ? 'bg-white/5 text-white' : 'text-foreground'}`}
                 >
                   Contact us
                 </Link>
