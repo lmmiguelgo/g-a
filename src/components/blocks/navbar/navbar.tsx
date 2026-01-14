@@ -14,7 +14,8 @@ import {
   BookOpen,
   ShieldCheck,
   UserStar,
-  Sparkles
+  Sparkles,
+  User
 } from 'lucide-react'
 
 import Link from 'next/link'
@@ -221,7 +222,8 @@ export default function Navbar() {
           </div>
 
           {/* Mobile Menu Button */}
-          <div className="flex lg:hidden">
+          <div className="flex lg:hidden items-center gap-x-4">
+
             <button
               type="button"
               onClick={() => setMobileMenuOpen(true)}
@@ -413,9 +415,13 @@ export default function Navbar() {
             </Link>
           </div>
 
-          <div className="hidden lg:flex lg:flex-1 lg:justify-end">
+          <div className="hidden lg:flex lg:flex-1 lg:justify-end items-center gap-x-6">
             <Link onClick={scrollToHome} href="/contact" className=" inline-flex items-center gap-x-2 rounded-md bg-accent-primary px-3.5 py-2.5 text-sm font-semibold text-foreground hover:bg-accent-primary/88">
               Contact us <span aria-hidden="true">&rarr;</span>
+            </Link>
+            <Link href="/login" className="rounded-full bg-white/20 p-2 text-foreground hover:bg-white/10 hover:text-white transition-all duration-300 border border-foreground/40">
+              <span className="sr-only">Log in</span>
+              <User className="h-6 w-6" aria-hidden="true" />
             </Link>
           </div>
 
@@ -464,6 +470,16 @@ export default function Navbar() {
           <div className="mt-6 flow-root">
             <div className="-my-6 divide-y divide-white/10">
               <div className="space-y-2 py-6">
+                <Link
+                  onClick={() => { setMobileMenuOpen(false) }}
+                  href="/login"
+                  className="group -mx-3 flex items-center gap-x-6 rounded-lg px-3 py-1 text-base font-semibold leading-8 text-foreground hover:bg-white/5"
+                >
+                  <div className="flex h-12 w-12 flex-none items-center justify-center rounded-full bg-white/20 group-hover:bg-white/10 border border-foreground/40">
+                    <User className="h-6 w-6 text-foreground/70 group-hover:text-foreground " aria-hidden="true" />
+                  </div>
+                  Log in
+                </Link>
                 {services.map((item) => (
                   <Link
                     onClick={() => { setMobileMenuOpen(false) }}
