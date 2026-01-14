@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { Montserrat, Cormorant_Garamond } from "next/font/google";
-import "./globals.css";
+import "./pages.css";
 
 
 import Navbar from "@/components/blocks/navbar/navbar";
