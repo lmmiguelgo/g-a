@@ -29,24 +29,12 @@ export default function ContactPage() {
       });
 
 
-    const tl = gsap.timeline({
-      scrollTrigger: {
-        scrub: 1,
-        start: "top top",
-        end: "+=400",
-        trigger: "body",
-      }
-    });
-
-    tl.to('#contact-page', {
-      duration: 1,
-      translateY: -100,
-    });
+   
   }, []);
 
   
   return (
-    <div id="contact-page" className="fixed w-full flex flex-col-reverse lg:block  bg-background">
+    <div id="contact-page" className="flex flex-col-reverse lg:block  bg-background">
       <div className="lg:absolute lg:inset-0 lg:left-1/2 z-10">
         <Image id="contact-img"
           alt=""
