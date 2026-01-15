@@ -1,13 +1,50 @@
+"use client";
+
 import Image from "next/image"
 import Link from "next/link"
 import { Pic } from "@/components/ui/pic/pic"
+import { useGSAP } from "@gsap/react";
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 
 export default function PhilanthropyPage() {
+
+   gsap.registerPlugin(ScrollTrigger);
+  
+  useGSAP(() => {
+
+    gsap.from("#Philanthropy-USExample-page", {
+       scrollTrigger: {
+        trigger: "#philanthropy-page",
+        start: "top 80%",
+        toggleActions: "play none none none",
+      },
+      opacity: 0,
+      translateY: 800,
+      duration: 0.8,
+      ease: "circ"
+    });
+    gsap.from("#Philanthropy-UgandaExample-page", {
+       scrollTrigger: {
+        trigger: "#philanthropy-page",
+        start: "top 80%",
+        toggleActions: "play none none none",
+      },
+      delay: 0.4,
+      opacity: 0,
+      translateY: -800,
+      duration: 0.8,
+      ease: "circ"
+    });
+   
+   
+
+  }, [])
     return (
        <>
 
-       <section id="philanthropy-section" className=" bg-background py-24 sm:py-32 ">
+       <section id="philanthropy-page" className=" bg-background py-24 sm:py-32 overflow-hidden ">
              <div className="mx-auto max-w-2xl px-6 lg:max-w-7xl lg:px-8">
                <div className="max-w-4xl">
                  <p className="text-xl/7 font-bold text-accent-primary">Philanthropy</p>
@@ -17,7 +54,7 @@ export default function PhilanthropyPage() {
                  
                </div>
                <section className="mt- lg:mt-8 grid grid-cols-1 lg:grid-cols-2 lg:gap-x-8 lg:gap-y-8">
-                 <div id="philanthropy-section-writing" className="lg:pr-8 ">
+                 <div id="philanthropy-page-writing" className="lg:pr-8 ">
        
                    <Image className="w-120 pt-20" src={Pic.GammysHouse} alt="Gammy's House" />
        
@@ -33,7 +70,7 @@ export default function PhilanthropyPage() {
                  </div>
                  <div className="pt-16 lg:row-span-2 lg:-mr-16 xl:mr-auto">
                    <div className="-mx-8 grid grid-cols-2 gap-4 sm:-mx-16 sm:grid-cols-4 lg:mx-0 lg:grid-cols-2 xl:gap-8">
-                     <div id="Philanthropy-USExample" className="aspect-square overflow-hidden rounded-xl outline-1 -outline-offset-1 outline-foreground/10 ">
+                     <div id="Philanthropy-USExample-page" className="aspect-square overflow-hidden rounded-xl outline-1 -outline-offset-1 outline-foreground/10 ">
                        <Image
                          
                          alt=""
@@ -41,21 +78,21 @@ export default function PhilanthropyPage() {
                          className="block size-full object-cover"
                        />
                      </div>
-                     <div id="Philanthropy-ZambiaExample" className="-mt-8 aspect-square overflow-hidden rounded-xl outline-1 -outline-offset-1 outline-foreground/10 lg:-mt-40 ">
+                     <div id="Philanthropy-ZambiaExample-page" className="-mt-8 aspect-square overflow-hidden rounded-xl outline-1 -outline-offset-1 outline-foreground/10 lg:-mt-40 ">
                        <Image
                          alt=""
                          src={Pic.ZambiaExample}
                          className="block size-full object-cover"
                        />
                      </div>
-                     <div id="Philanthropy-KenyaExample" className="aspect-square overflow-hidden rounded-xl outline-1 -outline-offset-1 outline-foreground/10 ">
+                     <div id="Philanthropy-KenyaExample-page" className="aspect-square overflow-hidden rounded-xl outline-1 -outline-offset-1 outline-foreground/10 ">
                        <Image
                          alt=""
                          src={Pic.KenyaExample}
                          className="block size-full object-cover"
                        />
                      </div>
-                     <div id="Philanthropy-UgandaExample" className="-mt-8 aspect-square overflow-hidden rounded-xl outline-1 -outline-offset-1 outline-foreground/10 lg:-mt-40 ">
+                     <div id="Philanthropy-UgandaExample-page" className="-mt-8 aspect-square overflow-hidden rounded-xl outline-1 -outline-offset-1 outline-foreground/10 lg:-mt-40 ">
                        <Image
                          alt=""
                          src={Pic.UgandaExample}
@@ -64,7 +101,7 @@ export default function PhilanthropyPage() {
                      </div>
                    </div>
                  </div>
-                 <div id="philanthropy-section-flags" className="max-lg:mt-16 lg:col-span-1  ">
+                 <div id="philanthropy-page-flags" className="max-lg:mt-16 lg:col-span-1  ">
                   
                    <hr className=" border-t border-second-bg" />
                    <dl className="mt-6 grid grid-cols-1 gap-x-8 gap-y-4 sm:grid-cols-2">
@@ -176,7 +213,7 @@ export default function PhilanthropyPage() {
 
 
 
-         <section id="philanthropy-section-eden" className=" overflow-hidden bg-background py-24 sm:py-32 ">
+         <section id="philanthropy-page-eden" className=" overflow-hidden bg-background py-24 sm:py-32 ">
               <div className="mx-auto max-w-2xl px-6 lg:max-w-7xl lg:px-8">
                 <div className="max-w-4xl">
                   <p className="text-xl/7 font-bold text-accent-primary">Philanthropy</p>
@@ -186,7 +223,7 @@ export default function PhilanthropyPage() {
         
                 </div>
                 <section className="mt- lg:mt-8 grid grid-cols-1 lg:grid-cols-2 lg:gap-x-8 lg:gap-y-8 ">
-                  <div id="philanthropy-section-writing-eden" className="lg:pr-8  ">
+                  <div id="philanthropy-page-writing-eden" className="lg:pr-8  ">
         
                     <div className="flex items-center justify-center">
                       <h1 className="font-secondary font-bold text-4xl">BACK TO <br /> EDEN GLOBAL</h1>

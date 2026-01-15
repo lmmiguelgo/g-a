@@ -25,4 +25,5 @@ body {
   color: var(--foreground);
   font-family: var(--font-montserrat), "Gill Sans", "Trebuchet MS", sans-serif;
   overflow-x: hidden;
+ 
 }

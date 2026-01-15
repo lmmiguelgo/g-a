@@ -1,13 +1,139 @@
+"use client";
+
 import { CheckCircle, Info } from 'lucide-react'
 import { Pic } from '@/components/ui/pic/pic'
 import Image from 'next/image'
+import { gsap } from 'gsap'
+import { useGSAP } from '@gsap/react'
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+
 
 export default function CompanyPage() {
+  gsap.registerPlugin(ScrollTrigger);
+  
+  useGSAP(() => {
+
+    gsap.from("#company-page-header", {
+       scrollTrigger: {
+        trigger: "#company-page-header",
+        start: "top 80%",
+        toggleActions: "play none none none",
+      },
+      opacity: 0,
+      translateX: -400,
+      duration: 0.8,
+      ease: "circ"
+    });
+   
+    gsap.from("#company-content-s1-page", {
+       scrollTrigger: {
+        trigger: "#company-page-header",
+        start: "top 80%",
+        toggleActions: "play none none none",
+      },
+      delay: 0.4,
+      opacity: 0,
+
+      translateX: 800,
+      duration: 0.8,
+      ease: "power3.out"
+    });
+    gsap.from("#company-content-s2-page", {
+       scrollTrigger: {
+        trigger: "#company-page-header",
+        start: "top 80%",
+        toggleActions: "play none none none",
+      },
+      delay: 0.8,
+      opacity: 0,
+      translateX: 800,
+      duration: 0.8,
+      ease: "power3.out"
+    });
+    gsap.from("#company-content-s3-page", {
+
+       scrollTrigger: {
+        trigger: "#company-page-header",
+        start: "top 80%",
+        toggleActions: "play none none none",
+      },
+      delay: 1.2,
+      opacity: 0,
+      translateX: 800,
+      duration: 0.8,
+      ease: "power3.out"
+    });
+
+    gsap.from("#company-content-s4-page", {
+      scrollTrigger: {
+        trigger: "#company-page-header",
+        start: "top 80%",
+        toggleActions: "play none none none",
+      },
+      
+      delay: 1.6,
+      opacity: 0,
+      translateX: 800,
+      duration: 0.8,
+      ease: "power3.out"
+    
+    });
+    gsap.from("#company-page-laura-pic", {
+      
+      scrollTrigger: {
+        trigger: "#company-page-laura",
+        start: "top 80%",
+        toggleActions: "play none none none",
+
+      },
+      opacity: 0,
+      translateX: -400,
+      duration: 0.8,
+    });
+    gsap.from("#company-content-laura-bio", {
+      
+      scrollTrigger: {
+        trigger: "#company-page-laura",
+        start: "top 80%",
+        toggleActions: "play none none none",
+
+      },
+      opacity: 0,
+      translateX: 400,
+      duration: 0.8,
+    });
+    gsap.from("#company-content-isaac-pic", {
+      
+      scrollTrigger: {
+        trigger: "#company-page-isaac",
+        start: "top 80%",
+        toggleActions: "play none none none",
+
+      },
+      opacity: 0,
+      translateX: 400,
+      duration: 0.8,
+    });
+    gsap.from("#company-content-isaac-bio", {
+      
+      scrollTrigger: {
+        trigger: "#company-page-isaac",
+        start: "top 80%",
+        toggleActions: "play none none none",
+
+      },
+      opacity: 0,
+      translateX: -400,
+      duration: 0.8,
+    });
+
+  }, [])
+
   return (
-    <div id='company-content' className=" bg-background pb-24 pt-24 sm:pb-32 sm:pt-32">
+    <div id='company-content-page' className=" bg-background pb-24 pt-24 sm:pb-32 sm:pt-32 overflow-hidden n">
       {/* 1. COMPANY OVERVIEW SECTION */}
       <div className="mx-auto max-w-7xl px-6 lg:px-8 w-full">
-        <div id='company-page-header' className="mx-auto max-w-7xl lg:mx-0 -">
+        <div id='company-page-header' className="mx-auto max-w-7xl lg:mx-0 ">
           <h2 className="text-lg/7 font-bold text-accent-primary">The Company</h2>
           <p className="mt-2 text-4xl font-semibold tracking-tight text-pretty text-foreground sm:text-5xl">
             Gordon & Associates
@@ -34,19 +160,19 @@ export default function CompanyPage() {
         {/* Services Checklist */}
         <div className="mx-auto mt-10 max-w-2xl lg:mx-0 lg:max-w-none">
           <div className="grid grid-cols-1 gap-x-8 gap-y-6 text-xl/7 font-bold text-foreground sm:grid-cols-2 md:flex lg:gap-x-10">
-            <div id='company-content-s1' className="flex gap-x-3 items-center  ">
+            <div id='company-content-s1-page' className="flex gap-x-3 items-center  ">
               <CheckCircle aria-hidden="true" className="mt-1 size-12 flex-none text-accent-primary" />
               Wealth Management
             </div>
-            <div id='company-content-s2' className="flex gap-x-3 items-center  ">
+            <div id='company-content-s2-page' className="flex gap-x-3 items-center  ">
               <CheckCircle aria-hidden="true" className="mt-1 size-12 flex-none text-accent-primary" />
               Tax Planning & Prep
             </div>
-            <div id='company-content-s3' className="flex gap-x-3 items-center  ">
+            <div id='company-content-s3-page' className="flex gap-x-3 items-center  ">
               <CheckCircle aria-hidden="true" className="mt-1 size-12 flex-none text-accent-primary" />
               Business Consulting
             </div>
-            <div id='company-content-s4' className="flex gap-x-3 items-center  ">
+            <div id='company-content-s4-page' className="flex gap-x-3 items-center  ">
               <CheckCircle aria-hidden="true" className="mt-1 size-12 flex-none text-accent-primary" />
               Executive Mentoring
             </div>
@@ -107,7 +233,7 @@ export default function CompanyPage() {
       </div>
       <div aria-hidden="true" id='company-page-isaac'></div>
       {/* 3. LEADERSHIP: ISAAC M. GORDON (Text Left / Image Right) */}
-      <div  className="mx-auto mt-32 max-w-7xl px-6 lg:px-8 ">
+      <div id='company-page-isaac'  className="mx-auto mt-32 max-w-7xl px-6 lg:px-8 ">
         <div  className="mx-auto grid max-w-2xl grid-cols-1 items-start gap-x-12 gap-y-16 lg:mx-0 lg:max-w-none lg:grid-cols-2">
           
           {/* Isaac's Bio - Order 2 on mobile, Order 1 on Desktop */}
