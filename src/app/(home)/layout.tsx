@@ -1,9 +1,10 @@
 import type { Metadata } from "next";
 import { Montserrat, Cormorant_Garamond } from "next/font/google";
-import "./globals.css";
+import "../globals.css";
 
 
 import Navbar from "@/components/blocks/navbar/navbar";
+
 
 
 const montserrat = Montserrat({
@@ -76,6 +77,8 @@ export default function RootLayout({
         <Navbar />
 
         {children}
+
+        
       </body>
     </html>
   );

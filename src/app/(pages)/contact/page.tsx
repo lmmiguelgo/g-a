@@ -29,29 +29,18 @@ export default function ContactPage() {
       });
 
 
-    const tl = gsap.timeline({
-      scrollTrigger: {
-        scrub: 1,
-        start: "top top",
-        end: "+=400",
-        trigger: "body",
-      }
-    });
-
-    tl.to('#contact-page', {
-      duration: 1,
-      translateY: -100,
-    });
+   
   }, []);
 
   
   return (
-    <div id="contact-page" className="fixed w-full flex flex-col-reverse lg:block  bg-background">
+    <div id="contact-page" className="flex flex-col-reverse lg:block overflow-hidden bg-background">
       <div className="lg:absolute lg:inset-0 lg:left-1/2 z-10">
         <Image id="contact-img"
           alt=""
           src={Pic.ContactImage}
-          className="h-screen w-full bg-second-bg object-cover sm:h-80 lg:absolute lg:h-full  "
+          className="h-screen w-full bg-second-bg object-cover sm:h-80 lg:absolute lg:h-full hidden lg:block  "
+          loading="eager"
         />
       </div>
       <div id="contact-container" className="pt-32 pb-24 sm:pt-24 sm:pb-32 lg:mx-auto lg:grid lg:max-w-7xl lg:grid-cols-2 lg:pt-32">

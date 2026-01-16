@@ -92,92 +92,42 @@ const pressItems = [
 
 export default function PressPage() {
 
+   gsap.registerPlugin(ScrollTrigger);
+  
   useGSAP(() => {
-      let mm = gsap.matchMedia();
 
-
-
-      // Desktop Version Animation
-      mm.add("(min-width: 800px)", () => {
-       
-
-        
-       const tl = gsap.timeline({
-      scrollTrigger: {
-        scrub: 1,
-        start: "top top",
-        end: "+=1400",
-        trigger: "body",
-      }
-    });
-
-    tl.to('#press-page', {
-      duration: 1,
-      translateY: -1400,
-    });
     gsap.from("#press-intro", {
-        translateX: -400,
-        opacity: 0,
-        duration: 1,
-        ease: "power3.out",
-    })
+       scrollTrigger: {
+        trigger: "#press-page",
+        start: "top 80%",
+        toggleActions: "play none none none",
+      },
+      opacity: 0,
+      translateX: -800,
+      duration: 0.8,
+      ease: "circ"
+    });
     gsap.from("#press-list", {
-
-        scale: 0.8,
-        opacity: 0,
-        duration: 1,
-        ease: "power3.out",
-
-       
-
-        
-      });
-    });
-
-      // Mobile Version Animation
-      mm.add("(max-width: 799px)", () => {
-         const tl = gsap.timeline({
-      scrollTrigger: {
-        scrub: 1,
-        start: "top top",
-        end: "+=2400",
-        trigger: "body",
-      }
-    });
-
-        tl.to('#press-page', {
-      duration: 1,
-      translateY: -2200,
-    });
-    gsap.from("#press-intro", {
-        translateX: -400,
-        opacity: 0,
-        duration: 1,
-        ease: "power3.out",
-    })
-    gsap.from("#press-list", {
-
-        scale: 0.8,
-        opacity: 0,
-        duration: 1,
-        ease: "power3.out",
-
-       
-
-       
-
-
-       
-        
-
-
-      });
+       scrollTrigger: {
+        trigger: "#press-page",
+        start: "top 80%",
+        toggleActions: "play none none none",
+      },
+      opacity: 0,
+      scale: 0.8,
+      duration: 0.8,
+      ease: "circ"
     });
     
-  }, []);
+    
+   
+   
+
+  }, [])
+
 
   return (
-    <div id="press-page" className="fixed w-full bg-background py-32">
+    <div id="press-page" className=" bg-background py-32">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="mx-auto flex max-w-2xl flex-col items-start justify-between gap-16 lg:mx-0 lg:max-w-none lg:flex-row">
           <div id="press-intro" className="w-full lg:max-w-lg lg:flex-auto">
