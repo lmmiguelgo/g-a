@@ -4,6 +4,7 @@ import "./pages.css";
 
 
 import Navbar from "@/components/blocks/navbar/navbar";
+import Footer from "@/components/blocks/footer/footer";
 
 
 const montserrat = Montserrat({
@@ -76,6 +77,7 @@ export default function RootLayout({
         <Navbar />
 
         {children}
+        <Footer />
       </body>
     </html>
   );

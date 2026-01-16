@@ -6,6 +6,7 @@ import "../globals.css";
 import Navbar from "@/components/blocks/navbar/navbar";
 
 
+
 const montserrat = Montserrat({
   variable: "--font-montserrat",
   subsets: ["latin"],
@@ -76,6 +77,8 @@ export default function RootLayout({
         <Navbar />
 
         {children}
+
+        
       </body>
     </html>
   );

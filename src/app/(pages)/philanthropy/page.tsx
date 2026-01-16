@@ -37,6 +37,81 @@ export default function PhilanthropyPage() {
       duration: 0.8,
       ease: "circ"
     });
+    gsap.from("#Philanthropy-KenyaExample-page", {
+       scrollTrigger: {
+        trigger: "#philanthropy-page",
+        start: "top 80%",
+        toggleActions: "play none none none",
+      },
+      delay: 0.8,
+      opacity: 0,
+      translateY: 800,
+      duration: 0.8,
+      ease: "circ"
+    });
+    gsap.from("#Philanthropy-ZambiaExample-page", {
+       scrollTrigger: {
+        trigger: "#philanthropy-page",
+        start: "top 80%",
+        toggleActions: "play none none none",
+      },
+      delay: 1.2,
+      opacity: 0,
+      translateY: -800,
+      duration: 0.8,
+      ease: "circ"
+    });
+
+
+    
+    gsap.from("#Philanthropy-USExample", {
+       scrollTrigger: {
+        trigger: "#philanthropy-page-eden",
+        start: "top 80%",
+        toggleActions: "play none none none",
+      },
+      opacity: 0,
+      translateY: 800,
+      duration: 0.8,
+      ease: "circ"
+    });
+    gsap.from("#Philanthropy-UgandaExample", {
+       scrollTrigger: {
+        trigger: "#philanthropy-page-eden",
+        start: "top 80%",
+        toggleActions: "play none none none",
+      },
+      delay: 0.4,
+      opacity: 0,
+      translateY: -800,
+      duration: 0.8,
+      ease: "circ"
+    });
+    gsap.from("#Philanthropy-KenyaExample", {
+       scrollTrigger: {
+        trigger: "#philanthropy-page-eden",
+        start: "top 80%",
+        toggleActions: "play none none none",
+      },
+      delay: 0.8,
+      opacity: 0,
+      translateY: 800,
+      duration: 0.8,
+      ease: "circ"
+    });
+    gsap.from("#Philanthropy-ZambiaExample", {
+       scrollTrigger: {
+        trigger: "#philanthropy-page-eden",
+        start: "top 80%",
+        toggleActions: "play none none none",
+      },
+      delay: 1.2,
+      opacity: 0,
+      translateY: -800,
+      duration: 0.8,
+      ease: "circ"
+    });
+    
    
    
 
@@ -69,7 +144,7 @@ export default function PhilanthropyPage() {
                    </p>
                  </div>
                  <div className="pt-16 lg:row-span-2 lg:-mr-16 xl:mr-auto">
-                   <div className="-mx-8 grid grid-cols-2 gap-4 sm:-mx-16 sm:grid-cols-4 lg:mx-0 lg:grid-cols-2 xl:gap-8">
+                   <div className="-mx-8 hidden lg:grid grid-cols-2 gap-4 sm:-mx-16 sm:grid-cols-4 lg:mx-0 lg:grid-cols-2 xl:gap-8  ">
                      <div id="Philanthropy-USExample-page" className="aspect-square overflow-hidden rounded-xl outline-1 -outline-offset-1 outline-foreground/10 ">
                        <Image
                          
@@ -145,9 +220,9 @@ export default function PhilanthropyPage() {
 
 
 
-        <div id="cta-gammys" className="">
-            <div className="mx-auto max-w-7xl py-24 sm:px-6 sm:py-32 lg:px-8 p-4">
-                <div className="relative isolate overflow-hidden bg-second-bg px-6 pt-16 after:pointer-events-none after:absolute after:inset-0 after:inset-ring after:inset-ring-white/10 sm:rounded-3xl sm:px-16 after:sm:rounded-3xl md:pt-24 lg:flex lg:gap-x-20 lg:px-24 lg:pt-0">
+        <div id="cta-gammys" className="h-200  flex flex-col items-center justify-center">
+            <div id="cta-gammys-container" className="mx-auto max-w-7xl w-full py-24 sm:px-6 sm:py-32 lg:px-8 p-4">
+                <div className="relative isolate overflow-hidden bg-second-bg h-200 lg:h-auto px-6 pt-16 after:pointer-events-none after:absolute after:inset-0 after:inset-ring after:inset-ring-white/10 sm:rounded-3xl sm:px-16 after:sm:rounded-3xl md:pt-24 lg:flex lg:gap-x-20 lg:px-24 lg:pt-0">
                     <svg
                         viewBox="0 0 1024 1024"
                         aria-hidden="true"
@@ -280,9 +355,9 @@ export default function PhilanthropyPage() {
             </section>
 
 
-             <div id="cta-eden-global" className="">
-            <div className="mx-auto max-w-7xl py-24 sm:px-6 sm:py-32 lg:px-8 p-4">
-                <div className="relative isolate overflow-hidden bg-second-bg px-6 pt-16 after:pointer-events-none after:absolute after:inset-0 after:inset-ring after:inset-ring-white/10 sm:rounded-3xl sm:px-16 after:sm:rounded-3xl md:pt-24 lg:flex lg:gap-x-20 lg:px-24 lg:pt-0">
+             <div id="cta-eden-global" className="h-200  flex flex-col items-center justify-center">
+            <div className="mx-auto max-w-7xl w-full py-24 sm:px-6 sm:py-32 lg:px-8 p-4">
+                <div className="relative isolate overflow-hidden bg-second-bg px-6 h-200 lg:h-auto pt-16 after:pointer-events-none after:absolute after:inset-0 after:inset-ring after:inset-ring-white/10 sm:rounded-3xl sm:px-16 after:sm:rounded-3xl md:pt-24 lg:flex lg:gap-x-20 lg:px-24 lg:pt-0">
                     <svg
                         viewBox="0 0 1024 1024"
                         aria-hidden="true"
@@ -338,7 +413,7 @@ export default function PhilanthropyPage() {
                             src={Pic.EdenGlobal}
                             width={1824}
                             height={1080}
-                            className="absolute top-40 left-10 w-80 max-w-none rounded-md "
+                            className="absolute top-40 left-10 w-80 max-w-none rounded-md hidden lg:block "
                         />
                     </div>
                 </div>

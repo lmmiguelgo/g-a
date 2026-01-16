@@ -50,7 +50,7 @@ export default function Navbar() {
 
   const philanthropy = [
     { name: "Gammy's House", scrollTo() { }, description: "", image: Pic.GammysSingle , href: "/philanthropy#philanthropy-section"},
-    { name: "Back to Eden Global", scrollTo() { }, description: "", image: Pic.EdenGlobal, href: "/philanthropy#philanthropy-section-eden" },
+    { name: "Back to Eden Global", scrollTo() { }, description: "", image: Pic.EdenGlobal, href: "/philanthropy#philanthropy-page-eden" },
   ]
 
   gsap.registerPlugin(ScrollToPlugin);

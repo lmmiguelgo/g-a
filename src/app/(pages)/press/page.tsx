@@ -92,6 +92,39 @@ const pressItems = [
 
 export default function PressPage() {
 
+   gsap.registerPlugin(ScrollTrigger);
+  
+  useGSAP(() => {
+
+    gsap.from("#press-intro", {
+       scrollTrigger: {
+        trigger: "#press-page",
+        start: "top 80%",
+        toggleActions: "play none none none",
+      },
+      opacity: 0,
+      translateX: -800,
+      duration: 0.8,
+      ease: "circ"
+    });
+    gsap.from("#press-list", {
+       scrollTrigger: {
+        trigger: "#press-page",
+        start: "top 80%",
+        toggleActions: "play none none none",
+      },
+      opacity: 0,
+      scale: 0.8,
+      duration: 0.8,
+      ease: "circ"
+    });
+    
+    
+   
+   
+
+  }, [])
+
 
   return (
     <div id="press-page" className=" bg-background py-32">

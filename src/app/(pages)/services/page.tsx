@@ -5,11 +5,11 @@ import Image from "next/image"
 import Link from "next/link"
 import { gsap } from "gsap"
 import { useGSAP } from "@gsap/react"
-import { ScrollTrigger } from "gsap/ScrollTrigger";
+
 
 const ServicesPage
  = () => {
-    gsap.registerPlugin(ScrollTrigger);
+   
 
 
     
@@ -22,20 +22,7 @@ const ServicesPage
 
 
     useGSAP(() => {
-        const tl = gsap.timeline({
-          scrollTrigger: {
-            scrub: 1,
-            start: "top top",
-            end: "bottom bottom",
-            trigger: "body",
-          }
-        });
-
-        tl.to("#services-section-page", {
-          scale: 1.2,
-          ease: "none",
-          duration: 1,
-        });
+        
         gsap.from("#page-service1", {
             translateX: -400,
             opacity: 0,
