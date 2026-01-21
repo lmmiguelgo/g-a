@@ -78,7 +78,7 @@ export default function ServiceSingle({ Servicenumber, Title, children, Picture 
                             <h1 className="mt-2 text-4xl font-semibold tracking-tight text-pretty text-foreground sm:text-5xl">
                                 {Title}
                             </h1>
-                            <div className="max-w-xl">
+                            <div className="max-w-xl text-foreground">
                                 {children}
                             </div>
                         </div>

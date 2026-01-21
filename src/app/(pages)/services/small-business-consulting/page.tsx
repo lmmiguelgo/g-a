@@ -9,7 +9,7 @@ const SmallBusinessConsultingPage = () => {
       Picture={Pic.SmallBusinessMobile}>
       <div className="my-8">
         <p>
-          <strong>Gordon & Associates</strong> guides <strong>small business owners</strong> through the full lifecycle of <strong>building a business—from early‑stage</strong> planning to <strong>everyday operational structure.</strong> We help clarify your vision, streamline your processes, and strengthen the <strong>foundation of your organization.</strong> Our team ensures you have the systems needed to <strong>make informed decisions</strong> and <strong>achieve consistent growth.</strong> With a structured approach,<strong> we transform concepts into sustainable, well‑run businesses.</strong>
+          Gordon & Associates guides small business owners through the full lifecycle of building a business—from early‑stage planning to everyday operational structure. We help clarify your vision, streamline your processes, and strengthen the foundation of your organization. Our team ensures you have the systems needed to make informed decisions and achieve consistent growth. With a structured approach, we transform concepts into sustainable, well‑run businesses.
         </p>
       </div>
     </ServiceSingle>

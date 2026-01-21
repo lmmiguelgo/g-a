@@ -23,10 +23,10 @@ export default function CtaGammys() {
                     </svg>
                     <div className="mx-auto max-w-xl  lg:mx-0 lg:flex-auto lg:py-32 text-left">
                         <h2 className="text-3xl font-light tracking-tight text-balance sm:text-4xl">
-                            Make a secure, <br /> <span className="font-bold">Tax-deductible Donation Online</span>
+                            Make a secure, <br /> <span className="font-semibold">tax-deductible donation online</span>
                         </h2>
                         <p className="mt-6 text-lg/8 text-pretty text-foreground text-start">
-                            Click on the <strong>“Donate Now”</strong> link below.
+                            Click on the “Donate Now” link below.
 
 
                         </p>

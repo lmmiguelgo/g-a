@@ -22,12 +22,9 @@ export default function EdenGlobalContent() {
             </div>
 
             <p className="mt-6 text-lg/7 text-foreground">
-              The mission of <strong>Back to Eden Global</strong> is to <strong>address the need for economic empowerment</strong>, using entrepreneurial opportunities on the continent of Africa, and throughout the diaspora. <br />
+              The mission of Back to Eden Global is to address the need for economic empowerment, using entrepreneurial opportunities on the continent of Africa, and throughout the diaspora. <br />
 
-              It employs educational, agricultural, and ecological stewardship initiatives to <strong>activate agency and develop</strong> entrepreneurial opportunities at project sites in <strong>Uganda, Zambia, Ghana, Nigeria, and the USA.</strong> <br />
-
-
-
+              It employs educational, agricultural, and ecological stewardship initiatives to activate agency and develop entrepreneurial opportunities at project sites in Uganda, Zambia, Ghana, Nigeria, and the USA. <br />
             </p>
 
           </div>

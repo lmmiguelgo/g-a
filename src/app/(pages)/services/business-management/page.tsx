@@ -11,7 +11,7 @@ const BusinessManagementPage = () => {
       Picture={Pic.BusinessManagementMobile}>
       <div className="my-8">
         <p>
-          <strong>Gordon & Associates</strong> delivers full‑service <strong>Business Management</strong> designed for the dynamic demands of <strong>Entertainers and Athletes.</strong> We oversee day‑to‑day financial operations, coordinate with agents, teams, and legal advisors, and <strong>provide clear strategies to navigate income fluctuation</strong>, major purchases, and <strong>Long‑term financial planning</strong>. Our proactive communication ensures <strong>Clients stay informed about decisions</strong> that impact taxes, career opportunities, and overall <strong>financial health</strong>. With a disciplined yet flexible approach, we <strong>help Clients </strong>maintain stability, <strong>Maximize earnings</strong>, and stay focused on performance—both on the field and on the screen.
+          Gordon & Associates delivers full‑service business management designed for the dynamic demands of entertainers and athletes. We oversee day‑to‑day financial operations, coordinate with agents, teams, and legal advisors, and provide clear strategies to navigate income fluctuation, major purchases, and long‑term financial planning. Our proactive communication ensures clients stay informed about decisions that impact taxes, career opportunities, and overall financial health. With a disciplined yet flexible approach, we help clients maintain stability, maximize earnings, and stay focused on performance—both on the field and on the screen.
         </p>
       </div>
       </ServiceSingle>

@@ -26,7 +26,7 @@ export default function terms() {
       <div className="mx-auto max-w-7xl px-6 lg:px-8 w-full">
         {/* 1. CONSENT OVERVIEW SECTION */}
         <div className="mx-auto max-w-7xl lg:mx-0">
-          <h2 className="text-lg/7 font-bold text-accent-primary uppercase tracking-widest">Preferences</h2>
+          <h2 className="text-lg/7 font-bold text-accent-primary tracking-widest">Preferences</h2>
           <p className="mt-2 text-4xl font-semibold tracking-tight text-pretty text-foreground sm:text-5xl">
             Communication Terms
           </p>
@@ -34,11 +34,11 @@ export default function terms() {
           <div className="mt-8 flex items-start gap-4 rounded-2xl bg-second-bg/50 p-6 ring-1 ring-accent-secondary/20">
             <ShieldCheck className="mt-1 size-8 flex-none text-accent-primary" />
             <div className="text-lg/8 text-foreground">
-              <p className="font-bold text-xl">SMS Consent Agreement</p>
+              <p className="text-xl">SMS Consent Agreement</p>
               <p className="mt-2 text-foreground/80">
-                By providing your phone number, you agree that <strong className="text-foreground">Gordon & Associates</strong> may send and receive text messages regarding your account, financial planning updates, and professional services. 
+                By providing your phone number, you agree that Gordon & Associates may send and receive text messages regarding your account, financial planning updates, and professional services. 
               </p>
-              <p className="mt-4 font-bold text-accent-primary">
+              <p className="mt-4 text-accent-primary">
                 "I accept Gordon & Associates sending and receiving text messages."
               </p>
             </div>
@@ -54,14 +54,14 @@ export default function terms() {
           {/* Information Side */}
           <div className="lg:pr-8">
             <h2 className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl">Opt-Out Management</h2>
-            <p className="mt-2 text-lg/7 font-bold text-accent-primary">Unsubscribe from SMS Communications</p>
+            <p className="mt-2 text-lg/7 text-accent-primary">Unsubscribe from SMS Communications</p>
             
             <div className="mt-6 space-y-6 text-lg/7 text-foreground">
               <p>
-                We respect your privacy and your time. If you no longer wish to receive text updates from our firm, you can opt out at any time using the form on this page or by replying <strong className="text-foreground">"STOP"</strong> to any message you receive.
+                We respect your privacy and your time. If you no longer wish to receive text updates from our firm, you can opt out at any time using the form on this page or by replying "STOP" to any message you receive.
               </p>
               <p>
-                Please note that unsubscribing from SMS will not affect your primary email communications or scheduled consultations. <strong className="text-foreground">Gordon & Associates</strong> remains committed to providing the highest standard of professional service through your preferred channels.
+                Please note that unsubscribing from SMS will not affect your primary email communications or scheduled consultations. Gordon & Associates remains committed to providing the highest standard of professional service through your preferred channels.
               </p>
               
               <div className="mt-8 flex flex-wrap gap-4 text-sm font-medium text-foreground">

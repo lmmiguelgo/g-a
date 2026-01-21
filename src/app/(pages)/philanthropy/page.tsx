@@ -134,13 +134,12 @@ export default function PhilanthropyPage() {
                    <Image className="w-120 pt-20" src={Pic.GammysHouse} alt="Gammy's House" />
        
                    <p className="mt-6 text-lg/7 text-foreground">
-                     <strong>Founded in 2003</strong> by <strong>Laura Gordon </strong>and inspired by her late grandmother.&nbsp;
-                      <strong>Gammy’s House</strong> is a corporate foundation of <strong>Gordon & Associates.</strong> It is
-                       a <strong>philanthropic organization</strong> dedicated to educating, equipping, and <strong>empowering the next generation of Black entrepreneurs</strong>.
-                        Gammy’s House operates as a component fund of the <strong>California Community Foundation</strong>.
+                     Founded in 2003 by Laura Gordon and inspired by her late grandmother. Gammy’s House is a corporate foundation of Gordon & Associates. It is
+                       a philanthropic organization dedicated to educating, equipping, and empowering the next generation of Black entrepreneurs.
+                        Gammy’s House operates as a component fund of the California Community Foundation.
                    </p>
                    <p className="mt-8 text-lg/7 text-foreground">
-                     Gammy’s House has <strong>invested in global initiatives</strong> that foster equity in <strong>education</strong> and <strong>entrepreneurship</strong>, including:
+                     Gammy’s House has invested in global initiatives that foster equity in education and entrepreneurship, including:
                    </p>
                  </div>
                  <div className="pt-16 lg:row-span-2 lg:-mr-16 xl:mr-auto">
@@ -181,19 +180,19 @@ export default function PhilanthropyPage() {
                    <hr className=" border-t border-second-bg" />
                    <dl className="mt-6 grid grid-cols-1 gap-x-8 gap-y-4 sm:grid-cols-2">
                      <div className="flex flex-col gap-y-2 border-b border-dotted border-second-bg pb-4">
-                       <dt className="text-md/6 text-foreground">Building water wells in <strong>Zambia.</strong></dt>
+                       <dt className="text-md/6 text-foreground">Building water wells in Zambia.</dt>
                        <Image className="rounded-lg border-4 border-foreground/20 aspect-video" src={Pic.ZambiaFlag} alt="Zambia Flag" />
                      </div>
                      <div className="flex flex-col gap-y-2 border-b border-dotted border-second-bg pb-4">
-                       <dt className="text-md/6 text-foreground">Building schools in <strong>Kenya.</strong></dt>
+                       <dt className="text-md/6 text-foreground">Building schools in Kenya.</dt>
                        <Image className="rounded-lg border-4 border-foreground/20 aspect-video" src={Pic.KenyaFlag} alt="Kenya Flag" />
                      </div>
                      <div className="flex flex-col gap-y-2 max-sm:border-b max-sm:border-dotted max-sm:border-second-bg max-sm:pb-4">
-                       <dt className="text-md/6 text-foreground">Providing micro-lending and scholarships in the <strong>United States.</strong></dt>
+                       <dt className="text-md/6 text-foreground">Providing micro-lending and scholarships in the United States.</dt>
                        <Image className="rounded-lg border-4 border-foreground/20 aspect-video" src={Pic.UnitedStatesFlag} alt="United States Flag" />
                      </div>
                      <div className="flex flex-col gap-y-2">
-                       <dt className="text-md/6 text-foreground">Empowering business owners in <strong>Uganda.</strong></dt>
+                       <dt className="text-md/6 text-foreground">Empowering business owners in Uganda.</dt>
                        <Image className="rounded-lg border-4 border-foreground/20 aspect-video" src={Pic.UgandaFlag} alt="Uganda Flag" />
                      </div>
                    </dl>
@@ -238,10 +237,10 @@ export default function PhilanthropyPage() {
                     </svg>
                     <div className="mx-auto max-w-xl  lg:mx-0 lg:flex-auto lg:py-32 text-left">
                         <h2 className="text-3xl font-light tracking-tight text-balance sm:text-4xl">
-                            Make a secure, <br /> <span className="font-bold">Tax-deductible Donation Online</span>
+                            Make a secure, <br />  <span className="font-semibold">tax-deductible donation online</span>
                         </h2>
                         <p className="mt-6 text-lg/8 text-pretty text-foreground text-start">
-                            Click on the <strong>“Donate Now”</strong> link below.
+                            Click on the “Donate Now” link below.
 
 
                         </p>
@@ -295,9 +294,9 @@ export default function PhilanthropyPage() {
                     </div>
         
                     <p className="mt-6 text-lg/7 text-foreground">
-                      The mission of <strong>Back to Eden Global</strong> is to <strong>address the need for economic empowerment</strong>, using entrepreneurial opportunities on the continent of Africa, and throughout the diaspora. <br />
+                      The mission of Back to Eden Global is to address the need for economic empowerment, using entrepreneurial opportunities on the continent of Africa, and throughout the diaspora. <br />
         
-                      It employs educational, agricultural, and ecological stewardship initiatives to <strong>activate agency and develop</strong> entrepreneurial opportunities at project sites in <strong>Uganda, Zambia, Ghana, Nigeria, and the USA.</strong> <br />
+                      It employs educational, agricultural, and ecological stewardship initiatives to activate agency and develop entrepreneurial opportunities at project sites in Uganda, Zambia, Ghana, Nigeria, and the USA. <br />
         
         
         
@@ -361,10 +360,10 @@ export default function PhilanthropyPage() {
                     </svg>
                     <div className="mx-auto max-w-xl  lg:mx-0 lg:flex-auto lg:py-32 text-left">
                         <h2 className="text-3xl font-light tracking-tight text-balance sm:text-4xl">
-                            Make a secure, <br /> <span className="font-bold">Tax-deductible Donation Online</span>
+                            Make a secure, <br />  <span className="font-semibold">tax-deductible donation online</span>
                         </h2>
                         <p className="mt-6 text-lg/8 text-pretty text-foreground text-start">
-                            Click on the <strong>“Donate Now”</strong> link below.
+                            Click on the “Donate Now” link below.
 
 
                         </p>
