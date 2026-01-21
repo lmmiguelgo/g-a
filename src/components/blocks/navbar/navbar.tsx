@@ -33,7 +33,7 @@ export default function Navbar() {
     { name: 'Tax Services', description: 'Proactive planning, compliance, and liability minimization', href: '/services/tax-services', icon: Calculator },
     { name: 'Executive Mentorship', description: 'Performance and wealth strategy mentorship for high-visibility careers', href: '/services/executive-mentorship', icon: GraduationCap },
     { name: 'Small Business Consulting', description: 'Development from early-stage planning to operational structure', href: '/services/small-business-consulting', icon: Store },
-    { name: 'Above the Neck, Inc.', description: 'Gordon & Associates is proud to partner with Above the Neck, Inc.', href: '/services/above-the-neck', icon: Handshake },
+    { name: 'Above the Neck, Inc.', description: 'Impactful financial education for athletes and entrepreneurs.', href: '/services/above-the-neck', icon: Handshake },
   ]
 
   const callsToAction = [

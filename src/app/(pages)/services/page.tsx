@@ -146,7 +146,7 @@ const ServicesPage
                                     
                                     <p className="mt-2 text-lg font-bold tracking-tight text-foreground">Above the Neck, Inc.</p>
                                     <p className="mt-2 max-w-lg text-md/6 text-foreground">
-                                       Gordon & Associates is proud to partner with Above the Neck, Inc. 
+                                       Impactful financial education for athletes and entrepreneurs.
                                     </p>
                                 </div>
                             </div>
