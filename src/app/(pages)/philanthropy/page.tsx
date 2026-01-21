@@ -220,7 +220,7 @@ export default function PhilanthropyPage() {
 
 
 
-        <div id="cta-gammys" className="h-200  flex flex-col items-center justify-center">
+        <div id="cta-gammys" className="h-140  flex flex-col items-center justify-center ">
             <div id="cta-gammys-container" className="mx-auto max-w-7xl w-full py-24 sm:px-6 sm:py-32 lg:px-8 p-4">
                 <div className="relative isolate overflow-hidden bg-second-bg h-200 lg:h-auto px-6 pt-16 after:pointer-events-none after:absolute after:inset-0 after:inset-ring after:inset-ring-white/10 sm:rounded-3xl sm:px-16 after:sm:rounded-3xl md:pt-24 lg:flex lg:gap-x-20 lg:px-24 lg:pt-0">
                     <svg
@@ -258,27 +258,15 @@ export default function PhilanthropyPage() {
                                 <span className="pl-2" aria-hidden="true">→</span>
                             </Link>
                         </div>
-                        <p className="mt-8 text-lg/8 text-pretty text-foreground text-start">
-                            You can Alternatively, send payable checks to the <strong>California Community Foundation</strong>, noting that the donation is for <strong>Gammy’s House</strong>. <br /> <br /> <strong>Checks should be mailed to:</strong> <br />
-                        </p>
-
-                        <address className="mt-4 not-italic">
-                            <strong>Gammy’s House – Fund# D805</strong>
-                            <br />
-                            <strong>c/o California Community Foundation</strong>
-                            <br />
-                            221 S. Figueroa St., Suite 400
-                            <br />
-                            Los Angeles, CA 90012.
-                        </address>
+                     
                     </div>
-                    <div className="relative mt-16 h-80 lg:mt-8">
+                    <div className="relative mt-16 h-80 lg:mt-0">
                         <Image
                             alt="Gammy's House Logo Solo"
                             src={Pic.GammysSingle}
                             width={1824}
                             height={1080}
-                            className="absolute top-40 left-10 w-70 max-w-none rounded-md"
+                            className="absolute top-20 left-10 w-70 max-w-none rounded-md"
                         />
                     </div>
                 </div>
@@ -355,7 +343,7 @@ export default function PhilanthropyPage() {
             </section>
 
 
-             <div id="cta-eden-global" className="h-200  flex flex-col items-center justify-center">
+             <div id="cta-eden-global" className="h-140  flex flex-col items-center justify-center ">
             <div className="mx-auto max-w-7xl w-full py-24 sm:px-6 sm:py-32 lg:px-8 p-4">
                 <div className="relative isolate overflow-hidden bg-second-bg px-6 h-200 lg:h-auto pt-16 after:pointer-events-none after:absolute after:inset-0 after:inset-ring after:inset-ring-white/10 sm:rounded-3xl sm:px-16 after:sm:rounded-3xl md:pt-24 lg:flex lg:gap-x-20 lg:px-24 lg:pt-0">
                     <svg
@@ -393,27 +381,15 @@ export default function PhilanthropyPage() {
                                 <span className="pl-2" aria-hidden="true">→</span>
                             </Link>
                         </div>
-                        <p className="mt-8 text-lg/8 text-pretty text-foreground text-start">
-                            You can Alternatively, send payable checks to the <strong>California Community Foundation</strong>, noting that the donation is for <strong>Back to Eden Global</strong>. <br /> <br /> <strong>Checks should be mailed to:</strong> <br />
-                        </p>
-
-                        <address className="mt-4 not-italic">
-                            <strong>Back to Eden Global</strong>
-                            <br />
-                            <strong>California Community Foundation</strong>
-                            <br />
-                            717 W Temple St.
-                            <br />
-                            Los Angeles, CA 90012.
-                        </address>
+                       
                     </div>
-                    <div className="relative mt-16 h-80 lg:mt-8">
+                     <div className="relative mt-16 h-80 lg:mt-0">
                         <Image
-                            alt="Back to Eden Global Logo Solo"
+                            alt="Gammy's House Logo Solo"
                             src={Pic.EdenGlobal}
                             width={1824}
                             height={1080}
-                            className="absolute top-40 left-10 w-80 max-w-none rounded-md hidden lg:block "
+                            className="absolute top-20 left-10 w-70 max-w-none rounded-md"
                         />
                     </div>
                 </div>

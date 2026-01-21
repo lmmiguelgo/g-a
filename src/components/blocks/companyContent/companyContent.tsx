@@ -125,13 +125,9 @@ export default function CompanyContent() {
               <p>
                 Beyond his work, Isaac remains dedicated to <strong className="text-foreground">mentorship and community service</strong>, continuing to invest in others just as mentors invested in him. His story is one of growth, gratitude, and a steady belief in doing the right thing—for clients, for family, and for the next generation coming up behind him.
               </p>
-              <p>
-                Isaac holds a Bachelor’s degree in Finance from the University of Texas at El Paso (<strong className="text-foreground">UTEP</strong>), an MBA in International Business from Griffith College, and is a licensed CPA. He was recently married to his wife, Kristen, who brings tremendous joy, love, and support into every area of his life.
+              <p className="border-l-2 border-accent-primary pl-4 italic text-foreground/80">
+                Isaac holds a Bachelor’s degree in Finance from the University of Texas at El Paso UTEP, an MBA in International Business from Griffith College, and is a licensed CPA. He was recently married to his wife, Kristen, who brings tremendous joy, love, and support into every area of his life.
               </p>
-              <div className="mt-8 flex gap-4 text-sm font-medium text-foreground">
-                 <div className="rounded-full bg-second-bg px-3 py-1 ring-1 ring-white/10">MBA International Business</div>
-                 <div className="rounded-full bg-second-bg px-3 py-1 ring-1 ring-white/10">Licensed CPA</div>
-              </div>
             </div>
           </div>
 
@@ -142,8 +138,11 @@ export default function CompanyContent() {
               src={Pic.IsaacGordonFull}
               className="absolute inset-0 size-full rounded-2xl bg-second-bg object-cover shadow-2xl"
             />
-             <div className="absolute bottom-4 left-4 rounded-lg bg-black/60 backdrop-blur-md px-4 py-2 text-xs text-white">
-               
+            {/* Floating Mission Quote overlapping the image */}
+            <div className="absolute -bottom-12 left-6 right-6 rounded-xl bg-accent-primary p-6 shadow-lg sm:left-12 sm:right-auto sm:max-w-sm">
+               <blockquote className="text-sm/6 font-medium text-white">
+                "His story is one of growth, gratitude, and a steady belief in doing the right thing—for clients, for family, and for the next generation."
+              </blockquote>
             </div>
           </div>
 

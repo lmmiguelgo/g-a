@@ -5,9 +5,9 @@ import { Pic } from "@/components/ui/pic/pic"
 
 export default function CtaEdenGlobal() {
     return (
-        <div id="cta-eden-global" className="fixed w-full hidden opacity-0 translate-y-400 ">
-            <div className="mx-auto max-w-7xl py-24 sm:px-6 sm:py-32 lg:px-8 p-4">
-                <div className="relative isolate overflow-hidden bg-second-bg px-6 pt-16 after:pointer-events-none after:absolute after:inset-0 after:inset-ring after:inset-ring-white/10 sm:rounded-3xl sm:px-16 after:sm:rounded-3xl md:pt-24 lg:flex lg:gap-x-20 lg:px-24 lg:pt-0">
+        <div id="cta-eden-global" className="fixed w-full hidden opacity-0 translate-y-400  ">
+            <div className="mx-auto max-w-7xl py-24 sm:px-6 sm:py-32 lg:px-8 p-4 ">
+                <div className="relative isolate overflow-hidden bg-second-bg px-6 pt-16 after:pointer-events-none after:absolute after:inset-0 after:inset-ring after:inset-ring-white/10 sm:rounded-3xl sm:px-16 after:sm:rounded-3xl md:pt-24 lg:flex lg:gap-x-20 lg:px-24 lg:pt-0 h-200 lg:h-fit">
                     <svg
                         viewBox="0 0 1024 1024"
                         aria-hidden="true"
@@ -43,27 +43,15 @@ export default function CtaEdenGlobal() {
                                 <span className="pl-2" aria-hidden="true">→</span>
                             </Link>
                         </div>
-                        <p className="mt-8 text-lg/8 text-pretty text-foreground text-start">
-                            You can Alternatively, send payable checks to the <strong>California Community Foundation</strong>, noting that the donation is for <strong>Back to Eden Global</strong>. <br /> <br /> <strong>Checks should be mailed to:</strong> <br />
-                        </p>
-
-                        <address className="mt-4 not-italic">
-                            <strong>Back to Eden Global</strong>
-                            <br />
-                            <strong>California Community Foundation</strong>
-                            <br />
-                            717 W Temple St.
-                            <br />
-                            Los Angeles, CA 90012.
-                        </address>
+                        
                     </div>
-                    <div className="relative mt-16 h-80 lg:mt-8">
+                    <div className="relative mt-16 h-80 lg:mt-0">
                         <Image
                             alt="Back to Eden Global Logo Solo"
                             src={Pic.EdenGlobal}
                             width={1824}
                             height={1080}
-                            className="absolute top-40 left-10 w-80 max-w-none rounded-md "
+                            className="absolute top-20 left-10 w-80 max-w-none rounded-md "
                         />
                     </div>
                 </div>
