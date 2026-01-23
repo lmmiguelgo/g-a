@@ -24,7 +24,7 @@ export const Hero = () => {
         gsap.from('#main-background', {
           ease: "circ",
           duration: 8,
-          scale: 1,
+          scale: 1.4,
         });
 
 
