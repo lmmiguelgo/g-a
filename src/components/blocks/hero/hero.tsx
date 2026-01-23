@@ -72,7 +72,7 @@ export const Hero = () => {
       <div id="logo-hero" className="fixed flex flex-col items-center justify-center w-full h-full">
 
 
-        <Image id="hero-logo-image" className=" pointer-events-none px-4 lg:px-0 lg:max-w-2xl lg:mb-12 " src={Pic.LogoWide} alt="Wide Logo" loading="eager" />
+        <Image id="hero-logo-image" className=" pointer-events-none px-4 lg:px-0 lg:max-w-2xl lg:mb-16 " src={Pic.LogoWide} alt="Wide Logo" loading="eager" />
         <ChevronDown id="hero-arrow-logo" className="animate-fade-down animate-infinite animate-duration-1800 animate-delay-1800 text-white mt-4" size={32} />
 
       </div>
