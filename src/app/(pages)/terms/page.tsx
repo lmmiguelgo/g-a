@@ -1,162 +1,100 @@
 "use client";
 
-import React, { useState } from 'react';
-import { MessageSquare, UserX, CheckCircle, Info, ShieldCheck, Mail, Phone } from 'lucide-react';
+import React from 'react';
 
-export default function terms() {
-  const [formData, setFormData] = useState({
-    email: '',
-    phone: ''
-  });
-  const [status, setStatus] = useState('idle'); // idle, loading, success
-
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-    setStatus('loading');
-    
-    // Simulate API call
-    setTimeout(() => {
-      setStatus('success');
-      setFormData({ email: '', phone: '' });
-    }, 1500);
-  };
-
+export default function Terms() {
   return (
-    <div className="w-full bg-background pb-24 pt-24 sm:pb-32 sm:pt-32">
-      <div className="mx-auto max-w-7xl px-6 lg:px-8 w-full">
-        {/* 1. CONSENT OVERVIEW SECTION */}
-        <div className="mx-auto max-w-7xl lg:mx-0">
-          <h2 className="text-lg/7 font-bold text-accent-primary tracking-widest">Preferences</h2>
-          <p className="mt-2 text-4xl font-semibold tracking-tight text-pretty text-foreground sm:text-5xl">
-            Communication Terms
-          </p>
-          
-          <div className="mt-8 flex items-start gap-4 rounded-2xl bg-second-bg/50 p-6 ring-1 ring-accent-secondary/20">
-            <ShieldCheck className="mt-1 size-8 flex-none text-accent-primary" />
-            <div className="text-lg/8 text-foreground">
-              <p className="text-xl">SMS Consent Agreement</p>
-              <p className="mt-2 text-foreground/80">
-                By providing your phone number, you agree that Gordon & Associates may send and receive text messages regarding your account, financial planning updates, and professional services. 
-              </p>
-              <p className="mt-4 text-accent-primary">
-                "I accept Gordon & Associates sending and receiving text messages."
-              </p>
-            </div>
-          </div>
+    <section id='sms-terms' className="w-full bg-background pb-24 pt-24 sm:pb-32 sm:pt-32">
+      <div className="mx-auto max-w-4xl px-6 lg:px-8 w-full">
+        
+        {/* Header */}
+        <div className="mb-12">
+            <h1 className="text-4xl font-bold tracking-tight text-foreground sm:text-5xl mb-6">
+            SMS Terms of Use
+            </h1>
+            <h2 className="text-lg font-semibold text-accent-primary tracking-widest uppercase">
+            Gordon & Associates Text Messaging Terms of Use
+            </h2>
         </div>
 
-        {/* DIVIDER */}
-        <div className="mx-auto my-20 max-w-7xl border-t border-accent-secondary/20 lg:my-32" />
-
-        {/* 2. UNSUBSCRIBE SECTION (Text Left / Form Right) */}
-        <div className="mx-auto grid max-w-2xl grid-cols-1 items-start gap-x-12 gap-y-16 lg:mx-0 lg:max-w-none lg:grid-cols-2">
-          
-          {/* Information Side */}
-          <div className="lg:pr-8">
-            <h2 className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl">Opt-Out Management</h2>
-            <p className="mt-2 text-lg/7 text-accent-primary">Unsubscribe from SMS Communications</p>
+        {/* Content */}
+        <div className="space-y-12 text-lg/8 text-foreground/80">
             
-            <div className="mt-6 space-y-6 text-lg/7 text-foreground">
-              <p>
-                We respect your privacy and your time. If you no longer wish to receive text updates from our firm, you can opt out at any time using the form on this page or by replying "STOP" to any message you receive.
-              </p>
-              <p>
-                Please note that unsubscribing from SMS will not affect your primary email communications or scheduled consultations. Gordon & Associates remains committed to providing the highest standard of professional service through your preferred channels.
-              </p>
-              
-              <div className="mt-8 flex flex-wrap gap-4 text-sm font-medium text-foreground">
-                 <div className="flex items-center gap-2 rounded-full bg-second-bg px-4 py-2 ring-1 ring-white/10">
-                   <CheckCircle className="size-4 text-accent-primary" />
-                   Instant Processing
-                 </div>
-                 <div className="flex items-center gap-2 rounded-full bg-second-bg px-4 py-2 ring-1 ring-white/10">
-                   <Info className="size-4 text-accent-primary" />
-                   Secure Handling
-                 </div>
-              </div>
+            <p className="text-xl leading-relaxed text-foreground">
+            By "Opting In" to or using a “Text Message Service” (as defined below) from Gordon & Associates, you accept these Terms & Conditions.
+            </p>
+
+            <div className="bg-second-bg/50 p-6 rounded-2xl border border-accent-secondary/20 text-sm/6">
+              <p className="font-bold text-foreground mb-1">ARBITRATION NOTICE</p>
+              THIS AGREEMENT IS SUBJECT TO BINDING ARBITRATION AND A WAIVER OF CLASS ACTION RIGHTS AS DETAILED BELOW.
             </div>
-          </div>
 
-          {/* Form Side */}
-          <div className="relative rounded-2xl bg-second-bg p-8 shadow-2xl ring-1 ring-white/10">
-            {status === 'success' ? (
-              <div className="flex flex-col items-center justify-center py-12 text-center">
-                <div className="rounded-full bg-accent-primary/20 p-4 mb-4">
-                    <CheckCircle className="size-12 text-accent-primary" />
-                </div>
-                <h3 className="text-2xl font-bold text-foreground">Request Received</h3>
-                <p className="mt-2 text-foreground/70">
-                  You have been successfully unsubscribed. Please allow up to 24 hours for our systems to fully update.
-                </p>
-                <button 
-                  onClick={() => setStatus('idle')}
-                  className="mt-8 rounded-lg bg-accent-primary px-6 py-2 text-sm font-bold text-white transition hover:bg-opacity-90"
-                >
-                  Manage Another Number
-                </button>
-              </div>
-            ) : (
-              <form onSubmit={handleSubmit} className="space-y-6">
-                <div>
-                  <label htmlFor="email" className="block text-sm font-bold text-foreground mb-2">
-                    Email Address
-                  </label>
-                  <div className="relative">
-                    <Mail className="absolute left-3 top-1/2 -translate-y-1/2 size-5 text-accent-primary" />
-                    <input
-                      required
-                      type="email"
-                      id="email"
-                      className="w-full rounded-lg border-none bg-background/50 pl-11 pr-4 py-3 text-foreground ring-1 ring-white/10 focus:ring-2 focus:ring-accent-primary outline-none transition"
-                      placeholder="laura@example.com"
-                      value={formData.email}
-                      onChange={(e) => setFormData({...formData, email: e.target.value})}
-                    />
-                  </div>
-                </div>
+            <p>
+            This agreement is between you and Gordon & Associates or one of its affiliates. All references to "Gordon & Associates," "we," "our," or "us" refer to Gordon & Associates, 468 N Camden Drive, Suite 400A, Beverly Hills, CA 90210.
+            </p>
 
-                <div>
-                  <label htmlFor="phone" className="block text-sm font-bold text-foreground mb-2">
-                    Phone Number
-                  </label>
-                  <div className="relative">
-                    <Phone className="absolute left-3 top-1/2 -translate-y-1/2 size-5 text-accent-primary" />
-                    <input
-                      required
-                      type="tel"
-                      id="phone"
-                      className="w-full rounded-lg border-none bg-background/50 pl-11 pr-4 py-3 text-foreground ring-1 ring-white/10 focus:ring-2 focus:ring-accent-primary outline-none transition"
-                      placeholder="(555) 000-0000"
-                      value={formData.phone}
-                      onChange={(e) => setFormData({...formData, phone: e.target.value})}
-                    />
-                  </div>
-                </div>
+            <div className="space-y-8">
+              <section>
+                  <h3 className="text-xl font-bold text-foreground mb-3">DEFINITIONS</h3>
+                  <p>
+                  "Opting In," "Opt In," and "Opt-In" refer to requesting, joining, agreeing to, enrolling in, signing up for, acknowledging, responding to, or otherwise consenting to receive one or more text messages. "Text Message Service" includes any arrangement or situation in which we send one or more messages addressed to your mobile phone number, including text messages (such as SMS, MMS, or successor protocols or technologies).
+                  </p>
+              </section>
 
-                <button
-                  type="submit"
-                  disabled={status === 'loading'}
-                  className="group relative w-full flex items-center justify-center gap-2 rounded-lg bg-accent-primary px-8 py-4 text-lg font-bold text-white transition-all hover:shadow-[0_0_20px_rgba(var(--accent-primary-rgb),0.3)] disabled:opacity-70"
-                >
-                  {status === 'loading' ? (
-                    <div className="size-6 border-2 border-white/30 border-t-white animate-spin rounded-full" />
-                  ) : (
-                    <>
-                      <UserX className="size-5 transition-transform group-hover:scale-110" />
-                      Unsubscribe Me
-                    </>
-                  )}
-                </button>
+              <section>
+                  <h3 className="text-xl font-bold text-foreground mb-3">CONSENTING TO TEXT MESSAGING</h3>
+                  <p>
+                  By consenting to receive text messages from us, you agreed to these Text Messaging Terms and Conditions, as well as our <span className="text-accent-primary">General T&Cs</span> and <span className="text-accent-primary">Privacy Policy</span>, incorporated herein by reference.
+                  </p>
+              </section>
+              
+              <section>
+                  <h3 className="text-xl font-bold text-foreground mb-3">E-SIGN DISCLOSURE</h3>
+                  <p>
+                  By agreeing to receive text messages, you also consent to the use of an electronic record to document your agreement. You may withdraw your consent to the use of the electronic record by replying STOP.
+                  </p>
+              </section>
 
-                <p className="text-center text-xs text-foreground/50">
-                  By clicking unsubscribe, you will no longer receive automated text updates from Gordon & Associates.
-                </p>
-              </form>
-            )}
-          </div>
+              <section>
+                  <h3 className="text-xl font-bold text-foreground mb-3">GORDON & ASSOCIATES TEXT MESSAGE SERVICE PRIVACY POLICY</h3>
+                  <p>
+                  We respect your privacy. We only use information you provide through this service to transmit your mobile messages and respond to you. This includes, but isn't limited to, sharing information with platform providers, phone companies, and other vendors who assist us in the delivery of mobile messages. Mobile information will not be shared with third parties/affiliates for marketing/promotional purposes. All the above categories exclude text messaging originator opt-in data and consent; this information will not be shared with any third parties. Nonetheless, we reserve the right always to disclose any information as necessary to satisfy any law, regulation or governmental request, to avoid liability, or to protect our rights or property. This Text Message Service Privacy Policy applies to your use of the Text Message Service and isn't intended to modify our general Privacy Policy, incorporated by reference above, which may govern the relationship between you and us in other contexts.
+                  </p>
+              </section>
+
+              <section>
+                  <h3 className="text-xl font-bold text-foreground mb-3">COSTS OF TEXT MESSAGES</h3>
+                  <p>
+                  We do not charge you for the messages you send and receive via this text message service. But message and data rates may apply, so depending on your plan with your wireless or other applicable provider, you may be charged by your carrier or other applicable provider.
+                  </p>
+              </section>
+
+              <section>
+                  <h3 className="text-xl font-bold text-foreground mb-3">FREQUENCY OF TEXT MESSAGES</h3>
+                  <p>
+                  This Text Messaging Service is for conversational person-to-person communication between you and our employees. We may send you an initial message providing details about the service. After that, the number of text messages you receive will vary depending on how you use our services and whether you take steps to generate more text messages from us (such as by sending a HELP request).
+                  </p>
+              </section>
+
+              <section>
+                  <h3 className="text-xl font-bold text-foreground mb-3">OPTING OUT OF TEXT MESSAGES</h3>
+                  <p>
+                  If you no longer want to receive text messages, you may reply to any text message with STOP, QUIT, END, REVOKE, OPT OUT, CANCEL, or UNSUBSCRIBE. As a person-to-person communication service, opt-out requests are specific to each conversation between you and one of our employees and their associated phone number. After unsubscribing, we may send you confirmation of your opt-out via text message.
+                  </p>
+              </section>
+
+              <section>
+                  <h3 className="text-xl font-bold text-foreground mb-3">CONTACT US</h3>
+                  <p>
+                  For support, contact us at <a href="mailto:info@gordonandassociates.biz" className="text-accent-primary hover:underline">info@gordonandassociates.biz</a>.
+                  </p>
+              </section>
+
+              
+            </div>
 
         </div>
       </div>
-    </div>
+    </section>
   );
 }
