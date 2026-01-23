@@ -213,7 +213,7 @@ export default function CompanyPage() {
                 Laura W. Gordon is a Certified Public Accountant licensed in the state of California and is a licensed minister in the marketplace.
               </p>
               <p>
-                In 1992, Laura founded Gordon & Associates, An Accountancy Corporation, a boutique business management firm which represents award winning comedians, actors, writers, directors, producers, recording artists, athletes, and industry executives. The firm also provides small business development, wealth management, tax planning and preparation services. It helps entertainers, professional athletes, small business owners, executives, and other high net worth individuals build wealth, protect assets, and secure their financial futures.
+                In 1992, Laura founded Gordon & Associates, An Accountancy Corporation, a boutique business management firm which represents award winning comedians, actors, writers, directors, producers, recording artists, athletes, and industry executives. The firm also provides small business development, wealth management, tax planning and tax preparation services. It helps entertainers, professional athletes, small business owners, executives, and other high net worth individuals build wealth, protect assets, and secure their financial futures.
               </p>
               <p>
                 Laura was named among The Hollywood Reporter’s “Hollywood’s Top Business Managers” of 2018 through 2025 and Variety’s “Business Manager Elite” of 2020 through 2023. For six years, Laura served on the board of Women in Film, Los Angeles, an organization that advocates for and advances the careers of women working in the screen industries to achieve parity and transform culture.
@@ -225,7 +225,7 @@ export default function CompanyPage() {
                 As a third-generation entrepreneur, Laura’s life mission expands beyond servicing just her clients. In 2022, she partnered with other ministries to establish Back to Eden Global, in which she employs her business skills and ministry gifts to develop economic opportunities for project sites in Africa and in the diaspora.
               </p>
                <p className="border-l-2 border-accent-primary pl-4 italic text-foreground/80">
-                Laura holds a Bachelor of Arts in Economics from UCLA, a Masters of Divinity from The King’s University, and a Doctorate of Ministry from Jakes Divinity School. She has been married to her college sweetheart for 39 years and they have 3 adult children and 5 grandchildren.
+                Laura holds a Bachelor of Arts in Economics from UCLA, a Masters of Divinity from The King’s University, and a Doctorate of Ministry from Jakes Divinity School. She has been married to her college sweetheart for 40 years and they have 3 adult children and 5 grandchildren.
               </p>
             </div>
           </div>
@@ -252,7 +252,7 @@ export default function CompanyPage() {
                 Beyond his work, Isaac remains dedicated to mentorship and community service, continuing to invest in others just as mentors invested in him. His story is one of growth, gratitude, and a steady belief in doing the right thing—for clients, for family, and for the next generation coming up behind him.
               </p>
               <p className="border-l-2 border-accent-primary pl-4 italic text-foreground/80">
-                Isaac holds a Bachelor’s degree in Finance from the University of Texas at El Paso UTEP, an MBA in International Business from Griffith College, and is a licensed CPA. He was recently married to his wife, Kristen, who brings tremendous joy, love, and support into every area of his life.
+                Isaac holds a Bachelor’s degree in Finance from the University of Texas at El Paso (UTEP), an MBA in International Business from Griffith College - Dublin, and is a licensed CPA. He was recently married to his wife, Kristen, who brings tremendous joy, love, and support into every area of his life.
               </p>
               
             </div>

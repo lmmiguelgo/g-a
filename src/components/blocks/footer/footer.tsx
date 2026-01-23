@@ -22,7 +22,7 @@ const navigation = {
   connect: [
     { name: 'Contact', href: '/contact' },
     { name: 'Press', href: '/press' },
-    { name: 'Client Portal', href: '/login' },
+    { name: 'Client Portal', href: '/client-portal' },
     { name: 'Terms', href: '/terms' },
   ],
 }

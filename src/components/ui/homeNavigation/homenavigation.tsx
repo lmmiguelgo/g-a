@@ -184,10 +184,7 @@ const HomeNavigation = () => {
   return (
     <div className="hidden fixed bottom-8 left-1/2 -translate-x-1/2 z-40 lg:flex items-center gap-6 bg-black/40 backdrop-blur-md px-6 py-3 rounded-full border border-white/10 shadow-2xl transition-all duration-300 hover:bg-black/50">
         <button 
-            onClick={() => {
-              steps[0]();
-              setCurrentStep(0);
-            }}
+           onClick={() => { window.location.href = "/"}}
             className="transition-all duration-300 opacity-100 hover:text-accent-primary hover:scale-110 cursor-pointer border-r border-white/20 pr-4 -mr-2.5"
             aria-label="Go to Start"
             title="Back to Top"

@@ -433,10 +433,10 @@ export default function Navbar() {
 
           <div className="hidden lg:flex lg:flex-1 lg:justify-end items-center gap-x-6">
             <Link onClick={scrollToHome} href="/contact" className=" inline-flex items-center gap-x-2 rounded-md bg-accent-primary px-3.5 py-2.5 text-sm font-semibold text-foreground hover:bg-accent-primary/88">
-              Contact us <span aria-hidden="true">&rarr;</span>
+              Contact Us <span aria-hidden="true">&rarr;</span>
             </Link>
-            <Link href="/login" className="rounded-full bg-white/20 p-2 text-foreground hover:bg-white/10 hover:text-white transition-all duration-300 border border-foreground/40">
-              <span className="sr-only">Log in</span>
+            <Link href="/client-portal" className="rounded-full bg-white/20 p-2 text-foreground hover:bg-white/10 hover:text-white transition-all duration-300 border border-foreground/40">
+              <span className="sr-only">Client Portal</span>
               <User className="h-6 w-6" aria-hidden="true" />
             </Link>
           </div>
@@ -618,15 +618,15 @@ export default function Navbar() {
                   href="/contact"
                   className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-foreground hover:bg-white/5 transition-colors duration-300"
                 >
-                  Contact us
+                  Contact Us
                 </Link>
 
                 <Link
                   onClick={() => { setMobileMenuOpen(false) }}
-                  href="/login"
+                  href="/client-portal"
                    className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-foreground hover:bg-white/5 transition-colors duration-300"
                 >
-                  Log in
+                  Client Portal
                 </Link>
                
               </div>

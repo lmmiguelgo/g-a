@@ -202,21 +202,21 @@ export default function PhilanthropyPage() {
             <div id="philanthropy-page-flags" className="max-lg:mt-16 lg:col-span-1  ">
 
               <hr className=" border-t border-second-bg" />
-              <dl className="mt-6 grid grid-cols-1 gap-x-8 gap-y-4 sm:grid-cols-2">
+              <dl className="mt-6 grid grid-cols-1 gap-x-8 gap-y-4 sm:grid-cols-2 font-semibold">
                 <div className="flex flex-col gap-y-2 border-b border-dotted border-second-bg pb-4">
-                  <dt className="text-md/6 text-foreground">Building water wells in Zambia.</dt>
+                  <dt className="text-lg/6 text-foreground">Building water wells in Zambia.</dt>
                   <Image className="rounded-lg border-4 border-foreground/20 aspect-video" src={Pic.ZambiaFlag} alt="Zambia Flag" />
                 </div>
                 <div className="flex flex-col gap-y-2 border-b border-dotted border-second-bg pb-4">
-                  <dt className="text-md/6 text-foreground">Building schools in Kenya.</dt>
+                  <dt className="text-lg/6 text-foreground">Building schools in Kenya.</dt>
                   <Image className="rounded-lg border-4 border-foreground/20 aspect-video" src={Pic.KenyaFlag} alt="Kenya Flag" />
                 </div>
                 <div className="flex flex-col gap-y-2 max-sm:border-b max-sm:border-dotted max-sm:border-second-bg max-sm:pb-4">
-                  <dt className="text-md/6 text-foreground">Providing micro-lending and scholarships in the United States.</dt>
+                  <dt className="text-lg/6 text-foreground">Providing micro-lending and scholarships in the United States.</dt>
                   <Image className="rounded-lg border-4 border-foreground/20 aspect-video" src={Pic.UnitedStatesFlag} alt="United States Flag" />
                 </div>
                 <div className="flex flex-col gap-y-2">
-                  <dt className="text-md/6 text-foreground">Empowering business owners in Uganda.</dt>
+                  <dt className="text-lg/6 text-foreground">Empowering business owners in Uganda.</dt>
                   <Image className="rounded-lg border-4 border-foreground/20 aspect-video" src={Pic.UgandaFlag} alt="Uganda Flag" />
                 </div>
               </dl>
@@ -318,7 +318,7 @@ export default function PhilanthropyPage() {
               </div>
 
               <p className="mt-6 text-lg/7 text-foreground">
-                The mission of Back to Eden Global is to address the need for economic empowerment, using entrepreneurial opportunities on the continent of Africa, and throughout the diaspora. <br />
+                The mission of Back to Eden Global is to address the need for economic empowerment, using entrepreneurial opportunities on the continent of Africa, and throughout the diaspora. <br /><br />
 
                 It employs educational, agricultural, and ecological stewardship initiatives to activate agency and develop entrepreneurial opportunities at project sites in Uganda, Zambia, Ghana, Nigeria, and the USA. <br />
 
