@@ -203,6 +203,12 @@ export default function Navbar() {
 
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
   const [hoveredDropdown, setHoveredDropdown] = useState(null)
+  
+  const [openMobileDropdown, setOpenMobileDropdown] = useState<string | null>(null)
+
+  const toggleMobileDropdown = (name: string) => {
+    setOpenMobileDropdown(openMobileDropdown === name ? null : name)
+  }
 
   // Handlers for hover state
   const handleMouseEnter = (menu: any) => {
@@ -479,78 +485,150 @@ export default function Navbar() {
           </div>
           <div className="mt-6 flow-root">
             <div className="-my-6 divide-y divide-white/10">
-              <div className="space-y-2 py-6">
-                <Link
-                  onClick={() => { setMobileMenuOpen(false) }}
-                  href="/login"
-                  className={`group -mx-3 flex items-center gap-x-6 rounded-lg px-3 py-1 text-base font-semibold leading-8 hover:bg-white/5 ${pathname.startsWith('/login') ? 'bg-white/5 text-white' : 'text-foreground'}`}
+              <div className="space-y-1 py-6">
+                 {/* Home */}
+                 <Link
+                  onClick={() => { setMobileMenuOpen(false); scrollToHome(); }}
+                  href="/"
+                  className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-foreground hover:bg-white/5"
                 >
-                  <div className={`flex h-12 w-12 flex-none items-center justify-center rounded-full border border-foreground/40 group-hover:bg-white/10 ${pathname.startsWith('/login') ? 'bg-white/10' : 'bg-white/20'}`}>
-                    <User className={`h-6 w-6 group-hover:text-foreground ${pathname.startsWith('/login') ? 'text-white' : 'text-foreground/70'}`} aria-hidden="true" />
-                  </div>
-                  Log in
+                  Home
                 </Link>
-                {services.map((item) => (
-                  <Link
-                    onClick={() => { setMobileMenuOpen(false) }}
-                    key={item.name}
-                    href={item.href}
-                    className={`group -mx-3 flex items-center gap-x-6 rounded-lg px-3 py-1 text-base font-semibold leading-8 hover:bg-white/5 ${isActive(item.href) ? 'bg-white/5 text-white' : 'text-foreground'}`}
-                  >
-                    <div className={`flex h-12 w-12 flex-none items-center justify-center rounded-lg group-hover:bg-white/10 ${isActive(item.href) ? 'bg-white/10' : 'bg-white/5'}`}>
-                      <item.icon className={`h-6 w-6 group-hover:text-foreground ${isActive(item.href) ? 'text-white' : 'text-foreground/70'}`} aria-hidden="true" />
-                    </div>
-                    {item.name}
-                  </Link>
-                ))}
-              </div>
-              <div className="space-y-2 py-4">
-                {philanthropy.map((item) => (
-                   <Link
-                   onClick={() => { 
-                     item.scrollTo();
-                     setMobileMenuOpen(false);
-                     setTimeout(() => setCurrentHash(window.location.hash), 100);
-                   }}
-                   key={item.name}
-                   href={item.href}
-                   className={`-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 hover:bg-white/5 ${isActive(item.href) ? 'bg-white/5 text-white' : 'text-foreground'}`}
-                 >
-                   {item.name}
-                 </Link>
-                ))}
-                
+
+                {/* Services */}
+                <div>
+                    <button
+                        onClick={() => toggleMobileDropdown('services')}
+                        className="flex w-full items-center justify-between rounded-lg py-2 pl-3 pr-3.5 text-base font-semibold leading-7 text-foreground hover:bg-white/5 -mx-3"
+                    >
+                        Services
+                        <ChevronDown
+                            className={`h-5 w-5 flex-none text-foreground/70 transition-transform ${openMobileDropdown === 'services' ? 'rotate-180' : ''}`}
+                            aria-hidden="true"
+                        />
+                    </button>
+                    {openMobileDropdown === 'services' && (
+                        <div className="mt-2 space-y-2">
+                            {services.map((item) => (
+                                <Link
+                                    key={item.name}
+                                    href={item.href}
+                                    onClick={() => setMobileMenuOpen(false)}
+                                    className={`group flex items-center gap-x-6 rounded-lg p-3 text-sm font-semibold leading-6 hover:bg-white/5 ${isActive(item.href) ? 'bg-white/5 text-white' : 'text-foreground'}`}
+                                >
+                                     <div className={`flex h-11 w-11 flex-none items-center justify-center rounded-lg group-hover:bg-white/10 ${isActive(item.href) ? 'bg-white/10' : 'bg-white/5'}`}>
+                                      <item.icon className={`h-6 w-6 group-hover:text-foreground ${isActive(item.href) ? 'text-white' : 'text-foreground/70'}`} aria-hidden="true" />
+                                    </div>
+                                    {item.name}
+                                </Link>
+                            ))}
+                        </div>
+                    )}
+                </div>
+
+                 {/* Company */}
+                 <div>
+                    <button
+                        onClick={() => toggleMobileDropdown('company')}
+                        className="flex w-full items-center justify-between rounded-lg py-2 pl-3 pr-3.5 text-base font-semibold leading-7 text-foreground hover:bg-white/5 -mx-3"
+                    >
+                        Company
+                        <ChevronDown
+                            className={`h-5 w-5 flex-none text-foreground/70 transition-transform ${openMobileDropdown === 'company' ? 'rotate-180' : ''}`}
+                            aria-hidden="true"
+                        />
+                    </button>
+                    {openMobileDropdown === 'company' && (
+                        <div className="mt-2 space-y-2">
+                             {company.map((item) => (
+                                <Link
+                                    key={item.name}
+                                    href={item.href}
+                                    onClick={() => { 
+                                      item.actionMobile();
+                                      setMobileMenuOpen(false);
+                                      setTimeout(() => setCurrentHash(window.location.hash), 100);
+                                    }}
+                                    className={`group flex items-center gap-x-6 rounded-lg p-3 text-sm font-semibold leading-6 hover:bg-white/5 ${isActive(item.href) ? 'bg-white/5 text-white' : 'text-foreground'}`}
+                                >
+                                     <div className={`flex h-11 w-11 flex-none items-center justify-center rounded-lg group-hover:bg-white/10 ${isActive(item.href) ? 'bg-white/10' : 'bg-white/5'}`}>
+                                          {'image' in item && item.image ? (
+                                              <Image
+                                                src={item.image}
+                                                alt={item.name}
+                                                className={`h-auto w-auto object-cover group-hover:grayscale-0 transition-all duration-300 ${isActive(item.href) ? 'grayscale-0' : 'grayscale'}`}
+                                              />
+                                            ) : (
+                                              /* @ts-ignore */
+                                              <item.icon className={`h-6 w-6 transition-colors duration-300 ${isActive(item.href) ? 'text-white' : 'text-foreground/70 group-hover:text-white'}`} aria-hidden="true" />
+                                            )}
+                                    </div>
+                                    {item.name}
+                                </Link>
+                            ))}
+                        </div>
+                    )}
+                </div>
+
+                 {/* Philanthropy */}
+                 <div>
+                    <button
+                        onClick={() => toggleMobileDropdown('philanthropy')}
+                        className="flex w-full items-center justify-between rounded-lg py-2 pl-3 pr-3.5 text-base font-semibold leading-7 text-foreground hover:bg-white/5 -mx-3"
+                    >
+                        Philanthropy
+                        <ChevronDown
+                            className={`h-5 w-5 flex-none text-foreground/70 transition-transform ${openMobileDropdown === 'philanthropy' ? 'rotate-180' : ''}`}
+                            aria-hidden="true"
+                        />
+                    </button>
+                    {openMobileDropdown === 'philanthropy' && (
+                        <div className="mt-2 space-y-2">
+                             {philanthropy.map((item) => (
+                                <Link
+                                    key={item.name}
+                                    href={item.href}
+                                    onClick={() => { 
+                                      item.scrollTo();
+                                      setMobileMenuOpen(false);
+                                      setTimeout(() => setCurrentHash(window.location.hash), 100);
+                                    }}
+                                    className={`group flex items-center gap-x-6 rounded-lg p-3 text-sm font-semibold leading-6 hover:bg-white/5 ${isActive(item.href) ? 'bg-white/5 text-white' : 'text-foreground'}`}
+                                >
+                                    <div className={`flex h-11 w-11 flex-none items-center justify-center rounded-lg group-hover:bg-white/10 ${isActive(item.href) ? 'bg-white/10' : 'bg-white/5'}`}>
+                                         <Image src={item.image} alt={item.name} className={`h-8 w-8 object-contain transition-all duration-300 ${isActive(item.href) ? 'brightness-100' : 'group-hover:brightness-100 brightness-80'}`} />
+                                    </div>
+                                    {item.name}
+                                </Link>
+                            ))}
+                        </div>
+                    )}
+                </div>
+
                 <Link
-                onClick={() => {setMobileMenuOpen(false); scrollToHome();}}
+                  onClick={() => { setMobileMenuOpen(false); scrollToHome(); }}
                   href="/press"
-                  className={`-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 hover:bg-white/5 ${pathname.startsWith('/press') ? 'bg-white/5 text-white' : 'text-foreground'}`}
+                  className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-foreground hover:bg-white/5"
                 >
                   Press
                 </Link>
 
-                {company.map((item) => (
-                  <Link
-                    onClick={() => { 
-                      item.actionMobile();
-                      setMobileMenuOpen(false);
-                      setTimeout(() => setCurrentHash(window.location.hash), 100);
-                    }}
-                    key={item.name}
-                    href={item.href}
-                    className={`-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 hover:bg-white/5 ${isActive(item.href) ? 'bg-white/5 text-white' : 'text-foreground'}`}
-                  >
-                    {item.name}
-                  </Link>
-                ))}
-              </div>
-              <div className="py-6">
                 <Link
-                onClick={() => {setMobileMenuOpen(false);}}
+                  onClick={() => {setMobileMenuOpen(false);}}
                   href="/contact"
-                  className={`-mx-3 block rounded-lg px-3 py-3 text-base font-semibold leading-7 hover:bg-white/5 transition-colors duration-300 ${pathname.startsWith('/contact') ? 'bg-white/5 text-white' : 'text-foreground'}`}
+                  className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-foreground hover:bg-white/5 transition-colors duration-300"
                 >
                   Contact us
                 </Link>
+
+                <Link
+                  onClick={() => { setMobileMenuOpen(false) }}
+                  href="/login"
+                   className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-foreground hover:bg-white/5 transition-colors duration-300"
+                >
+                  Log in
+                </Link>
+               
               </div>
             </div>
           </div>

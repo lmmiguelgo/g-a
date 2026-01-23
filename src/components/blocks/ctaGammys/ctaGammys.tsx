@@ -51,7 +51,7 @@ export default function CtaGammys() {
                             src={Pic.GammysSingle}
                             width={1824}
                             height={1080}
-                            className="absolute top-20 left-10 w-70 max-w-none rounded-md"
+                            className="absolute top-20 left-10 w-70 max-w-none rounded-md hidden lg:block"
                         />
                     </div>
                 </div>

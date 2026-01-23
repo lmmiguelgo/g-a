@@ -5,6 +5,7 @@ import "./pages.css";
 
 import Navbar from "@/components/blocks/navbar/navbar";
 import Footer from "@/components/blocks/footer/footer";
+import CookieConsent from "@/components/blocks/cookies/cookies";
 
 
 const montserrat = Montserrat({
@@ -78,6 +79,7 @@ export default function RootLayout({
 
         {children}
         <Footer />
+        <CookieConsent />
       </body>
     </html>
   );

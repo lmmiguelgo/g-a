@@ -47,7 +47,7 @@ export default function ServiceSingle({ Servicenumber, Title, children, Picture 
     }
 
     return (
-        <div className="fixed max-h-screen overflow-scroll lg:overflow-hidden w-full bg-background py-24 sm:py-32">
+        <div className="  w-full bg-background py-24 sm:py-32">
             <div className="mx-auto max-w-7xl px-6 lg:px-8">
                 <div className="mx-auto grid max-w-2xl grid-cols-1 items-start gap-x-8 gap-y-16 sm:gap-y-24 lg:mx-0 lg:max-w-none lg:grid-cols-2">
                     <div id="service-image-container" className="lg:pr-4">
@@ -91,7 +91,7 @@ export default function ServiceSingle({ Servicenumber, Title, children, Picture 
                                 Contact us{' '}
                                 <span className="pl-2" aria-hidden="true">→</span>
                             </Link>
-                            <Link onClick={() => { scrollToServices() }} href={"/"} className="text-sm/6 font-semibold hover:text-white">
+                            <Link  href={"/services"} className="text-sm/6 font-semibold hover:text-white">
                                 Other Services
 
                             </Link>

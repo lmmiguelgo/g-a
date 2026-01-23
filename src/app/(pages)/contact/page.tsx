@@ -136,10 +136,11 @@ export default function ContactPage() {
               {/* First Name */}
               <div>
                 <label htmlFor="first-name" className="block text-sm font-semibold leading-6 text-foreground">
-                  First name
+                  First name <span className="text-red-500">*</span>
                 </label>
                 <div className="mt-2.5">
                   <input
+                    required
                     type="text"
                     name="first-name"
                     id="first-name"
@@ -152,10 +153,11 @@ export default function ContactPage() {
               {/* Last Name */}
               <div>
                 <label htmlFor="last-name" className="block text-sm font-semibold leading-6 text-foreground">
-                  Last name
+                  Last name <span className="text-red-500">*</span>
                 </label>
                 <div className="mt-2.5">
                   <input
+                    required
                     type="text"
                     name="last-name"
                     id="last-name"
@@ -168,10 +170,11 @@ export default function ContactPage() {
               {/* Email */}
               <div className="sm:col-span-2">
                 <label htmlFor="email" className="block text-sm font-semibold leading-6 text-foreground">
-                  Email
+                  Email <span className="text-red-500">*</span>
                 </label>
                 <div className="mt-2.5">
                   <input
+                    required
                     type="email"
                     name="email"
                     id="email"
@@ -184,10 +187,11 @@ export default function ContactPage() {
               {/* Phone Number */}
               <div className="sm:col-span-2">
                 <label htmlFor="phone-number" className="block text-sm font-semibold leading-6 text-foreground">
-                  Phone number
+                  Phone number <span className="text-red-500">*</span>
                 </label>
                 <div className="mt-2.5">
                   <input
+                    required
                     type="tel"
                     name="phone-number"
                     id="phone-number"
@@ -200,10 +204,11 @@ export default function ContactPage() {
               {/* Message */}
               <div className="sm:col-span-2">
                 <label htmlFor="message" className="block text-sm font-semibold leading-6 text-foreground">
-                  Message
+                  Message <span className="text-red-500">*</span>
                 </label>
                 <div className="mt-2.5">
                   <textarea
+                    required
                     name="message"
                     id="message"
                     rows={4}

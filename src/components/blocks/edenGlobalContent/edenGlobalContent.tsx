@@ -17,7 +17,7 @@ export default function EdenGlobalContent() {
 
             <div className="flex items-center justify-center">
               <h1 className="font-secondary font-bold text-4xl">BACK TO <br /> EDEN GLOBAL</h1>
-              <Image className="w-60 pt-20" src={Pic.EdenGlobal} alt="Eden Global" />
+              <Image className="lg:w-60 w-40 pt-20" src={Pic.EdenGlobal} alt="Eden Global" />
 
             </div>
 

@@ -18,6 +18,16 @@ import EdenGlobalContent from "@/components/blocks/edenGlobalContent/edenGlobalC
 import CtaEdenGlobal from "@/components/blocks/ctaEdenGlobal/ctaEdenGlobal";
 import CompanyContent from "@/components/blocks/companyContent/companyContent";
 
+//Imports Static Version
+
+import { HeroStatic } from "@/components/blocks/heroStatic/heroStatic";
+import ServicesPage from "../(pages)/services/page";
+import CompanyPage from "../(pages)/company/page";
+import PhilanthropyPage from "../(pages)/philanthropy/page";
+
+
+
+
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -435,353 +445,23 @@ export default function Home() {
 
       // Mobile Version Animation
       mm.add("(max-width: 799px)", () => {
-        const tl = gsap.timeline({
-          scrollTrigger: {
-            scrub: 0.5,
-            start: "top top",
-            end: "+=20000",
-            trigger: "body",
-          }
-        });
 
+
+        gsap.from("#hero-logo-image-static", {
+          translateY: 400,
+          opacity: 0,
+          duration: 1,
+          ease: "circ",
+
+        })
+        gsap.from("#mobile-background ", {
+          zoom: 1.2,
+          opacity: 0,
+          duration: 1,
+          ease: "circ",
+
+        })
        
-
-        tl.to('#main-background', {
-          scale: 1,
-          opacity: 0,
-          ease: "circ",
-        });
-       
-
-        tl.to('#logo-hero', {
-          scale: 4,
-          opacity: 0,
-          ease: "circ",
-        }, "<");
-
-        tl.to('#home-title-Services', {
-          display: 'flex',
-          opacity: 1,
-          ease: "circ.in",
-        });
-
-        tl.to('#home-title-Services-h1', {
-          fontSize: '3.2rem',
-          translateX: 0,
-        }, );
-
-        tl.to('#home-subtitle-Services-h2', {
-          opacity: 1,
-        }, );
-
-        tl.to('#home-subtitle-Services-h2', {
-          color: '#ffffff',
-        }, );
-
-        tl.to('#home-title-Services', {
-          display: 'hidden',
-          opacity: 0,
-          ease: "circ.in",
-        });
-
-
-        tl.to('#services-section', {
-          opacity: 1,
-          scale: 1,
-          ease: "circ.out",
-          
-        });
-
-        tl.to('#home-service1', {
-          translateX: 0,
-          opacity: 1,
-          
-        });
-
-        tl.to('#home-service2', {
-          translateX: 0,
-          opacity: 1,
-          
-        });
-
-        tl.to('#services-section', {
-          duration: 4,
-          translateY: -2200,
-          
-        }, "<");
-
-        tl.to('#home-service3', {
-          translateX: 0,
-          opacity: 1,
-          
-          delay: 0.4,
-        }, "<");
-
-        tl.to('#home-service4', {
-          translateX: 0,
-          opacity: 1,
-          
-          delay: 0.6,
-        }, "<");
-
-        tl.to('#home-service5', {
-          translateX: 0,
-          opacity: 1,
-          
-          delay: 0.8,
-        }, "<");
-
-        tl.to('#services-section', {
-          display: 'none',
-          opacity: 0,
-          ease: "circ.in",
-        }, );
-
-
-
-
-
-         tl.to('#home-title-Company', {
-          display: 'flex',
-          opacity: 1,
-          ease: "circ.in",
-        });
-
-         tl.to('#home-title-Company-h1', {
-          fontSize: '3.2rem',
-          translateX: 0,
-        }, );
-
-        tl.to('#home-subtitle-Company-h2', {
-          opacity: 1,
-        }, );
-
-        tl.to('#home-subtitle-Company-h2', {
-          
-          color: '#ffffff',
-        }, );
-
-        tl.to('#home-title-Company', {
-          display: 'none',
-          opacity: 0,
-        });
-
-
-        
-
-        tl.to('#company-content', {
-          display: 'block',
-          opacity: 1,
-          scale: 1,
-          ease: "circ",
-        });
-
-        tl.to('#company-content-header', {
-          translateX: 0,
-          opacity: 1,
-          ease: "circ",
-        }, "<");
-
-
-        tl.to('#company-content', {
-          duration: 8,
-          translateY: -5800,
-          ease: "none",
-        });
-
-
-        
-        tl.to('#company-content-s1', {
-          delay: 0.6,
-          translateX: 0,
-          opacity: 1,
-          ease: "circ",
-        }, "<");
-        tl.to('#company-content-s2', {
-          delay: 0.2,
-          translateX: 0,
-          opacity: 1,
-          ease: "circ",
-        }, "<");
-        tl.to('#company-content-s3', {
-          delay: 0.2,
-          translateX: 0,
-          opacity: 1,
-          ease: "circ",
-        }, "<");
-        tl.to('#company-content-s4', {
-          delay: 0.2,
-          translateX: 0,
-          opacity: 1,
-          ease: "circ",
-        }, "<");
-
-        
-
-        tl.to('#company-content-laura-pic', {
-          duration: 0.4,
-          translateX: 0,
-          opacity: 1,
-          ease: "circ",       
-         }, "<");
-        tl.to('#company-content-laura-bio', {
-          duration: 0.4,
-          translateX: 0,
-          opacity: 1,
-          ease: "circ",       
-         }, "<");
-
-        tl.to('#company-content-isaac-pic', {
-          delay: 0.8,
-          duration: 0.6,
-          translateX: 0,
-          opacity: 1,
-          ease: "circ",       
-         }, "<");
-        tl.to('#company-content-isaac-bio', {
-          duration: 0.6,
-          translateX: 0,
-          opacity: 1,
-          ease: "circ",       
-         }, "<");
-        tl.to('#company-content', {
-          autoAlpha: 0,
-             
-         });
-
-
-
-
-
-
-         tl.to('#home-title-Philanthropy', {
-          display: 'flex',
-          opacity: 1,
-          ease: "circ.in",
-        });
-
-    
-
-    
-         tl.to('#home-title-Philanthropy-h1', {
-          fontSize: '3.2rem',
-          translateX: 0,
-        }, );
-
-        tl.to('#home-subtitle-Philanthropy-h2', {
-          opacity: 1,
-        }, );
-
-        tl.to('#home-subtitle-Philanthropy-h2', {
-          
-          color: '#ffffff',
-        }, );
-
-        tl.to('#home-title-Philanthropy', {
-          display: 'none',
-          opacity: 0,
-        });
-
-//Philanthropy Start
-
-         tl.to('#philanthropy-section', {
-          display: 'block',
-          opacity: 1,
-          scale: 1,
-          ease: "circ",
-        });
-
-         tl.to('#philanthropy-section-writing', {
-          translateX: 0,
-          opacity: 1,
-          ease: "circ",
-        });
-
-        tl.to('#philanthropy-section', {
-          
-          duration: 2.8,
-          translateY: -1680,
-          
-          
-        });
-
-         tl.to('#Philanthropy-USExample', {
-          
-          translateX: 0,
-          opacity: 1,
-          ease: "circ",
-        }, "<");
-         tl.to('#Philanthropy-ZambiaExample', {
-          delay: 0.1,
-          translateX: 0,
-          opacity: 1,
-          ease: "circ",
-        }, "<");
-         tl.to('#Philanthropy-KenyaExample', {
-          delay: 0.1,
-          translateX: 0,
-          opacity: 1,
-          ease: "circ",
-        }, "<");
-         tl.to('#Philanthropy-UgandaExample', {
-          delay: 0.1,
-          translateX: 0,
-          opacity: 1,
-          ease: "circ",
-        }, "<");
-
-        tl.to('#philanthropy-section', {
-          display: 'none',
-          opacity: 0,
-          ease: "circ",
-        } );
-
-        tl.to('#cta-gammys', {
-          display : 'block',
-          opacity: 1,
-          translateY: 0,
-          ease: "circ",
-        }, "<" );
-
-        tl.to('#cta-gammys', {
-          delay: 0.8,
-          display : 'none',
-          opacity: 0,
-          translateY: 200,
-          ease: "circ",
-        },);
-
-        tl.to('#philanthropy-section-eden', {
-          
-          display : 'block',
-          opacity: 1,
-          ease: "circ",
-        },);
-
-        tl.to('#philanthropy-section-writing-eden', {
-          delay: 0.8,
-          translateX: 0,
-          opacity: 1,
-          ease: "circ",
-        },"<");
-
-        tl.to('#philanthropy-section-eden', {
-          delay: 0.8,
-          display : 'hidden',
-          opacity: 0,
-          ease: "circ",
-        },);
-
-       
-        tl.to('#cta-eden-global', {
-          translateY: 0,
-          display : 'block',
-          opacity: 1,
-          ease: "circ",
-        }, "<");
-
-       
-
 
 
        
@@ -801,7 +481,8 @@ export default function Home() {
   return (
     <>
 
-    <HomeNavigation />
+   <div className="hidden lg:block">
+     <HomeNavigation />
     <HomeMobileNavigation />
 
 
@@ -832,6 +513,21 @@ export default function Home() {
       <div id="nav-to-services" aria-hidden= "true" className="absolute -z-10 top-1200">
 
       </div>
+   </div>
+
+
+
+
+
+   <div className="lg:hidden ">
+
+    <HeroStatic />
+    <ServicesPage />
+    <CompanyPage />
+    <PhilanthropyPage />
+
+   </div>
+   
 
       
 

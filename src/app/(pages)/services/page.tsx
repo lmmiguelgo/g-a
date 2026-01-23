@@ -5,39 +5,116 @@ import Image from "next/image"
 import Link from "next/link"
 import { gsap } from "gsap"
 import { useGSAP } from "@gsap/react"
+import { ScrollTrigger } from "gsap/ScrollTrigger"
 
 
 const ServicesPage
  = () => {
    
-
+gsap.registerPlugin(ScrollTrigger);
 
     
 
 
-
-
-
-
-
-
     useGSAP(() => {
+        let mm = gsap.matchMedia();
         
-        gsap.from("#page-service1", {
-            translateX: -400,
-            opacity: 0,
-            duration: 0.8,
-        })
-        gsap.from("#page-service2", {
-           delay: 0.4,
-            translateX: 400,
-            opacity: 0,
-            duration: 0.8,
-        })
+        mm.add("(max-width: 799px)", () => {
+            gsap.from("#page-service1", {
+                scrollTrigger: {
+                    trigger: "#services-section-page",
+                    start: "top 80%",
+                    toggleActions: "play none none none",
+                },
+                translateX: -400,
+                opacity: 0,
+                duration: 0.8,
+                
+            })
+            gsap.from("#page-service2", {
+                scrollTrigger: {
+                    trigger: "#page-service1",
+                    start: "top 80%",
+                    toggleActions: "play none none none",
+
+                },
+                delay: 0.4,
+                translateX: 400,
+                opacity: 0,
+                duration: 0.8,
+            
+            })
+            gsap.from("#page-service3", {
+                scrollTrigger: {
+                    trigger: "#page-service2",
+                    start: "top 80%",
+                    toggleActions: "play none none none",
+
+                },
+                delay: 0.4,
+                translateX: -400,
+                opacity: 0,
+                duration: 0.8,
+            
+            })
+            gsap.from("#page-service4", {
+                scrollTrigger: {
+                    trigger: "#page-service3",
+                    start: "top 80%",
+                    toggleActions: "play none none none",
+
+                },
+                delay: 0.4,
+                translateX: 400,
+                opacity: 0,
+                duration: 0.8,
+            
+            })
+            gsap.from("#page-service5", {
+                scrollTrigger: {
+                    trigger: "#page-service4",
+                    start: "top 80%",
+                    toggleActions: "play none none none",
+
+                },
+                delay: 0.4,
+                translateX: -400,
+                opacity: 0,
+                duration: 0.8,
+            
+            })
+        });
+
+        mm.add("(min-width: 800px)", () => {
+            gsap.from("#page-service1", {
+                scrollTrigger: {
+                    trigger: "#services-section-page",
+                    start: "top 80%",
+                    toggleActions: "play none none none",
+                },
+                translateX: -400,
+                opacity: 0,
+                duration: 0.8,
+                
+            })
+            gsap.from("#page-service2", {
+                scrollTrigger: {
+                    trigger: "#page-service1",
+                    start: "top 80%",
+                    toggleActions: "play none none none",
+
+                },
+                delay: 0.4,
+                translateX: 400,
+                opacity: 0,
+                duration: 0.8,
+            
+            })
+        });
 
     }, [])
   return (
-     <section id="services-section-page" className="overflow-x-hidden w-full  h-screen lg:h-fit scale-96 lg:scale-100  ">
+     <section id="services-section-page" className="overflow-x-hidden w-full  lg:h-fit  ">
             <div className="bg-background py-24 sm:py-32">
                 <div className="mx-auto max-w-2xl px-6 lg:max-w-7xl lg:px-8">
                     <h2 className="text-xl/7  font-bold text-accent-primary ">Our Services</h2>

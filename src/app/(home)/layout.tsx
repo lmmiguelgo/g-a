@@ -4,6 +4,8 @@ import "../globals.css";
 
 
 import Navbar from "@/components/blocks/navbar/navbar";
+import Footer from "@/components/blocks/footer/footer";
+import CookieConsent from "@/components/blocks/cookies/cookies";
 
 
 
@@ -77,8 +79,10 @@ export default function RootLayout({
         <Navbar />
 
         {children}
-
         
+       <div className="lg:hidden"> <Footer /></div>
+
+        <CookieConsent />
       </body>
     </html>
   );
