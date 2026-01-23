@@ -55,7 +55,7 @@ export default function Terms() {
                   </p>
               </section>
 
-              <section>
+              <section id='privacy-policy'>
                   <h3 className="text-xl font-bold text-foreground mb-3">GORDON & ASSOCIATES TEXT MESSAGE SERVICE PRIVACY POLICY</h3>
                   <p>
                   We respect your privacy. We only use information you provide through this service to transmit your mobile messages and respond to you. This includes, but isn't limited to, sharing information with platform providers, phone companies, and other vendors who assist us in the delivery of mobile messages. Mobile information will not be shared with third parties/affiliates for marketing/promotional purposes. All the above categories exclude text messaging originator opt-in data and consent; this information will not be shared with any third parties. Nonetheless, we reserve the right always to disclose any information as necessary to satisfy any law, regulation or governmental request, to avoid liability, or to protect our rights or property. This Text Message Service Privacy Policy applies to your use of the Text Message Service and isn't intended to modify our general Privacy Policy, incorporated by reference above, which may govern the relationship between you and us in other contexts.
