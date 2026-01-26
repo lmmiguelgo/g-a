@@ -1,9 +1,14 @@
 "use client";
 
 import React from 'react';
+import CtaTerms from '@/components/blocks/ctaTerms/ctaTerms';
 
 export default function Terms() {
   return (
+   <>
+   
+    <CtaTerms />
+   
     <section id='sms-terms' className="w-full bg-background pb-24 pt-24 sm:pb-32 sm:pt-32">
       <div className="mx-auto max-w-4xl px-6 lg:px-8 w-full">
         
@@ -44,19 +49,20 @@ export default function Terms() {
               <section>
                   <h3 className="text-xl font-bold text-foreground mb-3">CONSENTING TO TEXT MESSAGING</h3>
                   <p>
-                  By consenting to receive text messages from us, you agreed to these Text Messaging Terms and Conditions, as well as our <span className="text-accent-primary">General T&Cs</span> and <span className="text-accent-primary">Privacy Policy</span>, incorporated herein by reference.
+                  By consenting to receive text messages from us, you agreed to these Text Messaging Terms and Conditions, as well as our  and Privacy Policy, incorporated herein by reference. Consent is not a condition of any purchase.
                   </p>
               </section>
               
-              <section>
+              <section id='privacy-policy'>
                   <h3 className="text-xl font-bold text-foreground mb-3">E-SIGN DISCLOSURE</h3>
                   <p>
                   By agreeing to receive text messages, you also consent to the use of an electronic record to document your agreement. You may withdraw your consent to the use of the electronic record by replying STOP.
                   </p>
               </section>
+              
 
-              <section id='privacy-policy'>
-                  <h3 className="text-xl font-bold text-foreground mb-3">GORDON & ASSOCIATES TEXT MESSAGE SERVICE PRIVACY POLICY</h3>
+              <section >
+                  <h3  className="text-xl font-bold text-foreground mb-3">GORDON & ASSOCIATES TEXT MESSAGE SERVICE PRIVACY POLICY</h3>
                   <p>
                   We respect your privacy. We only use information you provide through this service to transmit your mobile messages and respond to you. This includes, but isn't limited to, sharing information with platform providers, phone companies, and other vendors who assist us in the delivery of mobile messages. Mobile information will not be shared with third parties/affiliates for marketing/promotional purposes. All the above categories exclude text messaging originator opt-in data and consent; this information will not be shared with any third parties. Nonetheless, we reserve the right always to disclose any information as necessary to satisfy any law, regulation or governmental request, to avoid liability, or to protect our rights or property. This Text Message Service Privacy Policy applies to your use of the Text Message Service and isn't intended to modify our general Privacy Policy, incorporated by reference above, which may govern the relationship between you and us in other contexts.
                   </p>
@@ -72,14 +78,14 @@ export default function Terms() {
               <section>
                   <h3 className="text-xl font-bold text-foreground mb-3">FREQUENCY OF TEXT MESSAGES</h3>
                   <p>
-                  This Text Messaging Service is for conversational person-to-person communication between you and our employees. We may send you an initial message providing details about the service. After that, the number of text messages you receive will vary depending on how you use our services and whether you take steps to generate more text messages from us (such as by sending a HELP request).
+                  This Text Messaging Service is for conversational person-to-person communication between you and our employees. We may send you an initial message providing details about the service. Message frequency varies.
                   </p>
               </section>
 
               <section>
-                  <h3 className="text-xl font-bold text-foreground mb-3">OPTING OUT OF TEXT MESSAGES</h3>
+                  <h3 className="text-xl font-bold text-foreground mb-3">OPTING OUT OF TEXT MESSAGES & GETTING HELP</h3>
                   <p>
-                  If you no longer want to receive text messages, you may reply to any text message with STOP, QUIT, END, REVOKE, OPT OUT, CANCEL, or UNSUBSCRIBE. As a person-to-person communication service, opt-out requests are specific to each conversation between you and one of our employees and their associated phone number. After unsubscribing, we may send you confirmation of your opt-out via text message.
+                  You can cancel the SMS service at any time. Just reply STOP to cancel. After you send the SMS message STOP to us, we will send you an SMS message to confirm that you have been unsubscribed. After this, you will no longer receive SMS messages from us. If you want to join again, just sign up as you did the first time and we will start sending SMS messages to you again. If you are experiencing issues with the messaging program you can reply with the keyword HELP for more assistance, or you can get help directly at <a href="mailto:info@gordonandassociates.biz" className="text-accent-primary hover:underline">info@gordonandassociates.biz</a>.
                   </p>
               </section>
 
@@ -95,6 +101,8 @@ export default function Terms() {
 
         </div>
       </div>
+      
     </section>
+   </>
   );
 }
