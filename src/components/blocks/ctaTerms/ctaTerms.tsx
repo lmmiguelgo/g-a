@@ -24,7 +24,7 @@ export default function CtaTerms() {
 
                     <div className="mx-auto max-w-xl lg:mx-0 lg:flex-auto lg:py-32 text-left lg:w-1/2">
                         <h2 className="text-3xl font-light tracking-tight text-white sm:text-4xl">
-                            Stay Connected <br /> <span className="font-semibold">Opt-in </span>
+                            Stay Connected with <br /> <span className="font-semibold">Gordon & Associates</span>
                         </h2>
                         <p className="mt-6 text-lg/8 text-pretty text-foreground/80 text-start">
                             Fill out the form to get started.
@@ -60,6 +60,25 @@ export default function CtaTerms() {
                                         <input required type="tel" name="phone-number" id="phone-number" autoComplete="tel" className="block w-full rounded-md border-0 bg-white/5 px-3 py-1.5 text-foreground shadow-sm ring-1 ring-inset ring-white/10 focus:ring-2 focus:ring-inset focus:ring-accent-primary sm:text-sm sm:leading-6" />
                                     </div>
                                 </div>
+
+                                <div className="sm:col-span-2">
+                                    <div className="flex gap-x-3 items-start">
+                                        <div className="flex h-6 items-center">
+                                            <input
+                                                id="age-gate"
+                                                name="age-gate"
+                                                type="checkbox"
+                                                required
+                                                className="h-4 w-4 rounded border-white/10 bg-white/5 text-accent-primary focus:ring-accent-primary"
+                                            />
+                                        </div>
+                                        <div className="text-sm leading-6">
+                                            <label htmlFor="age-gate" className="font-medium text-foreground">
+                                                I confirm that I am 18 years of age or older.
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
                                 <div className="sm:col-span-2">
                                     <div className="flex gap-x-3 items-start">
                                         <div className="flex h-6 items-center">
@@ -77,7 +96,7 @@ export default function CtaTerms() {
                                             </label>
                                             <p className="text-foreground/60 text-xs mt-1">
                                                 By checking this box, you consent to receive text messages from Gordon & Associates.
-                                                Msg frequency varies. Msg & data rates may apply.
+                                                Msg frequency varies. Message and data rates may apply.
                                                 Reply STOP to opt out or HELP for help.
                                                 View our <Link href="/terms#sms-terms" className="underline hover:text-accent-primary" target="_blank">Terms</Link>
                                                 {' '}and{' '}
