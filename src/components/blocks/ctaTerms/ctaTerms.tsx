@@ -61,24 +61,7 @@ export default function CtaTerms() {
                                     </div>
                                 </div>
 
-                                <div className="sm:col-span-2">
-                                    <div className="flex gap-x-3 items-start">
-                                        <div className="flex h-6 items-center">
-                                            <input
-                                                id="age-gate"
-                                                name="age-gate"
-                                                type="checkbox"
-                                                required
-                                                className="h-4 w-4 rounded border-white/10 bg-white/5 text-accent-primary focus:ring-accent-primary"
-                                            />
-                                        </div>
-                                        <div className="text-sm leading-6">
-                                            <label htmlFor="age-gate" className="font-medium text-foreground">
-                                                I confirm that I am 18 years of age or older.
-                                            </label>
-                                        </div>
-                                    </div>
-                                </div>
+                                
                                 <div className="sm:col-span-2">
                                     <div className="flex gap-x-3 items-start">
                                         <div className="flex h-6 items-center">
