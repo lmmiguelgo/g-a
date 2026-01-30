@@ -128,7 +128,7 @@ export default function ContactPage() {
              {/* FormSubmit Configuration */}
              <input type="hidden" name="_next" value="https://gordonandassociates.biz/thanks" />
              <input type="hidden" name="_subject" value="New Contact Form Submission" />
-             <input type="hidden" name="_captcha" value="false" />
+             <input type="hidden" name="_captcha" value="true" />
 
           <div className="mx-auto max-w-xl lg:mr-0 lg:max-w-lg">
             <div className="grid grid-cols-1 gap-x-8 gap-y-6 sm:grid-cols-2">

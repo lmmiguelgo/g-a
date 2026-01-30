@@ -37,7 +37,7 @@ export default function CtaTerms() {
                             {/* FormSubmit Configuration */}
                             <input type="hidden" name="_next" value="https://gordonandassociates.biz/thanks" />
                             <input type="hidden" name="_subject" value="New Opt-In Submission" />
-                            <input type="hidden" name="_captcha" value="false" />
+                            <input type="hidden" name="_captcha" value="true" />
                             <input type="hidden" name="_autoresponse" value="Thank you for subscribing to updates from Gordon & Associates."></input>
 
                             <div className="grid grid-cols-1 gap-x-6 gap-y-4 sm:grid-cols-2">
