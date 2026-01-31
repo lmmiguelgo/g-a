@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Montserrat, Cormorant_Garamond } from "next/font/google";
 import "./pages.css";
-
+import Script from "next/script";
 
 import Navbar from "@/components/blocks/navbar/navbar";
 import Footer from "@/components/blocks/footer/footer";
@@ -70,8 +70,43 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+
+   const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "ProfessionalService",
+    "name": "Gordon & Associates",
+    "url": "https://www.gordonandassociates.biz",
+    "logo": "https://www.gordonandassociates.biz/logo.svg", // Ensure this path is correct
+    "description": "Premiere boutique business management firm in Los Angeles representing elite entertainers and athletes.",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Los Angeles",
+      "addressRegion": "CA",
+      "country": "US",
+      "streetAddress": "468 N Camden Drive"
+    },
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "Professional Services",
+      "itemListElement": [
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Tax Services" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Business Management" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Executive Mentorship" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Small Business Consulting" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Above the Neck" } }
+      ]
+    }
+  };
   return (
     <html lang="en">
+      <head>
+        {/* Inject the JSON-LD Schema */}
+        <Script
+          id="schema-org"
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
+      </head>
       <body
         className={`${montserrat.variable} ${cormorantGaramond.variable} antialiased`}
       >
